@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: "PT Mitra Sahabat Logistik",
+  name: "PT. Mitra Sahabat Logistik",
   tagline: "Solusi Logistik Terpercaya",
   description: "Memberikan solusi logistik terbaik untuk mendukung pertumbuhan bisnis Anda dengan teknologi modern dan layanan profesional.",
   
   contact: {
-    phone: "+62 21 1234 5678",
-    email: "info@mitrasahabatlogistik.com",
+    phone: "0812-6602-0295",
+    email: "ops@sahabatlogistik.com",
     address: {
-      street: "Jl. Logistik Raya No. 123",
-      city: "Jakarta Utara 14350"
+      street: "Komp. Glory View, Blok B No.12",
+      city: "Legenda Malaka, Batam"
     }
   },
 

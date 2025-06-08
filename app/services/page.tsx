@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
+import Image from "next/image";
 
 const iconMap = {
   Truck,
@@ -19,31 +20,31 @@ const iconMap = {
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Truck className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-slate-900">{siteConfig.name}</h1>
-                <p className="text-xs text-slate-600">{siteConfig.tagline}</p>
-              </div>
+          <div className="flex justify-between items-center h-20">
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/logo.png" 
+                alt="MSL Logo" 
+                width={180} 
+                height={60}
+                className="h-12 w-auto"
+              />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               {siteConfig.navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+                  className="text-gray-700 hover:text-msl-navy transition-colors font-medium"
                 >
                   {item.name}
                 </Link>
               ))}
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
                 Konsultasi Gratis
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -53,27 +54,26 @@ export default function ServicesPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-emerald-600/10" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge variant="secondary" className="bg-blue-50 text-blue-700 border-blue-200 mb-6">
+      <section className="relative py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20 mb-6">
             🚛 Layanan Logistik Komprehensif
           </Badge>
-          <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+          <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight mb-6">
             Solusi Logistik
-            <span className="text-blue-600"> Terpadu</span> untuk
-            <span className="text-emerald-600"> Setiap Kebutuhan</span>
+            <span className="text-msl-orange"> Terpadu</span> untuk
+            <span className="text-msl-navy"> Setiap Kebutuhan</span>
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
             Dari transportasi hingga supply chain management, kami menyediakan layanan logistik 
             end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button size="lg" className="bg-msl-navy hover:bg-msl-dark-blue text-white">
               Konsultasi Gratis
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-slate-300 hover:bg-slate-50">
+            <Button size="lg" variant="outline" className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white">
               Download Brosur
             </Button>
           </div>
@@ -81,16 +81,16 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+            <Badge variant="secondary" className="bg-msl-navy/10 text-msl-navy border-msl-navy/20">
               🎯 Layanan Unggulan
             </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
               Layanan Logistik Komprehensif
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Pilih layanan yang sesuai dengan kebutuhan bisnis Anda
             </p>
           </div>
@@ -99,29 +99,29 @@ export default function ServicesPage() {
             {siteConfig.services.map((service, index) => {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap];
               return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-slate-200">
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white">
                   <CardHeader className="space-y-4">
-                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                      <IconComponent className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                    <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
+                      <IconComponent className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
                     </div>
-                    <CardTitle className="text-xl text-slate-900">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-msl-navy">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <CardDescription className="text-slate-600 leading-relaxed">
+                    <CardDescription className="text-gray-600 leading-relaxed">
                       {service.shortDescription}
                     </CardDescription>
                     <div className="space-y-2">
                       {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-slate-600">
-                          <CheckCircle className="w-4 h-4 text-emerald-500 mr-3" />
+                        <div key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-msl-orange mr-3" />
                           {feature}
                         </div>
                       ))}
                     </div>
-                    <div className="pt-4 border-t border-slate-100">
+                    <div className="pt-4 border-t border-gray-100">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-slate-900">{service.pricing}</span>
-                        <Button variant="outline" size="sm">
+                        <span className="text-sm font-medium text-msl-navy">{service.pricing}</span>
+                        <Button variant="outline" size="sm" className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white">
                           Detail Layanan
                         </Button>
                       </div>
@@ -134,110 +134,17 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Detailed Services */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-slate-900">
-              Detail Layanan
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Pelajari lebih detail tentang setiap layanan yang kami tawarkan
-            </p>
-          </div>
-
-          <Tabs defaultValue={siteConfig.services[0].id} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 mb-8">
-              {siteConfig.services.map((service) => (
-                <TabsTrigger key={service.id} value={service.id} className="text-xs lg:text-sm">
-                  {service.title.split(' ')[0]}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {siteConfig.services.map((service) => {
-              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
-              return (
-                <TabsContent key={service.id} value={service.id}>
-                  <Card className="border-slate-200">
-                    <CardHeader className="pb-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center">
-                          <IconComponent className="h-8 w-8 text-blue-600" />
-                        </div>
-                        <div className="flex-1">
-                          <CardTitle className="text-2xl text-slate-900 mb-2">{service.title}</CardTitle>
-                          <CardDescription className="text-lg text-slate-600">
-                            {service.fullDescription}
-                          </CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-8">
-                      <div className="grid md:grid-cols-2 gap-8">
-                        <div className="space-y-6">
-                          <div>
-                            <h4 className="text-lg font-semibold text-slate-900 mb-4">Keunggulan Layanan</h4>
-                            <div className="space-y-3">
-                              {service.benefits.map((benefit, idx) => (
-                                <div key={idx} className="flex items-start space-x-3">
-                                  <Star className="w-5 h-5 text-yellow-500 mt-0.5 flex-shrink-0" />
-                                  <span className="text-slate-600">{benefit}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                        <div className="space-y-6">
-                          <div className="bg-slate-50 p-6 rounded-xl">
-                            <h4 className="text-lg font-semibold text-slate-900 mb-4">Informasi Layanan</h4>
-                            <div className="space-y-4">
-                              <div>
-                                <span className="text-sm font-medium text-slate-700">Cakupan Area:</span>
-                                <p className="text-slate-600">{service.coverage}</p>
-                              </div>
-                              <div>
-                                <span className="text-sm font-medium text-slate-700">Harga Mulai:</span>
-                                <p className="text-slate-600 font-semibold">{service.pricing}</p>
-                              </div>
-                              <div>
-                                <span className="text-sm font-medium text-slate-700">Fitur Utama:</span>
-                                <div className="flex flex-wrap gap-2 mt-2">
-                                  {service.features.map((feature, idx) => (
-                                    <Badge key={idx} variant="secondary" className="bg-blue-50 text-blue-700">
-                                      {feature}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                            Konsultasi Layanan Ini
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TabsContent>
-              );
-            })}
-          </Tabs>
-        </div>
-      </section>
-
       {/* Why Choose Our Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="bg-orange-50 text-orange-700 border-orange-200">
+            <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20">
               ⭐ Mengapa Memilih Kami
             </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
               Komitmen Terhadap Kualitas
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Pengalaman {siteConfig.company.experience} tahun melayani {siteConfig.company.clients} klien 
               dengan tingkat kepuasan {siteConfig.company.satisfaction}
             </p>
@@ -270,13 +177,13 @@ export default function ServicesPage() {
                 metric: "Hemat 30%"
               }
             ].map((item, index) => (
-              <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 border-slate-200">
+              <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white">
                 <CardContent className="pt-8 space-y-4">
                   <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.description}</p>
-                  <div className="pt-4 border-t border-slate-100">
-                    <span className="text-lg font-bold text-blue-600">{item.metric}</span>
+                  <h3 className="text-xl font-semibold text-msl-navy">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <div className="pt-4 border-t border-gray-100">
+                    <span className="text-lg font-bold text-msl-orange">{item.metric}</span>
                   </div>
                 </CardContent>
               </Card>
@@ -286,26 +193,26 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-msl-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
-            <Badge variant="secondary" className="bg-slate-800 text-slate-300 border-slate-700">
+            <Badge variant="secondary" className="bg-white/10 text-white border-white/20">
               📞 Siap Membantu Anda
             </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold text-white">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Mulai Optimasi
-              <span className="text-blue-400"> Logistik Bisnis</span> Anda
+              <span className="text-msl-orange"> Logistik Bisnis</span> Anda
             </h2>
-            <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik 
               untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-msl-orange hover:bg-msl-orange/90 text-white">
                 <Phone className="mr-2 h-5 w-5" />
                 Hubungi Sekarang
               </Button>
-              <Button size="lg" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-msl-navy">
                 <Mail className="mr-2 h-5 w-5" />
                 Kirim Email
               </Button>
@@ -315,20 +222,18 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 py-12">
+      <footer className="bg-msl-dark-blue py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="bg-blue-600 p-2 rounded-lg">
-                  <Truck className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white">{siteConfig.name}</h3>
-                  <p className="text-xs text-slate-400">{siteConfig.tagline}</p>
-                </div>
-              </div>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <Image 
+                src="/logo.png" 
+                alt="MSL Logo" 
+                width={180} 
+                height={60}
+                className="h-12 w-auto brightness-0 invert"
+              />
+              <p className="text-gray-400 text-sm leading-relaxed">
                 {siteConfig.description}
               </p>
             </div>
@@ -337,7 +242,7 @@ export default function ServicesPage() {
               <h4 className="font-semibold text-white">Layanan</h4>
               <div className="space-y-2 text-sm">
                 {siteConfig.services.slice(0, 4).map((service) => (
-                  <div key={service.id} className="text-slate-400 hover:text-white transition-colors cursor-pointer">
+                  <div key={service.id} className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                     {service.title}
                   </div>
                 ))}
@@ -348,7 +253,7 @@ export default function ServicesPage() {
               <h4 className="font-semibold text-white">Perusahaan</h4>
               <div className="space-y-2 text-sm">
                 {siteConfig.navigation.map((item) => (
-                  <Link key={item.name} href={item.href} className="text-slate-400 hover:text-white transition-colors block">
+                  <Link key={item.name} href={item.href} className="text-gray-400 hover:text-white transition-colors block">
                     {item.name}
                   </Link>
                 ))}
@@ -357,7 +262,7 @@ export default function ServicesPage() {
             
             <div className="space-y-4">
               <h4 className="font-semibold text-white">Kontak</h4>
-              <div className="space-y-2 text-sm text-slate-400">
+              <div className="space-y-2 text-sm text-gray-400">
                 <div>{siteConfig.contact.phone}</div>
                 <div>{siteConfig.contact.email}</div>
                 <div>
@@ -368,8 +273,8 @@ export default function ServicesPage() {
             </div>
           </div>
           
-          <div className="border-t border-slate-800 mt-12 pt-8 text-center">
-            <p className="text-slate-400 text-sm">
+          <div className="border-t border-gray-700 mt-12 pt-8 text-center">
+            <p className="text-gray-400 text-sm">
               © 2024 {siteConfig.name}. All rights reserved.
             </p>
           </div>
