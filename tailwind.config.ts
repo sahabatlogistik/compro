@@ -20,6 +20,18 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        // MSL Brand Colors
+        'msl-navy': '#1B245B',
+        'msl-orange': '#FB942C',
+        'msl-brown': '#98643C',
+        'msl-dark-brown': '#6D4B3F',
+        'msl-light-brown': '#865C3E',
+        'msl-blue': '#B1733A',
+        'msl-dark-blue': '#253460',
+        'msl-purple': '#473542',
+        'msl-dark-purple': '#302A48',
+        'msl-black': '#181834',
+        
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
