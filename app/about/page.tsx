@@ -1,14 +1,30 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { ArrowRight, Truck, Users, Award, Clock, Phone, Mail, MapPin as LocationIcon, Target, Eye, Heart, Lightbulb, Shield, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
+import { PageLoading } from "@/components/ui/loading";
+import { useLoading } from "@/hooks/use-loading";
+import { initAOS } from "@/lib/aos";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function AboutPage() {
+  const isLoading = useLoading(1500);
+
+  useEffect(() => {
+    if (!isLoading) {
+      initAOS();
+    }
+  }, [isLoading]);
+
+  if (isLoading) {
+    return <PageLoading isLoading={isLoading} />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -17,7 +33,7 @@ export default function AboutPage() {
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center">
               <Image 
-                src="/logo.png" 
+                src="/LOGOOO MSL.png" 
                 alt="MSL Logo" 
                 width={180} 
                 height={60}
@@ -47,7 +63,7 @@ export default function AboutPage() {
       <section className="relative py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8" data-aos="fade-right">
               <div className="space-y-4">
                 <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20">
                   🏢 Tentang Perusahaan
@@ -73,7 +89,7 @@ export default function AboutPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" data-aos="fade-left">
               <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8">
                 <img 
                   src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800" 
@@ -95,22 +111,17 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-msl-navy mb-2">{siteConfig.company.experience}</div>
-              <div className="text-gray-600">Tahun Pengalaman</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-msl-orange mb-2">{siteConfig.company.clients}</div>
-              <div className="text-gray-600">Klien Terlayani</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-msl-brown mb-2">{siteConfig.company.satisfaction}</div>
-              <div className="text-gray-600">Tingkat Kepuasan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-msl-dark-brown mb-2">{siteConfig.company.certification}</div>
-              <div className="text-gray-600">Certified</div>
-            </div>
+            {[
+              { value: siteConfig.company.experience, label: "Tahun Pengalaman", color: "msl-navy" },
+              { value: siteConfig.company.clients, label: "Klien Terlayani", color: "msl-orange" },
+              { value: siteConfig.company.satisfaction, label: "Tingkat Kepuasan", color: "msl-brown" },
+              { value: siteConfig.company.certification, label: "Certified", color: "msl-dark-brown" }
+            ].map((stat, index) => (
+              <div key={index} className="text-center" data-aos="fade-up" data-aos-delay={index * 100}>
+                <div className={`text-4xl font-bold text-${stat.color} mb-2`}>{stat.value}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -118,7 +129,7 @@ export default function AboutPage() {
       {/* Vision & Mission */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-16" data-aos="fade-up">
             <Badge variant="secondary" className="bg-msl-navy/10 text-msl-navy border-msl-navy/20">
               🎯 Visi & Misi
             </Badge>
@@ -131,7 +142,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <Card className="border-gray-200 hover:shadow-lg transition-shadow bg-white">
+            <Card className="border-gray-200 hover:shadow-lg transition-shadow bg-white" data-aos="fade-right">
               <CardHeader className="text-center pb-6">
                 <div className="w-16 h-16 bg-msl-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="h-8 w-8 text-msl-orange" />
@@ -145,7 +156,7 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-gray-200 hover:shadow-lg transition-shadow bg-white">
+            <Card className="border-gray-200 hover:shadow-lg transition-shadow bg-white" data-aos="fade-left">
               <CardHeader className="text-center pb-6">
                 <div className="w-16 h-16 bg-msl-navy/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="h-8 w-8 text-msl-navy" />
@@ -165,7 +176,7 @@ export default function AboutPage() {
       {/* Company Values */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-16" data-aos="fade-up">
             <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20">
               💎 Nilai-Nilai Perusahaan
             </Badge>
@@ -185,7 +196,7 @@ export default function AboutPage() {
               const color = colors[index];
               
               return (
-                <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white">
+                <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white" data-aos="fade-up" data-aos-delay={index * 100}>
                   <CardContent className="pt-8 space-y-4">
                     <div className={`w-16 h-16 bg-${color}/10 rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <IconComponent className={`h-8 w-8 text-${color}`} />
@@ -203,7 +214,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-msl-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-up">
             <Badge variant="secondary" className="bg-white/10 text-white border-white/20">
               🤝 Mari Berkolaborasi
             </Badge>
@@ -216,10 +227,12 @@ export default function AboutPage() {
               Mari diskusikan kebutuhan logistik bisnis Anda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-msl-orange hover:bg-msl-orange/90 text-white">
-                <Phone className="mr-2 h-5 w-5" />
-                Hubungi Kami
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-msl-orange hover:bg-msl-orange/90 text-white">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Hubungi Kami
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-msl-navy">
                 <Mail className="mr-2 h-5 w-5" />
                 Kirim Proposal
@@ -235,7 +248,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <Image 
-                src="/logo.png" 
+                src="/LOGOOO MSL.png" 
                 alt="MSL Logo" 
                 width={180} 
                 height={60}

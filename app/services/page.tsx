@@ -1,11 +1,15 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { ArrowRight, Truck, Warehouse, Package, Users, Award, Clock, Phone, Mail, MapPin as LocationIcon, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { siteConfig } from "@/lib/config";
+import { PageLoading } from "@/components/ui/loading";
+import { useLoading } from "@/hooks/use-loading";
+import { initAOS } from "@/lib/aos";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -19,6 +23,18 @@ const iconMap = {
 };
 
 export default function ServicesPage() {
+  const isLoading = useLoading(1500);
+
+  useEffect(() => {
+    if (!isLoading) {
+      initAOS();
+    }
+  }, [isLoading]);
+
+  if (isLoading) {
+    return <PageLoading isLoading={isLoading} />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -27,7 +43,7 @@ export default function ServicesPage() {
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center">
               <Image 
-                src="/logo.png" 
+                src="/LOGOOO MSL.png" 
                 alt="MSL Logo" 
                 width={180} 
                 height={60}
@@ -56,26 +72,30 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20 mb-6">
-            🚛 Layanan Logistik Komprehensif
-          </Badge>
-          <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight mb-6">
-            Solusi Logistik
-            <span className="text-msl-orange"> Terpadu</span> untuk
-            <span className="text-msl-navy"> Setiap Kebutuhan</span>
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
-            Dari transportasi hingga supply chain management, kami menyediakan layanan logistik 
-            end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-              Konsultasi Gratis
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white">
-              Download Brosur
-            </Button>
+          <div data-aos="fade-up">
+            <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20 mb-6">
+              🚛 Layanan Logistik Komprehensif
+            </Badge>
+            <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight mb-6">
+              Solusi Logistik
+              <span className="text-msl-orange"> Terpadu</span> untuk
+              <span className="text-msl-navy"> Setiap Kebutuhan</span>
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+              Dari transportasi hingga supply chain management, kami menyediakan layanan logistik 
+              end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-msl-navy hover:bg-msl-dark-blue text-white">
+                  Konsultasi Gratis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Button size="lg" variant="outline" className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white">
+                Download Brosur
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -83,7 +103,7 @@ export default function ServicesPage() {
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-16" data-aos="fade-up">
             <Badge variant="secondary" className="bg-msl-navy/10 text-msl-navy border-msl-navy/20">
               🎯 Layanan Unggulan
             </Badge>
@@ -99,7 +119,7 @@ export default function ServicesPage() {
             {siteConfig.services.map((service, index) => {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap];
               return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white">
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white" data-aos="fade-up" data-aos-delay={index * 100}>
                   <CardHeader className="space-y-4">
                     <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
                       <IconComponent className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
@@ -137,7 +157,7 @@ export default function ServicesPage() {
       {/* Why Choose Our Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-16" data-aos="fade-up">
             <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20">
               ⭐ Mengapa Memilih Kami
             </Badge>
@@ -177,7 +197,7 @@ export default function ServicesPage() {
                 metric: "Hemat 30%"
               }
             ].map((item, index) => (
-              <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white">
+              <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white" data-aos="fade-up" data-aos-delay={index * 100}>
                 <CardContent className="pt-8 space-y-4">
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h3 className="text-xl font-semibold text-msl-navy">{item.title}</h3>
@@ -195,7 +215,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-msl-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-up">
             <Badge variant="secondary" className="bg-white/10 text-white border-white/20">
               📞 Siap Membantu Anda
             </Badge>
@@ -208,10 +228,12 @@ export default function ServicesPage() {
               untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-msl-orange hover:bg-msl-orange/90 text-white">
-                <Phone className="mr-2 h-5 w-5" />
-                Hubungi Sekarang
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-msl-orange hover:bg-msl-orange/90 text-white">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Hubungi Sekarang
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-msl-navy">
                 <Mail className="mr-2 h-5 w-5" />
                 Kirim Email
@@ -227,7 +249,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <Image 
-                src="/logo.png" 
+                src="/LOGOOO MSL.png" 
                 alt="MSL Logo" 
                 width={180} 
                 height={60}

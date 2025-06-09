@@ -1,14 +1,30 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { ArrowRight, Truck, Warehouse, Package, Users, Award, Clock, Phone, Mail, MapPin as LocationIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
+import { PageLoading } from "@/components/ui/loading";
+import { useLoading } from "@/hooks/use-loading";
+import { initAOS } from "@/lib/aos";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
+  const isLoading = useLoading(2000);
+
+  useEffect(() => {
+    if (!isLoading) {
+      initAOS();
+    }
+  }, [isLoading]);
+
+  if (isLoading) {
+    return <PageLoading isLoading={isLoading} />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -17,7 +33,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <Image 
-                src="/logo.png" 
+                src="/LOGOOO MSL.png" 
                 alt="MSL Logo" 
                 width={180} 
                 height={60}
@@ -47,7 +63,7 @@ export default function Home() {
       <section id="beranda" className="relative py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8" data-aos="fade-right">
               <div className="space-y-6">
                 <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20">
                   🚛 Mitra Logistik Terpercaya
@@ -87,7 +103,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" data-aos="fade-left">
               <div className="relative z-10 bg-white rounded-2xl shadow-xl p-8">
                 <img 
                   src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800" 
@@ -108,7 +124,7 @@ export default function Home() {
       {/* Services Section */}
       <section id="layanan" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-16" data-aos="fade-up">
             <Badge variant="secondary" className="bg-msl-navy/10 text-msl-navy border-msl-navy/20">
               🎯 Layanan Unggulan
             </Badge>
@@ -160,7 +176,7 @@ export default function Home() {
                 features: ["Express Delivery", "Emergency Service", "Time Guarantee"]
               }
             ].map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white" data-aos="fade-up" data-aos-delay={index * 100}>
                 <CardHeader className="space-y-4">
                   <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
                     <service.icon className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
@@ -184,7 +200,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12" data-aos="fade-up">
             <Link href="/services">
               <Button size="lg" className="bg-msl-navy hover:bg-msl-dark-blue text-white">
                 Lihat Semua Layanan
@@ -199,7 +215,7 @@ export default function Home() {
       <section id="tentang" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8" data-aos="fade-right">
               <div className="space-y-4">
                 <Badge variant="secondary" className="bg-msl-orange/10 text-msl-navy border-msl-orange/20">
                   🏢 Tentang Perusahaan
@@ -237,7 +253,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative" data-aos="fade-left">
               <div className="grid grid-cols-2 gap-4">
                 <img 
                   src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400" 
@@ -268,7 +284,7 @@ export default function Home() {
       <section id="kontak" className="py-24 bg-msl-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8" data-aos="fade-right">
               <div className="space-y-4">
                 <Badge variant="secondary" className="bg-white/10 text-white border-white/20">
                   📞 Hubungi Kami
@@ -315,9 +331,22 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <Button size="lg" className="bg-msl-orange hover:bg-msl-orange/90 text-white w-full">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Hubungi Kami
+                  </Button>
+                </Link>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-msl-navy">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Kirim Email
+                </Button>
+              </div>
             </div>
 
-            <Card className="bg-white">
+            <Card className="bg-white" data-aos="fade-left">
               <CardHeader>
                 <CardTitle className="text-2xl text-msl-navy">Konsultasi Gratis</CardTitle>
                 <CardDescription>
@@ -387,7 +416,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <Image 
-                src="/logo.png" 
+                src="/LOGOOO MSL.png" 
                 alt="MSL Logo" 
                 width={180} 
                 height={60}

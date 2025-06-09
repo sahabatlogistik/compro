@@ -159,6 +159,6 @@ export const siteConfig = {
     { name: "Beranda", href: "/" },
     { name: "Layanan", href: "/services" },
     { name: "Tentang", href: "/about" },
-    { name: "Kontak", href: "#kontak" }
+    { name: "Kontak", href: "/contact" }
   ]
 };
