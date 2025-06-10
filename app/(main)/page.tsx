@@ -24,42 +24,11 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import Image from "next/image";
+import LeadForm from "@/components/forms/lead-form";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
-              <Image
-                src="/logo.png"
-                alt="MSL Logo"
-                width={180}
-                height={60}
-                className="h-12 w-auto"
-              />
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              {siteConfig.navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-msl-navy transition-colors font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-                Konsultasi Gratis
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    <>
       {/* Hero Section */}
       <section id="beranda" className="relative py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -427,14 +396,20 @@ export default function Home() {
                     Hubungi Kami
                   </Button>
                 </Link>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-msl-navy hover:bg-slate-300 hover:text-msl-navy"
+                <Link
+                  href={`mailto:${siteConfig.contact.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Mail className="mr-2 h-5 w-5" />
-                  Kirim Email
-                </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-msl-navy hover:bg-slate-300 hover:text-msl-navy"
+                  >
+                    <Mail className="mr-2 h-5 w-5" />
+                    Kirim Email
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -447,156 +422,13 @@ export default function Home() {
                   Dapatkan penawaran terbaik untuk kebutuhan logistik Anda
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700">
-                      Nama Lengkap
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-msl-orange"
-                      placeholder="Masukkan nama"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-700">
-                      Perusahaan
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-msl-orange"
-                      placeholder="Nama perusahaan"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-msl-orange"
-                    placeholder="email@perusahaan.com"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">
-                    Layanan yang Dibutuhkan
-                  </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-msl-orange">
-                    <option>Pilih layanan</option>
-                    <option>Transportasi & Distribusi</option>
-                    <option>Pergudangan & Storage</option>
-                    <option>Packaging & Handling</option>
-                    <option>Last Mile Delivery</option>
-                    <option>Supply Chain Management</option>
-                    <option>Express & Urgent</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">
-                    Pesan
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-msl-orange"
-                    placeholder="Deskripsikan kebutuhan logistik Anda..."
-                  />
-                </div>
-                <Button className="w-full bg-msl-navy hover:bg-msl-dark-blue text-white">
-                  Kirim Permintaan Konsultasi
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+              <CardContent>
+                <LeadForm />
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-msl-dark-blue py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <Image
-                src="/logo.png"
-                alt="MSL Logo"
-                width={180}
-                height={60}
-                className="h-12 w-auto brightness-0 invert"
-              />
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {siteConfig.description}
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-white">Layanan</h4>
-              <div className="space-y-2 text-sm">
-                <Link
-                  href="/services"
-                  className="text-gray-400 hover:text-white transition-colors block"
-                >
-                  Transportasi
-                </Link>
-                <Link
-                  href="/services"
-                  className="text-gray-400 hover:text-white transition-colors block"
-                >
-                  Pergudangan
-                </Link>
-                <Link
-                  href="/services"
-                  className="text-gray-400 hover:text-white transition-colors block"
-                >
-                  Packaging
-                </Link>
-                <Link
-                  href="/services"
-                  className="text-gray-400 hover:text-white transition-colors block"
-                >
-                  Last Mile
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-white">Perusahaan</h4>
-              <div className="space-y-2 text-sm">
-                {siteConfig.navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-400 hover:text-white transition-colors block"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-white">Kontak</h4>
-              <div className="space-y-2 text-sm text-gray-400">
-                <div>{siteConfig.contact.phone}</div>
-                <div>{siteConfig.contact.email}</div>
-                <div>
-                  {siteConfig.contact.address.street}
-                  <br />
-                  {siteConfig.contact.address.city}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 {siteConfig.name}. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 import { Toaster } from "sonner";
+import { AppFooter, AppNavbar } from "@/components/app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -77,7 +78,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <main className="min-h-screen bg-white">
+          <AppNavbar />
+          {children}
+          <AppFooter />
+        </main>
 
         <Toaster richColors position="bottom-right" />
       </body>

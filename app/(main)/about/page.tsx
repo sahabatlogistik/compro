@@ -25,39 +25,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.png"
-                alt="MSL Logo"
-                width={180}
-                height={60}
-                className="h-12 w-auto"
-              />
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              {siteConfig.navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-msl-navy transition-colors font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-                Konsultasi Gratis
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    <>
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -323,74 +291,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-msl-dark-blue py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <Image
-                src="/logo.png"
-                alt="MSL Logo"
-                width={180}
-                height={60}
-                className="h-12 w-auto brightness-0 invert"
-              />
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {siteConfig.description}
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-white">Layanan</h4>
-              <div className="space-y-2 text-sm">
-                {siteConfig.services.slice(0, 4).map((service) => (
-                  <div
-                    key={service.id}
-                    className="text-gray-400 hover:text-white transition-colors cursor-pointer"
-                  >
-                    {service.title}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-white">Perusahaan</h4>
-              <div className="space-y-2 text-sm">
-                {siteConfig.navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-400 hover:text-white transition-colors block"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-white">Kontak</h4>
-              <div className="space-y-2 text-sm text-gray-400">
-                <div>{siteConfig.contact.phone}</div>
-                <div>{siteConfig.contact.email}</div>
-                <div>
-                  {siteConfig.contact.address.street}
-                  <br />
-                  {siteConfig.contact.address.city}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 {siteConfig.name}. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }
