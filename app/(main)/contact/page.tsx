@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import {
   ArrowRight,
   Phone,
@@ -21,39 +20,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import Image from "next/image";
+import LeadForm from "@/components/forms/lead-form";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
-
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -147,7 +119,7 @@ export default function ContactPage() {
                 description: "Respon dalam 24 jam",
                 action: "Kirim Email",
                 href: `mailto:${siteConfig.contact.email}`,
-                color: "msl-navy",
+                color: "msl-orange",
               },
               {
                 icon: MapPin,
@@ -156,7 +128,7 @@ export default function ContactPage() {
                 description: siteConfig.contact.address.city,
                 action: "Lihat Lokasi",
                 href: "#",
-                color: "msl-brown",
+                color: "msl-orange",
               },
               {
                 icon: MessageCircle,
@@ -168,7 +140,7 @@ export default function ContactPage() {
                   /[^0-9]/g,
                   ""
                 )}`,
-                color: "green-600",
+                color: "msl-orange",
               },
             ].map((contact, index) => (
               <Card
@@ -240,123 +212,7 @@ export default function ContactPage() {
 
               <Card className="border-gray-200 shadow-lg">
                 <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-gray-700 flex items-center">
-                          <User className="w-4 h-4 mr-2" />
-                          Nama Lengkap *
-                        </label>
-                        <Input
-                          type="text"
-                          placeholder="Masukkan nama lengkap"
-                          value={formData.name}
-                          onChange={(e) =>
-                            handleInputChange("name", e.target.value)
-                          }
-                          className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-gray-700 flex items-center">
-                          <Building className="w-4 h-4 mr-2" />
-                          Nama Perusahaan
-                        </label>
-                        <Input
-                          type="text"
-                          placeholder="Nama perusahaan"
-                          value={formData.company}
-                          onChange={(e) =>
-                            handleInputChange("company", e.target.value)
-                          }
-                          className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-gray-700 flex items-center">
-                          <Mail className="w-4 h-4 mr-2" />
-                          Email *
-                        </label>
-                        <Input
-                          type="email"
-                          placeholder="email@perusahaan.com"
-                          value={formData.email}
-                          onChange={(e) =>
-                            handleInputChange("email", e.target.value)
-                          }
-                          className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-gray-700 flex items-center">
-                          <Phone className="w-4 h-4 mr-2" />
-                          Nomor Telepon *
-                        </label>
-                        <Input
-                          type="tel"
-                          placeholder="08xx-xxxx-xxxx"
-                          value={formData.phone}
-                          onChange={(e) =>
-                            handleInputChange("phone", e.target.value)
-                          }
-                          className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-700">
-                        Layanan yang Dibutuhkan
-                      </label>
-                      <Select
-                        value={formData.service}
-                        onValueChange={(value) =>
-                          handleInputChange("service", value)
-                        }
-                      >
-                        <SelectTrigger className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange">
-                          <SelectValue placeholder="Pilih layanan yang dibutuhkan" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {siteConfig.services.map((service) => (
-                            <SelectItem key={service.id} value={service.id}>
-                              {service.title}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-700">
-                        Pesan
-                      </label>
-                      <Textarea
-                        rows={5}
-                        placeholder="Deskripsikan kebutuhan logistik Anda secara detail..."
-                        value={formData.message}
-                        onChange={(e) =>
-                          handleInputChange("message", e.target.value)
-                        }
-                        className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-msl-navy hover:bg-msl-dark-blue text-white py-3"
-                      size="lg"
-                    >
-                      <Send className="mr-2 h-5 w-5" />
-                      Kirim Permintaan Konsultasi
-                    </Button>
-                  </form>
+                  <LeadForm />
                 </CardContent>
               </Card>
             </div>

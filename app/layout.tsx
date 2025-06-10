@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import { Toaster } from "sonner";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: siteConfig.name + " | " + siteConfig.tagline,
@@ -74,7 +76,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+
+        <Toaster richColors position="bottom-right" />
+      </body>
     </html>
   );
 }
