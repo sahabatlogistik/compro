@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/config";
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params: { locale }
 }: {

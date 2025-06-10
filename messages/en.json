@@ -1,0 +1,308 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "getQuote": "Get Quote",
+    "freeConsultation": "Free Consultation",
+    "sendMessage": "Send Message",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "required": "Required",
+    "optional": "Optional",
+    "downloadBrochure": "Download Brochure",
+    "viewLocation": "View Location",
+    "sendEmail": "Send Email",
+    "chatWhatsApp": "Chat WhatsApp",
+    "callNow": "Call Now",
+    "openGoogleMaps": "Open in Google Maps"
+  },
+  "home": {
+    "hero": {
+      "badge": "🚛 Trusted Logistics Partner",
+      "title": "Integrated Logistics",
+      "titleHighlight": "Solutions",
+      "description": "We provide comprehensive logistics services with modern technology, extensive distribution network, and commitment to customer satisfaction.",
+      "startConsultation": "Start Consultation",
+      "exploreServices": "Explore Services",
+      "stats": {
+        "activeClients": "Active Clients",
+        "yearsExperience": "Years Experience",
+        "satisfactionRate": "Satisfaction Rate"
+      }
+    },
+    "services": {
+      "badge": "🎯 Featured Services",
+      "title": "Comprehensive Logistics Services",
+      "description": "From transportation to warehousing, we provide end-to-end logistics solutions tailored to your business needs.",
+      "viewAllServices": "View All Services"
+    },
+    "about": {
+      "badge": "🏢 About Company",
+      "title": "Trusted Partner in",
+      "titleHighlight": "Logistics Solutions",
+      "description": "PT. Mitra Sahabat Logistik was established in 2008 with a commitment to providing the best logistics solutions in Indonesia. With more than 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
+      "stats": {
+        "yearsExperience": "Years Experience",
+        "clientsServed": "Clients Served"
+      }
+    },
+    "contact": {
+      "badge": "📞 Contact Us",
+      "title": "Ready to Serve Your",
+      "titleHighlight": "Logistics Needs",
+      "titleEnd": "",
+      "description": "Our expert team is ready to provide consultation and the best solutions for your business logistics needs. Contact us now!",
+      "form": {
+        "title": "Free Consultation",
+        "description": "Get the best offer for your logistics needs"
+      }
+    }
+  },
+  "services": {
+    "hero": {
+      "badge": "🚛 Comprehensive Logistics Services",
+      "title": "Integrated Logistics",
+      "titleHighlight": "Solutions",
+      "titleEnd": "for",
+      "titleEnd2": "Every Need",
+      "description": "From transportation to supply chain management, we provide end-to-end logistics services tailored to your business needs."
+    },
+    "overview": {
+      "badge": "🎯 Featured Services",
+      "title": "Comprehensive Logistics Services",
+      "description": "Choose services that suit your business needs"
+    },
+    "whyChoose": {
+      "badge": "⭐ Why Choose Us",
+      "title": "Commitment to Quality",
+      "description": "15+ years of experience serving 500+ clients with 99.5% satisfaction rate",
+      "features": [
+        {
+          "title": "Modern Technology",
+          "description": "Real-time tracking system and digital platform for full transparency",
+          "metric": "99.9% Uptime"
+        },
+        {
+          "title": "Wide Network",
+          "description": "Coverage area includes all of Indonesia with trusted partners",
+          "metric": "34 Provinces"
+        },
+        {
+          "title": "Professional Team",
+          "description": "Experienced and certified human resources with high commitment",
+          "metric": "500+ Employees"
+        },
+        {
+          "title": "Competitive Pricing",
+          "description": "Cost-effective solutions with the best value without compromising quality",
+          "metric": "Save 30%"
+        }
+      ]
+    },
+    "cta": {
+      "badge": "📞 Ready to Help You",
+      "title": "Start Optimizing Your",
+      "titleHighlight": "Business Logistics",
+      "titleEnd": "",
+      "description": "Our expert team is ready to provide free consultation and the best solutions for your business logistics needs. Contact us now!",
+      "contactNow": "Contact Now"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "🏢 About Company",
+      "title": "Trusted Partner in",
+      "titleHighlight": "Logistics Solutions",
+      "description": "PT. Mitra Sahabat Logistik was established in 2008 with a commitment to providing the best logistics solutions in Indonesia. With more than 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
+      "downloadProfile": "Download Company Profile"
+    },
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "clientsServed": "Clients Served",
+      "satisfactionRate": "Satisfaction Rate",
+      "certified": "Certified"
+    },
+    "visionMission": {
+      "badge": "🎯 Vision & Mission",
+      "title": "Our Commitment",
+      "description": "Vision and mission that guide every step of our journey",
+      "vision": {
+        "title": "Company Vision"
+      },
+      "mission": {
+        "title": "Company Mission"
+      }
+    },
+    "values": {
+      "badge": "💎 Company Values",
+      "title": "Values We Uphold",
+      "description": "Principles that become the foundation in every service we provide"
+    },
+    "cta": {
+      "badge": "🤝 Let's Collaborate",
+      "title": "Join Our",
+      "titleHighlight": "500+ Clients",
+      "titleEnd": "",
+      "description": "Be part of clients who have experienced the benefits of our best logistics solutions. Let's discuss your business logistics needs.",
+      "sendProposal": "Send Proposal"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "📞 Contact Us",
+      "title": "Let's Discuss Your",
+      "titleHighlight": "Logistics Needs",
+      "titleEnd": "",
+      "description": "Our expert team is ready to provide free consultation and the best solutions to optimize your business logistics operations."
+    },
+    "info": {
+      "badge": "📍 Contact Information",
+      "title": "Various Ways to Contact Us",
+      "description": "Choose the most convenient way for you to communicate with our team",
+      "phone": {
+        "title": "Phone",
+        "description": "Monday - Friday, 08:00 - 17:00 WIB"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Response within 24 hours"
+      },
+      "address": {
+        "title": "Office Address"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Chat directly with our team"
+      }
+    },
+    "form": {
+      "badge": "📝 Contact Form",
+      "title": "Get Free Consultation",
+      "description": "Fill out the form below and our team will contact you within 24 hours to provide the best solution.",
+      "fields": {
+        "fullName": "Full Name",
+        "fullNamePlaceholder": "Enter full name",
+        "company": "Company Name",
+        "companyPlaceholder": "Company name",
+        "email": "Email",
+        "emailPlaceholder": "email@company.com",
+        "phone": "Phone Number",
+        "phonePlaceholder": "08xx-xxxx-xxxx",
+        "service": "Required Service",
+        "servicePlaceholder": "Select required service",
+        "message": "Message",
+        "messagePlaceholder": "Describe your logistics needs in detail...",
+        "submit": "Send Consultation Request"
+      }
+    },
+    "companyInfo": {
+      "operatingHours": {
+        "title": "Operating Hours",
+        "weekdays": "Monday - Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "closed": "Closed",
+        "emergency": "Emergency Service: 24/7 for urgent services"
+      },
+      "whyChoose": {
+        "title": "Why Choose MSL?",
+        "reasons": [
+          "15+ years experience in logistics industry",
+          "Professional and certified team",
+          "Real-time tracking technology",
+          "Distribution network throughout Indonesia",
+          "Competitive prices with guaranteed quality",
+          "Responsive customer service 24/7"
+        ]
+      }
+    },
+    "location": {
+      "badge": "📍 Office Location",
+      "title": "Visit Our Office",
+      "description": "Our head office is strategically located in Batam to serve your logistics needs",
+      "fullAddress": {
+        "title": "Full Address"
+      },
+      "transportation": {
+        "title": "Transportation Access",
+        "fromAirport": "From Airport: 15 minutes drive",
+        "fromPort": "From Port: 20 minutes drive",
+        "publicTransport": "Public Transport: City transport available"
+      }
+    }
+  },
+  "form": {
+    "sending": "Sending request...",
+    "success": "Consultation request sent successfully!",
+    "error": "Failed to send request, please try again."
+  },
+  "footer": {
+    "description": "Providing the best logistics solutions to support your business growth with modern technology and professional services.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "copyright": "All rights reserved."
+  },
+  "servicesList": {
+    "transportation": {
+      "title": "Transportation & Distribution",
+      "shortDescription": "Land transportation services with modern fleet and optimal routes for efficient and timely goods distribution.",
+      "features": ["Complete Fleet", "Real-time Tracking", "Goods Insurance"],
+      "pricing": "Starting from Rp 50,000 per shipment"
+    },
+    "warehousing": {
+      "title": "Warehousing & Storage",
+      "shortDescription": "Modern warehousing facilities with inventory management system and high-level security for goods storage.",
+      "features": ["Modern Warehouse", "WMS System", "24/7 Security"],
+      "pricing": "Starting from Rp 15,000 per m³ per month"
+    },
+    "packaging": {
+      "title": "Packaging & Handling",
+      "shortDescription": "Professional packaging services and special handling to ensure goods arrive in prime condition.",
+      "features": ["Custom Packaging", "Special Handling", "Quality Control"],
+      "pricing": "Starting from Rp 5,000 per item"
+    },
+    "lastmile": {
+      "title": "Last Mile Delivery",
+      "shortDescription": "Delivery to final destination with extensive distribution network and responsive customer service.",
+      "features": ["COD Available", "Same Day Delivery", "Flexible Schedule"],
+      "pricing": "Starting from Rp 15,000 per shipment"
+    },
+    "supplyChain": {
+      "title": "Supply Chain Management",
+      "shortDescription": "Supply chain optimization with modern technology for operational efficiency and cost reduction.",
+      "features": ["SCM Consultation", "Process Optimization", "Cost Reduction"],
+      "pricing": "Starting from Rp 25,000,000 per project"
+    },
+    "express": {
+      "title": "Express & Urgent",
+      "shortDescription": "Express service for urgent deliveries with high priority and guaranteed delivery time.",
+      "features": ["Express Delivery", "Emergency Service", "Time Guarantee"],
+      "pricing": "Starting from Rp 100,000 per shipment"
+    }
+  },
+  "companyValues": {
+    "integrity": {
+      "title": "Integrity",
+      "description": "Committed to honesty and transparency in every service"
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "Using cutting-edge technology for efficient logistics solutions"
+    },
+    "quality": {
+      "title": "Quality",
+      "description": "Maintaining high standards in every operational aspect"
+    },
+    "customerSatisfaction": {
+      "title": "Customer Satisfaction",
+      "description": "Prioritizing client needs and satisfaction as our top priority"
+    }
+  }
+}

@@ -15,8 +15,10 @@ import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { toast } from "sonner";
 import { sendLeadToMake } from "@/lib/axios";
+import { useTranslations } from 'next-intl';
 
 export default function LeadForm() {
+  const t = useTranslations();
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -54,9 +56,9 @@ export default function LeadForm() {
         });
       },
       {
-        loading: "Mengirim permintaan...",
-        success: "Permintaan konsultasi berhasil dikirim!",
-        error: "Gagal mengirim permintaan, silakan coba lagi.",
+        loading: t('form.sending'),
+        success: t('form.success'),
+        error: t('form.error'),
       }
     );
   };
@@ -67,11 +69,11 @@ export default function LeadForm() {
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-700 flex items-center">
             <User className="w-4 h-4 mr-2" />
-            Nama Lengkap *
+            {t('contact.form.fields.fullName')} *
           </label>
           <Input
             type="text"
-            placeholder="Masukkan nama lengkap"
+            placeholder={t('contact.form.fields.fullNamePlaceholder')}
             value={formData.name}
             onChange={(e) => handleInputChange("name", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -81,11 +83,11 @@ export default function LeadForm() {
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-700 flex items-center">
             <Building className="w-4 h-4 mr-2" />
-            Nama Perusahaan
+            {t('contact.form.fields.company')}
           </label>
           <Input
             type="text"
-            placeholder="Nama perusahaan"
+            placeholder={t('contact.form.fields.companyPlaceholder')}
             value={formData.company}
             onChange={(e) => handleInputChange("company", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -97,11 +99,11 @@ export default function LeadForm() {
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-700 flex items-center">
             <Mail className="w-4 h-4 mr-2" />
-            Email *
+            {t('contact.form.fields.email')} *
           </label>
           <Input
             type="email"
-            placeholder="email@perusahaan.com"
+            placeholder={t('contact.form.fields.emailPlaceholder')}
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -111,11 +113,11 @@ export default function LeadForm() {
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-700 flex items-center">
             <Phone className="w-4 h-4 mr-2" />
-            Nomor Telepon *
+            {t('contact.form.fields.phone')} *
           </label>
           <Input
             type="tel"
-            placeholder="08xx-xxxx-xxxx"
+            placeholder={t('contact.form.fields.phonePlaceholder')}
             value={formData.phone}
             onChange={(e) => handleInputChange("phone", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -126,19 +128,19 @@ export default function LeadForm() {
 
       <div className="space-y-2">
         <label className="text-sm font-medium text-gray-700">
-          Layanan yang Dibutuhkan
+          {t('contact.form.fields.service')}
         </label>
         <Select
           value={formData.service}
           onValueChange={(value) => handleInputChange("service", value)}
         >
           <SelectTrigger className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange">
-            <SelectValue placeholder="Pilih layanan yang dibutuhkan" />
+            <SelectValue placeholder={t('contact.form.fields.servicePlaceholder')} />
           </SelectTrigger>
           <SelectContent>
             {siteConfig.services.map((service) => (
               <SelectItem key={service.id} value={service.id}>
-                {service.title}
+                {t(`servicesList.${service.id}.title`)}
               </SelectItem>
             ))}
           </SelectContent>
@@ -146,10 +148,10 @@ export default function LeadForm() {
       </div>
 
       <div className="space-y-2">
-        <label className="text-sm font-medium text-gray-700">Pesan</label>
+        <label className="text-sm font-medium text-gray-700">{t('contact.form.fields.message')}</label>
         <Textarea
           rows={5}
-          placeholder="Deskripsikan kebutuhan logistik Anda secara detail..."
+          placeholder={t('contact.form.fields.messagePlaceholder')}
           value={formData.message}
           onChange={(e) => handleInputChange("message", e.target.value)}
           className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -162,7 +164,7 @@ export default function LeadForm() {
         size="lg"
       >
         <Send className="mr-2 h-5 w-5" />
-        Kirim Permintaan Konsultasi
+        {t('contact.form.fields.submit')}
       </Button>
     </form>
   );
