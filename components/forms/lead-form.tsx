@@ -1,3 +1,5 @@
+"use client";
+
 import { Building, Mail, Phone, Send, User } from "lucide-react";
 import React, { useState } from "react";
 import { Input } from "../ui/input";

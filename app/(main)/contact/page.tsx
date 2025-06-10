@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   Phone,
@@ -21,9 +19,14 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
-import Link from "next/link";
-import Image from "next/image";
 import LeadForm from "@/components/forms/lead-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hubungi Kami",
+  description:
+    "Hubungi tim kami untuk konsultasi gratis dan solusi logistik terbaik. Kami siap membantu kebutuhan logistik bisnis Anda.",
+};
 
 export default function ContactPage() {
   return (

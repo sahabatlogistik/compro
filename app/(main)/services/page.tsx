@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   Truck,
@@ -26,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 
 const iconMap = {
   Truck,
@@ -34,6 +33,12 @@ const iconMap = {
   LocationIcon,
   Users,
   Clock,
+};
+
+export const metadata: Metadata = {
+  title: "Layanan Logistik",
+  description:
+    "Jelajahi layanan logistik komprehensif kami yang mencakup transportasi, pergudangan, manajemen rantai pasokan, dan solusi kustom untuk memenuhi kebutuhan bisnis Anda.",
 };
 
 export default function ServicesPage() {

@@ -1,5 +1,5 @@
 export const siteConfig = {
-  url: "https://sahabatlogistik.com",
+  url: process.env.NEXT_PUBLIC_BASE_URL || "https://sahabatlogistik.com",
   name: "PT. Mitra Sahabat Logistik",
   tagline: "Solusi Logistik Terpercaya",
   description:

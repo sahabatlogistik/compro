@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   Truck,
@@ -21,7 +19,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
-import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tentang Kami",
+  description:
+    "Pelajari lebih lanjut tentang PT. Mitra Sahabat Logistik, visi, misi, nilai-nilai, dan komitmen kami dalam memberikan solusi logistik terbaik di Indonesia.",
+};
 
 export default function AboutPage() {
   return (

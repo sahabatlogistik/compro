@@ -10,7 +10,10 @@ import { AppFooter, AppNavbar } from "@/components/app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: siteConfig.name + " | " + siteConfig.tagline,
+  title: {
+    default: siteConfig.name + " | " + siteConfig.tagline,
+    template: "%s | " + siteConfig.name,
+  },
   description: siteConfig.description,
   openGraph: {
     title: siteConfig.name,
