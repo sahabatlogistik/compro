@@ -43,7 +43,51 @@
       "badge": "🎯 Featured Services",
       "title": "Comprehensive Freight Forwarding Services",
       "subtitle": "From domestic to international shipping, we provide end-to-end logistics solutions tailored to your business needs.",
-      "cta": "View All Services"
+      "cta": "View All Services",
+      "items": [
+        {
+          "id": "domestic-land",
+          "icon": "Truck",
+          "title": "Domestic Freight Forwarding - Land",
+          "shortDescription": "Land shipping services throughout Indonesia with modern fleet and optimal routes for efficient and timely goods distribution.",
+          "features": ["Door-to-door Service", "Real-time Tracking", "Cargo Insurance"]
+        },
+        {
+          "id": "domestic-sea",
+          "icon": "Package",
+          "title": "Domestic Freight Forwarding - Sea",
+          "shortDescription": "Domestic sea shipping services for large cargo with efficient costs and regular schedules to major Indonesian ports.",
+          "features": ["FCL & LCL Service", "Port-to-port", "Custom Handling"]
+        },
+        {
+          "id": "domestic-air",
+          "icon": "LocationIcon",
+          "title": "Domestic Freight Forwarding - Air",
+          "shortDescription": "Domestic air shipping services for urgent goods with fastest transit time to all airports in Indonesia.",
+          "features": ["Same Day Service", "Express Delivery", "Temperature Control"]
+        },
+        {
+          "id": "international-import",
+          "icon": "Users",
+          "title": "International Freight Forwarding - Import",
+          "shortDescription": "Import services from worldwide with customs documentation, custom clearance, and delivery to final destination.",
+          "features": ["Custom Clearance", "Door-to-door", "Document Handling"]
+        },
+        {
+          "id": "international-export",
+          "icon": "Warehouse",
+          "title": "International Freight Forwarding - Export",
+          "shortDescription": "Export services worldwide with export documentation, custom clearance, and coordination with international buyers.",
+          "features": ["Export Documentation", "Custom Clearance", "International Network"]
+        },
+        {
+          "id": "custom-clearance",
+          "icon": "Clock",
+          "title": "Custom Clearance & Documentation",
+          "shortDescription": "Customs documentation and custom clearance services that are fast, accurate, and compliant with latest regulations.",
+          "features": ["PPJK Licensed", "Document Preparation", "Regulatory Compliance"]
+        }
+      ]
     },
     "about": {
       "badge": "🏢 About Company",

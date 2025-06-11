@@ -43,7 +43,51 @@
       "badge": "🎯 Layanan Unggulan",
       "title": "Layanan Freight Forwarding Komprehensif",
       "subtitle": "Dari pengiriman domestik hingga internasional, kami menyediakan solusi logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
-      "cta": "Lihat Semua Layanan"
+      "cta": "Lihat Semua Layanan",
+      "items": [
+        {
+          "id": "domestic-land",
+          "icon": "Truck",
+          "title": "Freight Forwarding Domestik - Darat",
+          "shortDescription": "Layanan pengiriman darat ke seluruh Indonesia dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
+          "features": ["Door-to-door Service", "Tracking Real-time", "Asuransi Barang"]
+        },
+        {
+          "id": "domestic-sea",
+          "icon": "Package",
+          "title": "Freight Forwarding Domestik - Laut",
+          "shortDescription": "Layanan pengiriman laut domestik untuk cargo besar dengan biaya efisien dan jadwal reguler ke pelabuhan utama Indonesia.",
+          "features": ["FCL & LCL Service", "Port-to-port", "Custom Handling"]
+        },
+        {
+          "id": "domestic-air",
+          "icon": "LocationIcon",
+          "title": "Freight Forwarding Domestik - Udara",
+          "shortDescription": "Layanan pengiriman udara domestik untuk barang urgent dengan waktu tempuh tercepat ke seluruh bandara di Indonesia.",
+          "features": ["Same Day Service", "Express Delivery", "Temperature Control"]
+        },
+        {
+          "id": "international-import",
+          "icon": "Users",
+          "title": "Freight Forwarding Internasional - Import",
+          "shortDescription": "Layanan import dari seluruh dunia dengan pengurusan dokumen kepabeanan, custom clearance, dan pengiriman hingga tujuan akhir.",
+          "features": ["Custom Clearance", "Door-to-door", "Document Handling"]
+        },
+        {
+          "id": "international-export",
+          "icon": "Warehouse",
+          "title": "Freight Forwarding Internasional - Export",
+          "shortDescription": "Layanan export ke seluruh dunia dengan pengurusan dokumen ekspor, custom clearance, dan koordinasi dengan buyer internasional.",
+          "features": ["Export Documentation", "Custom Clearance", "International Network"]
+        },
+        {
+          "id": "custom-clearance",
+          "icon": "Clock",
+          "title": "Custom Clearance & Documentation",
+          "shortDescription": "Layanan pengurusan dokumen kepabeanan dan custom clearance yang cepat, akurat, dan sesuai dengan regulasi terbaru.",
+          "features": ["PPJK Licensed", "Document Preparation", "Regulatory Compliance"]
+        }
+      ]
     },
     "about": {
       "badge": "🏢 Tentang Perusahaan",

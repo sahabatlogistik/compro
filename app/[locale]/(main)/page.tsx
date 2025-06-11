@@ -140,7 +140,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {siteConfig.services.map((service, index) => {
+            {t.raw("home.services.items").map((service: any, index: number) => {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap];
               return (
                 <Card
@@ -162,7 +162,7 @@ export default function Home() {
                       {service.shortDescription}
                     </CardDescription>
                     <div className="space-y-2">
-                      {service.features.map((feature, idx) => (
+                      {service.features.map((feature: string, idx: number) => (
                         <div
                           key={idx}
                           className="flex items-center text-sm text-gray-600"
