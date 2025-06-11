@@ -58,7 +58,7 @@ export default function AboutPage() {
                 >
                   {t("about.hero.badge")}
                 </Badge>
-                <H1 text={t("about.hero.title")} />
+                <H1 text={t("about.hero.title")} size="xl" />
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {t("about.hero.subtitle")}
                 </p>
@@ -150,7 +150,7 @@ export default function AboutPage() {
             >
               {t("about.vision_mission.badge")}
             </Badge>
-            <H1 text={t("about.vision_mission.title")} />
+            <H1 text={t("about.vision_mission.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("about.vision_mission.subtitle")}
             </p>
@@ -208,7 +208,7 @@ export default function AboutPage() {
             >
               {t("about.values.badge")}
             </Badge>
-            <H1 text={t("about.values.title")} />
+            <H1 text={t("about.values.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("about.values.subtitle")}
             </p>
@@ -268,7 +268,7 @@ export default function AboutPage() {
             >
               {t("about.cta.badge")}
             </Badge>
-            <H1 text={t("about.cta.title")} className="text-white" />
+            <H1 text={t("about.cta.title")} size="lg" className="text-white" />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("about.cta.subtitle")}
             </p>

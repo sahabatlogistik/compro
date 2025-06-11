@@ -1,13 +1,21 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export default function H1({
-  text,
-  className,
-}: {
+interface H1Props {
   text: string;
   className?: string;
-}) {
+  size?: "sm" | "md" | "lg" | "xl" | "2xl";
+}
+
+const sizeClasses = {
+  sm: "text-2xl lg:text-3xl",
+  md: "text-3xl lg:text-4xl", 
+  lg: "text-4xl lg:text-5xl",
+  xl: "text-5xl lg:text-6xl",
+  "2xl": "text-6xl lg:text-7xl",
+};
+
+export default function H1({ text, className, size = "xl" }: H1Props) {
   // Handle multiple styling symbols:
   // *text* = orange color (primary accent)
   // _text_ = italic style
@@ -18,7 +26,8 @@ export default function H1({
   return (
     <h1
       className={cn(
-        "text-5xl lg:text-6xl font-bold text-msl-navy leading-tight",
+        "font-bold text-msl-navy leading-tight",
+        sizeClasses[size],
         className
       )}
     >

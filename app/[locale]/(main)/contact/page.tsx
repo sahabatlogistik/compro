@@ -57,7 +57,7 @@ export default function ContactPage() {
             >
               {t("contact.hero.badge")}
             </Badge>
-            <H1 text={t("contact.hero.title")} className="text-white" />
+            <H1 text={t("contact.hero.title")} size="lg" className="text-white" />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("contact.hero.subtitle")}
             </p>
@@ -75,7 +75,7 @@ export default function ContactPage() {
             >
               {t("contact.info.badge")}
             </Badge>
-            <H1 text={t("contact.info.title")} />
+            <H1 text={t("contact.info.title")} size="md" />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {t("contact.info.subtitle")}
             </p>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                 >
                   {t("contact.form.badge")}
                 </Badge>
-                <H1 text={t("contact.form.title")} />
+                <H1 text={t("contact.form.title")} size="md" />
                 <p className="text-lg text-gray-600">
                   {t("contact.form.subtitle")}
                 </p>
@@ -293,7 +293,7 @@ export default function ContactPage() {
             >
               {t("contact.location.badge")}
             </Badge>
-            <H1 text={t("contact.location.title")} />
+            <H1 text={t("contact.location.title")} size="md" />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {t("contact.location.subtitle")}
             </p>

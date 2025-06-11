@@ -69,7 +69,7 @@ export default function ServicesPage() {
             >
               {t("services.hero.badge")}
             </Badge>
-            <H1 text={t("services.hero.title")} />
+            <H1 text={t("services.hero.title")} size="xl" className="mb-6" />
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
               {t("services.hero.subtitle")}
             </p>
@@ -105,7 +105,7 @@ export default function ServicesPage() {
             >
               {t("services.overview.badge")}
             </Badge>
-            <H1 text={t("services.overview.title")} />
+            <H1 text={t("services.overview.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("services.overview.subtitle")}
             </p>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
             >
               {t("services.why_choose.badge")}
             </Badge>
-            <H1 text={t("services.why_choose.title")} />
+            <H1 text={t("services.why_choose.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("services.why_choose.subtitle")}
             </p>
@@ -217,7 +217,7 @@ export default function ServicesPage() {
             >
               {t("services.cta.badge")}
             </Badge>
-            <H1 text={t("services.cta.title")} className="text-white" />
+            <H1 text={t("services.cta.title")} size="lg" className="text-white" />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("services.cta.subtitle")}
             </p>

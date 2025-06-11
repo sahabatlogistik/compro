@@ -51,7 +51,7 @@ export default function Home() {
                 >
                   {t("home.hero.badge")}
                 </Badge>
-                <H1 text={t("home.hero.title")} />
+                <H1 text={t("home.hero.title")} size="xl" />
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {t("home.hero.subtitle")}
                 </p>
@@ -126,9 +126,7 @@ export default function Home() {
             >
               {t("home.services.badge")}
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t("home.services.title")}
-            </h2>
+            <H1 text={t("home.services.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("home.services.subtitle")}
             </p>
@@ -200,13 +198,7 @@ export default function Home() {
                 >
                   {t("home.about.badge")}
                 </Badge>
-                <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-                  {t("home.about.title")}
-                  <span className="text-msl-orange">
-                    {" "}
-                    {t("common.tagline").split(" ")[1]}
-                  </span>
-                </h2>
+                <H1 text={t("home.about.title")} size="lg" />
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {t("home.about.subtitle")}
                 </p>
@@ -282,14 +274,7 @@ export default function Home() {
                 >
                   {t("home.contact.badge")}
                 </Badge>
-                <h2 className="text-4xl lg:text-5xl font-bold text-white">
-                  {t("home.contact.title")}
-                  <span className="text-msl-orange">
-                    {" "}
-                    {t("common.tagline").split(" ")[1]}
-                  </span>{" "}
-                  Anda
-                </h2>
+                <H1 text={t("home.contact.title")} size="lg" className="text-white" />
                 <p className="text-xl text-gray-300 leading-relaxed">
                   {t("home.contact.subtitle")}
                 </p>
