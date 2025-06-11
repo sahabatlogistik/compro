@@ -23,6 +23,7 @@ import { siteConfig } from "@/lib/config";
 import { Link } from "@/i18n/navigation";
 import LeadForm from "@/components/forms/lead-form";
 import { useTranslations } from "next-intl";
+import H1 from "@/components/ui/h1";
 
 const iconMap = {
   Truck,
@@ -50,13 +51,7 @@ export default function Home() {
                 >
                   {t("home.hero.badge")}
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight">
-                  {t("home.hero.title")}
-                  <span className="text-msl-orange">
-                    {" "}
-                    {t("common.tagline").split(" ")[1]}
-                  </span>
-                </h1>
+                <H1 text={t("home.hero.title")} />
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {t("home.hero.subtitle")}
                 </p>
@@ -141,7 +136,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.raw("home.services.items").map((service: any, index: number) => {
-              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
+              const IconComponent =
+                iconMap[service.icon as keyof typeof iconMap];
               return (
                 <Card
                   key={service.id}

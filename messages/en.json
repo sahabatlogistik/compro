@@ -34,7 +34,7 @@
     },
     "hero": {
       "badge": "🚛 Trusted Logistics Partner",
-      "title": "Domestic & International Freight Forwarding",
+      "title": "*Trusted* Domestic & International Logistics Solution",
       "subtitle": "We are here as a logistics solution that is not only reliable and efficient, but also accessible and pleasant to work with. With extensive experience and network, we are here as your reliable logistics partner: fast, safe, and hassle-free.",
       "cta_primary": "Start Consultation",
       "cta_secondary": "Learn Services",
@@ -55,7 +55,11 @@
           "icon": "Truck",
           "title": "Domestic Freight Forwarding - Land",
           "shortDescription": "Land shipping services throughout Indonesia with modern fleet and optimal routes for efficient and timely goods distribution.",
-          "features": ["Door-to-door Service", "Real-time Tracking", "Cargo Insurance"]
+          "features": [
+            "Door-to-door Service",
+            "Real-time Tracking",
+            "Cargo Insurance"
+          ]
         },
         {
           "id": "domestic-sea",
@@ -69,7 +73,11 @@
           "icon": "LocationIcon",
           "title": "Domestic Freight Forwarding - Air",
           "shortDescription": "Domestic air shipping services for urgent goods with fastest transit time to all airports in Indonesia.",
-          "features": ["Same Day Service", "Express Delivery", "Temperature Control"]
+          "features": [
+            "Same Day Service",
+            "Express Delivery",
+            "Temperature Control"
+          ]
         },
         {
           "id": "international-import",
@@ -83,14 +91,22 @@
           "icon": "Warehouse",
           "title": "International Freight Forwarding - Export",
           "shortDescription": "Export services worldwide with export documentation, custom clearance, and coordination with international buyers.",
-          "features": ["Export Documentation", "Custom Clearance", "International Network"]
+          "features": [
+            "Export Documentation",
+            "Custom Clearance",
+            "International Network"
+          ]
         },
         {
           "id": "custom-clearance",
           "icon": "Clock",
           "title": "Custom Clearance & Documentation",
           "shortDescription": "Customs documentation and custom clearance services that are fast, accurate, and compliant with latest regulations.",
-          "features": ["PPJK Licensed", "Document Preparation", "Regulatory Compliance"]
+          "features": [
+            "PPJK Licensed",
+            "Document Preparation",
+            "Regulatory Compliance"
+          ]
         }
       ]
     },

@@ -34,7 +34,7 @@
     },
     "hero": {
       "badge": "🚛 Sahabat Logistik Terpercaya",
-      "title": "Freight Forwarding Domestik & Internasional",
+      "title": "Solusi Logistik Domestik & Internasional *Terpercaya*",
       "subtitle": "Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama. Dengan pengalaman dan jaringan yang luas, kami hadir sebagai sahabat logistik andalan yang bisa Anda percaya: cepat, aman, dan tanpa ribet.",
       "cta_primary": "Mulai Konsultasi",
       "cta_secondary": "Pelajari Layanan",
@@ -55,7 +55,11 @@
           "icon": "Truck",
           "title": "Freight Forwarding Domestik - Darat",
           "shortDescription": "Layanan pengiriman darat ke seluruh Indonesia dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
-          "features": ["Door-to-door Service", "Tracking Real-time", "Asuransi Barang"]
+          "features": [
+            "Door-to-door Service",
+            "Tracking Real-time",
+            "Asuransi Barang"
+          ]
         },
         {
           "id": "domestic-sea",
@@ -69,7 +73,11 @@
           "icon": "LocationIcon",
           "title": "Freight Forwarding Domestik - Udara",
           "shortDescription": "Layanan pengiriman udara domestik untuk barang urgent dengan waktu tempuh tercepat ke seluruh bandara di Indonesia.",
-          "features": ["Same Day Service", "Express Delivery", "Temperature Control"]
+          "features": [
+            "Same Day Service",
+            "Express Delivery",
+            "Temperature Control"
+          ]
         },
         {
           "id": "international-import",
@@ -83,14 +91,22 @@
           "icon": "Warehouse",
           "title": "Freight Forwarding Internasional - Export",
           "shortDescription": "Layanan export ke seluruh dunia dengan pengurusan dokumen ekspor, custom clearance, dan koordinasi dengan buyer internasional.",
-          "features": ["Export Documentation", "Custom Clearance", "International Network"]
+          "features": [
+            "Export Documentation",
+            "Custom Clearance",
+            "International Network"
+          ]
         },
         {
           "id": "custom-clearance",
           "icon": "Clock",
           "title": "Custom Clearance & Documentation",
           "shortDescription": "Layanan pengurusan dokumen kepabeanan dan custom clearance yang cepat, akurat, dan sesuai dengan regulasi terbaru.",
-          "features": ["PPJK Licensed", "Document Preparation", "Regulatory Compliance"]
+          "features": [
+            "PPJK Licensed",
+            "Document Preparation",
+            "Regulatory Compliance"
+          ]
         }
       ]
     },
