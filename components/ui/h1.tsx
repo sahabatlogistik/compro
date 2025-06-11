@@ -1,11 +1,23 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
-export default function H1({ text }: { text: string }) {
+export default function H1({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   // Combine both * and _ handling using RegExp
   const parts = text.split(/(\*[^*]+\*|_[^_]+_)/g);
 
   return (
-    <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight">
+    <h1
+      className={cn(
+        "text-5xl lg:text-6xl font-bold text-msl-navy leading-tight",
+        className
+      )}
+    >
       {parts.map((part, index) => {
         if (part.startsWith("*") && part.endsWith("*")) {
           return (
