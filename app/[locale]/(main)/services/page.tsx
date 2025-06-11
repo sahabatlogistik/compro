@@ -26,6 +26,7 @@ import { Link } from "@/i18n/navigation";
 import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import H1 from "@/components/ui/h1";
 
 const iconMap = {
   Truck,
@@ -68,13 +69,7 @@ export default function ServicesPage() {
             >
               {t("services.hero.badge")}
             </Badge>
-            <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight mb-6">
-              {t("services.hero.title")}
-              <span className="text-msl-orange">
-                {" "}
-                {t("common.tagline").split(" ")[1]}
-              </span>
-            </h1>
+            <H1 text={t("services.hero.title")} size="xl" className="mb-6" />
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
               {t("services.hero.subtitle")}
             </p>
@@ -110,9 +105,7 @@ export default function ServicesPage() {
             >
               {t("services.overview.badge")}
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t("services.overview.title")}
-            </h2>
+            <H1 text={t("services.overview.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("services.overview.subtitle")}
             </p>
@@ -170,9 +163,7 @@ export default function ServicesPage() {
             >
               {t("services.why_choose.badge")}
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t("services.why_choose.title")}
-            </h2>
+            <H1 text={t("services.why_choose.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("services.why_choose.subtitle")}
             </p>
@@ -191,7 +182,7 @@ export default function ServicesPage() {
                   <CardContent className="pt-8 space-y-4">
                     <div className="text-4xl mb-4">
                       {index === 0
-                        ? "🚀"
+                        ? "📡"
                         : index === 1
                         ? "🛡️"
                         : index === 2
@@ -226,13 +217,7 @@ export default function ServicesPage() {
             >
               {t("services.cta.badge")}
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white">
-              {t("services.cta.title")}
-              <span className="text-msl-orange">
-                {" "}
-                {t("common.tagline").split(" ")[1]}
-              </span>
-            </h2>
+            <H1 text={t("services.cta.title")} size="lg" className="text-white" />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("services.cta.subtitle")}
             </p>

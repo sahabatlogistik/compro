@@ -22,6 +22,7 @@ import { Link } from "@/i18n/navigation";
 import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import H1 from "@/components/ui/h1";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -57,9 +58,7 @@ export default function AboutPage() {
                 >
                   {t("about.hero.badge")}
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight">
-                  {t("about.hero.title")}
-                </h1>
+                <H1 text={t("about.hero.title")} size="xl" />
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {t("about.hero.subtitle")}
                 </p>
@@ -151,9 +150,7 @@ export default function AboutPage() {
             >
               {t("about.vision_mission.badge")}
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t("about.vision_mission.title")}
-            </h2>
+            <H1 text={t("about.vision_mission.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("about.vision_mission.subtitle")}
             </p>
@@ -211,9 +208,7 @@ export default function AboutPage() {
             >
               {t("about.values.badge")}
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t("about.values.title")}
-            </h2>
+            <H1 text={t("about.values.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("about.values.subtitle")}
             </p>
@@ -273,9 +268,7 @@ export default function AboutPage() {
             >
               {t("about.cta.badge")}
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white">
-              {t("about.cta.title")}
-            </h2>
+            <H1 text={t("about.cta.title")} size="lg" className="text-white" />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("about.cta.subtitle")}
             </p>
