@@ -23,7 +23,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import { Link } from "@/i18n/navigation";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
@@ -36,19 +36,22 @@ const iconMap = {
   Clock,
 };
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: { locale: string };
-// }) {
-//   const { locale } = params;
-//   const t = await getTranslations({ locale, namespace: "services" });
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-//   return {
-//     title: t("metadata.title"),
-//     description: t("metadata.description"),
-//   };
-// }
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function ServicesPage() {
   const t = useTranslations();
@@ -117,7 +120,8 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {t.raw("home.services.items").map((service: any, index: number) => {
-              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
+              const IconComponent =
+                iconMap[service.icon as keyof typeof iconMap];
               return (
                 <Card
                   key={service.id}

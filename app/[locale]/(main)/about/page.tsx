@@ -19,23 +19,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import { Link } from "@/i18n/navigation";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: { locale: string }; // ✅ FIXED type
-// }) {
-//   const { locale } = params; // ✅ NO AWAIT here
-//   const t = await getTranslations({ locale, namespace: "about" });
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-//   return {
-//     title: t("metadata.title"),
-//     description: t("metadata.description"),
-//   };
-// }
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function AboutPage() {
   const t = useTranslations("");
@@ -271,12 +274,6 @@ export default function AboutPage() {
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               {t("about.cta.title")}
-              <span className="text-msl-orange">
-                {" "}
-                {siteConfig.company.clients}{" "}
-                {t("about.cta.title").split(" ")[2]}
-              </span>{" "}
-              Kami
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("about.cta.subtitle")}
@@ -294,7 +291,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-msl-navy"
+                className="border-white hover:bg-white text-msl-navy"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 {t("about.cta.cta_secondary")}
