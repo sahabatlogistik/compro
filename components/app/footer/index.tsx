@@ -2,9 +2,9 @@
 
 import { siteConfig } from "@/lib/config";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 import Logo from "@/app/logo.png"; // Adjust the path as necessary
 
@@ -14,10 +14,10 @@ export default function AppFooter() {
   const currentYear = new Date().getFullYear();
 
   const navigation = [
-    { name: t("navigation.home"), href: `/${locale}` },
-    { name: t("navigation.services"), href: `/${locale}/services` },
-    { name: t("navigation.about"), href: `/${locale}/about` },
-    { name: t("navigation.contact"), href: `/${locale}/contact` },
+    { name: t("navigation.home"), href: "/" },
+    { name: t("navigation.services"), href: "/services" },
+    { name: t("navigation.about"), href: "/about" },
+    { name: t("navigation.contact"), href: "/contact" },
   ];
 
   return (
@@ -43,25 +43,25 @@ export default function AppFooter() {
             </h4>
             <div className="space-y-2 text-sm">
               <Link
-                href={`/${locale}/services`}
+                href="/services"
                 className="text-gray-400 hover:text-white transition-colors block"
               >
                 Transportasi
               </Link>
               <Link
-                href={`/${locale}/services`}
+                href="/services"
                 className="text-gray-400 hover:text-white transition-colors block"
               >
                 Pergudangan
               </Link>
               <Link
-                href={`/${locale}/services`}
+                href="/services"
                 className="text-gray-400 hover:text-white transition-colors block"
               >
                 Packaging
               </Link>
               <Link
-                href={`/${locale}/services`}
+                href="/services"
                 className="text-gray-400 hover:text-white transition-colors block"
               >
                 Last Mile

@@ -18,25 +18,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-// export async function generateMetadata(props: {
-//   params: { locale: string };
-// }): Promise<Metadata> {
-//   const locale = props.params.locale;
-
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string }; // ✅ FIXED type
+// }) {
+//   const { locale } = params; // ✅ NO AWAIT here
 //   const t = await getTranslations({ locale, namespace: "about" });
 
-//   console.log({
-//     t: t("meta"),
-//   });
-
 //   return {
-//     title: t("meta.title"),
-//     description: t("meta.description"),
+//     title: t("metadata.title"),
+//     description: t("metadata.description"),
 //   };
 // }
 

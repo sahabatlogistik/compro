@@ -25,15 +25,16 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 // export async function generateMetadata({
-//   params: { locale }
+//   params,
 // }: {
-//   params: { locale: string }
-// }): Promise<Metadata> {
-//   const t = await getTranslations({ locale, namespace: 'contact' });
+//   params: { locale: string };
+// }) {
+//   const { locale } = params;
+//   const t = await getTranslations({ locale, namespace: "contact" });
 
 //   return {
-//     title: t('hero.title'),
-//     description: t('hero.subtitle'),
+//     title: t("metadata.title"),
+//     description: t("metadata.description"),
 //   };
 // }
 
