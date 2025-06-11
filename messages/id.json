@@ -46,7 +46,7 @@
     },
     "services": {
       "badge": "🎯 Layanan Unggulan",
-      "title": "Layanan Freight Forwarding Komprehensif",
+      "title": "Layanan *Freight Forwarding* Komprehensif",
       "subtitle": "Dari pengiriman domestik hingga internasional, kami menyediakan solusi logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
       "cta": "Lihat Semua Layanan",
       "items": [
@@ -112,7 +112,7 @@
     },
     "about": {
       "badge": "🏢 Tentang Perusahaan",
-      "title": "Sahabat Terpercaya untuk Semua Pengiriman Anda",
+      "title": "*Sahabat Terpercaya* untuk Semua Pengiriman Anda",
       "subtitle": "PT. Mitra Sahabat Logistik berbasis di Batam, Kepulauan Riau, bergerak di bidang jasa freight forwarding domestik dan internasional. Kami hadir sebagai sahabat logistik andalan yang bisa Anda percaya dengan layanan yang cepat, aman, dan tanpa ribet.",
       "stats": {
         "experience": "Tahun Berpengalaman",
@@ -122,7 +122,7 @@
     },
     "contact": {
       "badge": "📞 Hubungi Kami",
-      "title": "Siap Melayani Kebutuhan Pengiriman Anda",
+      "title": "Siap Melayani Kebutuhan *Pengiriman* Anda",
       "subtitle": "Tim ahli kami siap memberikan konsultasi dan solusi terbaik untuk kebutuhan freight forwarding bisnis Anda. Hubungi kami sekarang!",
       "form_title": "Konsultasi Gratis",
       "form_subtitle": "Dapatkan penawaran terbaik untuk kebutuhan pengiriman Anda",
@@ -137,19 +137,19 @@
     },
     "hero": {
       "badge": "🚛 Layanan Freight Forwarding Komprehensif",
-      "title": "Solusi Pengiriman Domestik & Internasional",
+      "title": "Solusi Pengiriman Domestik & Internasional *Terpadu*",
       "subtitle": "Dari pengiriman dalam negeri hingga lintas negara, kami menyediakan layanan freight forwarding yang andal, efisien, dan mudah dijangkau untuk semua kebutuhan bisnis Anda.",
       "cta_primary": "Konsultasi Gratis",
       "cta_secondary": "Download Brosur"
     },
     "overview": {
       "badge": "🎯 Layanan Unggulan",
-      "title": "Layanan Freight Forwarding Komprehensif",
+      "title": "Layanan *Freight Forwarding* Komprehensif",
       "subtitle": "Pilih layanan yang sesuai dengan kebutuhan pengiriman bisnis Anda"
     },
     "why_choose": {
       "badge": "⭐ Mengapa Memilih MSL",
-      "title": "All-in-One Service untuk Semua Kebutuhan",
+      "title": "*All-in-One Service* untuk Semua Kebutuhan",
       "subtitle": "Domestik & Internasional, semua kami tangani dengan profesional",
       "features": [
         {
@@ -176,7 +176,7 @@
     },
     "cta": {
       "badge": "📞 Siap Membantu Anda",
-      "title": "Mulai Pengiriman Tanpa Ribet",
+      "title": "Mulai Pengiriman *Tanpa Ribet*",
       "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk kebutuhan freight forwarding bisnis Anda. Hubungi kami sekarang!",
       "cta_primary": "Hubungi Sekarang",
       "cta_secondary": "Kirim Email"
@@ -189,7 +189,7 @@
     },
     "hero": {
       "badge": "🏢 Tentang Perusahaan",
-      "title": "Sahabat Terpercaya untuk Semua Pengiriman Anda",
+      "title": "*Sahabat Terpercaya* untuk Semua Pengiriman Anda",
       "subtitle": "PT Mitra Sahabat Logistik (MSL) adalah perusahaan yang bergerak di bidang jasa freight forwarding domestik dan internasional, berbasis di Batam, Kepulauan Riau. Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama.",
       "cta_primary": "Pelajari Lebih Lanjut",
       "cta_secondary": "Download Company Profile"
@@ -202,7 +202,7 @@
     },
     "vision_mission": {
       "badge": "🎯 Visi & Misi",
-      "title": "Komitmen Kami",
+      "title": "*Komitmen* Kami",
       "subtitle": "Visi dan misi yang mengarahkan setiap langkah perjalanan kami",
       "vision": {
         "title": "Visi Perusahaan",
@@ -215,12 +215,12 @@
     },
     "values": {
       "badge": "💎 Nilai-Nilai Perusahaan",
-      "title": "Nilai yang Kami Junjung",
+      "title": "Nilai yang Kami *Junjung*",
       "subtitle": "Prinsip-prinsip yang menjadi fondasi dalam setiap layanan yang kami berikan"
     },
     "cta": {
       "badge": "🤝 Mari Berkolaborasi",
-      "title": "Bergabunglah dengan 500+ Klien Kami",
+      "title": "Bergabunglah dengan *500+ Klien* Kami",
       "subtitle": "Jadilah bagian dari klien yang telah merasakan manfaat layanan freight forwarding terbaik dari kami. Mari diskusikan kebutuhan pengiriman bisnis Anda.",
       "cta_primary": "Hubungi Kami",
       "cta_secondary": "Kirim Proposal"
@@ -233,12 +233,12 @@
     },
     "hero": {
       "badge": "📞 Hubungi Kami",
-      "title": "Mari Diskusikan Kebutuhan Pengiriman Anda",
+      "title": "Mari Diskusikan Kebutuhan *Pengiriman* Anda",
       "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk mengoptimalkan kebutuhan freight forwarding bisnis Anda."
     },
     "info": {
       "badge": "📍 Informasi Kontak",
-      "title": "Berbagai Cara Menghubungi Kami",
+      "title": "Berbagai Cara *Menghubungi* Kami",
       "subtitle": "Pilih cara yang paling nyaman untuk Anda berkomunikasi dengan tim kami",
       "phone": {
         "title": "Telepon",
@@ -263,7 +263,7 @@
     },
     "form": {
       "badge": "📝 Formulir Kontak",
-      "title": "Dapatkan Konsultasi Gratis",
+      "title": "Dapatkan *Konsultasi Gratis*",
       "subtitle": "Isi formulir di bawah ini dan tim kami akan menghubungi Anda dalam 24 jam untuk memberikan solusi terbaik.",
       "fields": {
         "name": "Nama Lengkap",
@@ -290,7 +290,7 @@
       "emergency": "Emergency Service: 24/7 untuk layanan urgent"
     },
     "why_choose": {
-      "title": "Mengapa Memilih MSL?",
+      "title": "Mengapa Memilih *MSL*?",
       "reasons": [
         "All-in-One Service domestik & internasional",
         "Real-time tracking untuk transparansi penuh",
@@ -302,7 +302,7 @@
     },
     "location": {
       "badge": "📍 Lokasi Kantor",
-      "title": "Kunjungi Kantor Kami",
+      "title": "Kunjungi *Kantor* Kami",
       "subtitle": "Kantor kami berlokasi strategis di Batam, Kepulauan Riau untuk melayani kebutuhan freight forwarding Anda",
       "address_title": "Alamat Lengkap",
       "transportation": {

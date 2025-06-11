@@ -8,8 +8,12 @@ export default function H1({
   text: string;
   className?: string;
 }) {
-  // Combine both * and _ handling using RegExp
-  const parts = text.split(/(\*[^*]+\*|_[^_]+_)/g);
+  // Handle multiple styling symbols:
+  // *text* = orange color (primary accent)
+  // _text_ = italic style
+  // **text** = bold + orange
+  // __text__ = underline
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|__[^_]+__|_[^_]+_)/g);
 
   return (
     <h1
@@ -19,6 +23,15 @@ export default function H1({
       )}
     >
       {parts.map((part, index) => {
+        // **text** = bold + orange
+        if (part.startsWith("**") && part.endsWith("**")) {
+          return (
+            <span key={index} className="text-msl-orange font-extrabold">
+              {part.slice(2, -2)}
+            </span>
+          );
+        }
+        // *text* = orange color
         if (part.startsWith("*") && part.endsWith("*")) {
           return (
             <span key={index} className="text-msl-orange">
@@ -26,9 +39,18 @@ export default function H1({
             </span>
           );
         }
+        // __text__ = underline
+        if (part.startsWith("__") && part.endsWith("__")) {
+          return (
+            <span key={index} className="underline decoration-msl-orange decoration-2">
+              {part.slice(2, -2)}
+            </span>
+          );
+        }
+        // _text_ = italic
         if (part.startsWith("_") && part.endsWith("_")) {
           return (
-            <em key={index} className="italic text-msl-gray">
+            <em key={index} className="italic">
               {part.slice(1, -1)}
             </em>
           );

@@ -23,6 +23,7 @@ import LeadForm from "@/components/forms/lead-form";
 import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import H1 from "@/components/ui/h1";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -56,14 +57,7 @@ export default function ContactPage() {
             >
               {t("contact.hero.badge")}
             </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-              {t("contact.hero.title")}
-              <span className="text-msl-orange">
-                {" "}
-                {t("common.tagline").split(" ")[1]}
-              </span>{" "}
-              Anda
-            </h1>
+            <H1 text={t("contact.hero.title")} className="text-white" />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("contact.hero.subtitle")}
             </p>
@@ -81,9 +75,7 @@ export default function ContactPage() {
             >
               {t("contact.info.badge")}
             </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-msl-navy">
-              {t("contact.info.title")}
-            </h2>
+            <H1 text={t("contact.info.title")} />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {t("contact.info.subtitle")}
             </p>
@@ -189,9 +181,7 @@ export default function ContactPage() {
                 >
                   {t("contact.form.badge")}
                 </Badge>
-                <h2 className="text-3xl lg:text-4xl font-bold text-msl-navy">
-                  {t("contact.form.title")}
-                </h2>
+                <H1 text={t("contact.form.title")} />
                 <p className="text-lg text-gray-600">
                   {t("contact.form.subtitle")}
                 </p>
@@ -303,9 +293,7 @@ export default function ContactPage() {
             >
               {t("contact.location.badge")}
             </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-msl-navy">
-              {t("contact.location.title")}
-            </h2>
+            <H1 text={t("contact.location.title")} />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {t("contact.location.subtitle")}
             </p>
