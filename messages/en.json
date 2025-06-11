@@ -15,6 +15,11 @@
     "read_more": "Read More",
     "back_to_home": "Back to Home"
   },
+  "loading": {
+    "company_name": "PT. Mitra Sahabat Logistik",
+    "tagline": "Trusted Partner for All Your Shipments",
+    "loading_text": "Loading page..."
+  },
   "navigation": {
     "home": "Home",
     "services": "Services",

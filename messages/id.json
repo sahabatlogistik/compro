@@ -15,6 +15,11 @@
     "read_more": "Baca Selengkapnya",
     "back_to_home": "Kembali ke Beranda"
   },
+  "loading": {
+    "company_name": "PT. Mitra Sahabat Logistik",
+    "tagline": "Sahabat Terpercaya untuk Semua Pengiriman Anda",
+    "loading_text": "Memuat halaman..."
+  },
   "navigation": {
     "home": "Beranda",
     "services": "Layanan",
