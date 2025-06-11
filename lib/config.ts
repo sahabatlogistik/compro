@@ -1,9 +1,9 @@
 export const siteConfig = {
   url: process.env.NEXT_PUBLIC_BASE_URL || "https://sahabatlogistik.com",
   name: "PT. Mitra Sahabat Logistik",
-  tagline: "Solusi Logistik Terpercaya",
+  tagline: "Sahabat Terpercaya untuk Semua Pengiriman Anda",
   description:
-    "Memberikan solusi logistik terbaik untuk mendukung pertumbuhan bisnis Anda dengan teknologi modern dan layanan profesional.",
+    "PT Mitra Sahabat Logistik (MSL) adalah perusahaan yang bergerak di bidang jasa freight forwarding domestik dan internasional, berbasis di Batam, Kepulauan Riau. Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama.",
 
   contact: {
     phone: "0812-6602-0295",
@@ -11,7 +11,7 @@ export const siteConfig = {
     email: "ops@sahabatlogistik.com",
     address: {
       street: "Komp. Glory View, Blok B No.12",
-      city: "Legenda Malaka, Batam",
+      city: "Legenda Malaka, Batam, Kepulauan Riau",
     },
   },
 
@@ -31,147 +31,147 @@ export const siteConfig = {
     certification: "ISO 9001:2015",
 
     vision:
-      "Menjadi perusahaan logistik terdepan di Indonesia dengan standar internasional.",
+      "Menjadi perusahaan freight forwarding terdepan di Indonesia yang menjadi sahabat terpercaya untuk semua kebutuhan pengiriman domestik dan internasional.",
     mission:
-      "Memberikan solusi logistik inovatif, efisien, dan berkelanjutan untuk mendukung pertumbuhan bisnis klien.",
+      "Memberikan solusi freight forwarding yang andal, efisien, mudah dijangkau, dan menyenangkan untuk mendukung pertumbuhan bisnis klien dengan layanan yang cepat, aman, dan tanpa ribet.",
 
     values: [
       {
-        title: "Integritas",
+        title: "Keandalan",
         description:
-          "Berkomitmen pada kejujuran dan transparansi dalam setiap layanan",
+          "Berkomitmen memberikan layanan yang konsisten dan dapat diandalkan",
       },
       {
-        title: "Inovasi",
+        title: "Efisiensi",
         description:
-          "Menggunakan teknologi terdepan untuk solusi logistik yang efisien",
+          "Mengoptimalkan proses untuk memberikan solusi yang cepat dan tepat",
       },
       {
-        title: "Kualitas",
-        description: "Menjaga standar tinggi dalam setiap aspek operasional",
+        title: "Kemudahan",
+        description: "Menyediakan layanan yang mudah dijangkau dan user-friendly",
       },
       {
         title: "Kepuasan Pelanggan",
         description:
-          "Mengutamakan kebutuhan dan kepuasan klien sebagai prioritas utama",
+          "Mengutamakan kepuasan klien dengan layanan yang menyenangkan",
       },
     ],
   },
 
   services: [
     {
-      id: "transportation",
+      id: "domestic-land",
       icon: "Truck",
-      title: "Transportasi & Distribusi",
+      title: "Freight Forwarding Domestik - Darat",
       shortDescription:
-        "Layanan transportasi darat dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
+        "Layanan pengiriman darat ke seluruh Indonesia dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
       fullDescription:
-        "Kami menyediakan layanan transportasi dan distribusi komprehensif dengan armada kendaraan modern yang terawat dengan baik. Tim profesional kami memastikan setiap pengiriman dilakukan dengan efisien, aman, dan tepat waktu. Dengan sistem tracking real-time, Anda dapat memantau status pengiriman kapan saja.",
-      features: ["Armada Lengkap", "Tracking Real-time", "Asuransi Barang"],
+        "Kami menyediakan layanan freight forwarding domestik via darat dengan coverage ke seluruh Indonesia. Dengan armada yang terawat dan sistem tracking real-time, kami memastikan barang Anda sampai dengan aman dan tepat waktu.",
+      features: ["Door-to-door Service", "Tracking Real-time", "Asuransi Barang"],
       benefits: [
-        "Pengiriman tepat waktu dengan tingkat akurasi 99.5%",
-        "Monitoring real-time melalui aplikasi mobile dan web",
-        "Asuransi penuh untuk keamanan barang Anda",
-        "Rute optimal untuk efisiensi biaya dan waktu",
+        "Pengiriman ke seluruh Indonesia",
+        "Monitoring real-time melalui aplikasi",
+        "Asuransi penuh untuk keamanan barang",
+        "Rute optimal untuk efisiensi biaya",
         "Tim driver profesional dan berpengalaman",
       ],
-      coverage: "Seluruh Indonesia dengan jaringan partner terpercaya",
+      coverage: "Seluruh Indonesia",
       pricing: "Mulai dari Rp 50.000 per pengiriman",
     },
     {
-      id: "warehousing",
-      icon: "Warehouse",
-      title: "Pergudangan & Storage",
-      shortDescription:
-        "Fasilitas pergudangan modern dengan sistem manajemen inventory dan keamanan tingkat tinggi untuk penyimpanan barang.",
-      fullDescription:
-        "Fasilitas pergudangan kami dilengkapi dengan teknologi Warehouse Management System (WMS) terdepan untuk memastikan pengelolaan inventory yang akurat dan efisien. Dengan sistem keamanan 24/7 dan kontrol suhu yang tepat, barang Anda akan tersimpan dalam kondisi optimal.",
-      features: ["Gudang Modern", "Sistem WMS", "Keamanan 24/7"],
-      benefits: [
-        "Sistem WMS terintegrasi untuk akurasi inventory 99.9%",
-        "Keamanan berlapis dengan CCTV dan security 24/7",
-        "Kontrol suhu dan kelembaban untuk barang sensitif",
-        "Laporan inventory real-time dan detail",
-        "Fleksibilitas penyimpanan jangka pendek dan panjang",
-      ],
-      coverage: "Gudang strategis di Jakarta, Surabaya, dan Medan",
-      pricing: "Mulai dari Rp 15.000 per m³ per bulan",
-    },
-    {
-      id: "packaging",
+      id: "domestic-sea",
       icon: "Package",
-      title: "Packaging & Handling",
+      title: "Freight Forwarding Domestik - Laut",
       shortDescription:
-        "Layanan pengemasan profesional dan handling khusus untuk memastikan barang sampai dengan kondisi prima.",
+        "Layanan pengiriman laut domestik untuk cargo besar dengan biaya efisien dan jadwal reguler ke pelabuhan utama Indonesia.",
       fullDescription:
-        "Tim ahli packaging kami menggunakan material berkualitas tinggi dan teknik pengemasan yang sesuai dengan jenis barang. Dari barang fragile hingga produk berbahaya, kami memiliki solusi packaging yang tepat untuk memastikan keamanan selama transit.",
-      features: ["Custom Packaging", "Handling Khusus", "Quality Control"],
+        "Solusi pengiriman laut domestik yang ideal untuk cargo volume besar. Kami bekerja sama dengan shipping line terpercaya untuk memastikan pengiriman yang aman dan ekonomis ke seluruh pelabuhan di Indonesia.",
+      features: ["FCL & LCL Service", "Port-to-port", "Custom Handling"],
       benefits: [
-        "Material packaging berkualitas tinggi dan ramah lingkungan",
-        "Desain custom sesuai kebutuhan produk",
-        "Handling khusus untuk barang fragile dan berbahaya",
-        "Quality control berlapis untuk memastikan kualitas",
-        "Sertifikasi packaging untuk ekspor internasional",
+        "Biaya ekonomis untuk cargo besar",
+        "Jadwal sailing reguler",
+        "Handling khusus untuk berbagai jenis cargo",
+        "Dokumentasi lengkap dan akurat",
+        "Koordinasi dengan pelabuhan tujuan",
       ],
-      coverage: "Layanan packaging di semua cabang utama",
-      pricing: "Mulai dari Rp 5.000 per item",
+      coverage: "Seluruh pelabuhan utama Indonesia",
+      pricing: "Mulai dari Rp 500.000 per CBM",
     },
     {
-      id: "lastmile",
+      id: "domestic-air",
       icon: "LocationIcon",
-      title: "Last Mile Delivery",
+      title: "Freight Forwarding Domestik - Udara",
       shortDescription:
-        "Pengiriman hingga tujuan akhir dengan jaringan distribusi luas dan layanan pelanggan yang responsif.",
+        "Layanan pengiriman udara domestik untuk barang urgent dengan waktu tempuh tercepat ke seluruh bandara di Indonesia.",
       fullDescription:
-        "Layanan last mile delivery kami memastikan produk sampai ke tangan konsumen akhir dengan cepat dan aman. Dengan jaringan kurir yang luas dan sistem yang fleksibel, kami dapat mengakomodasi berbagai kebutuhan pengiriman termasuk same day delivery dan COD.",
-      features: ["COD Available", "Same Day Delivery", "Flexible Schedule"],
+        "Layanan freight forwarding udara domestik untuk kebutuhan pengiriman cepat dan urgent. Dengan jaringan airline partner yang luas, kami dapat mengirim ke seluruh bandara di Indonesia dengan waktu tempuh minimal.",
+      features: ["Same Day Service", "Express Delivery", "Temperature Control"],
       benefits: [
-        "Same day delivery untuk area Jakarta dan sekitarnya",
-        "Layanan COD (Cash on Delivery) tersedia",
-        "Penjadwalan pengiriman yang fleksibel",
-        "Notifikasi real-time kepada penerima",
-        "Proof of delivery dengan foto dan tanda tangan digital",
+        "Pengiriman tercepat 1-2 hari",
+        "Handling khusus untuk barang sensitif",
+        "Temperature controlled untuk produk khusus",
+        "Prioritas handling di bandara",
+        "Dokumentasi cepat dan akurat",
       ],
-      coverage: "Jabodetabek, Bandung, Surabaya, dan kota besar lainnya",
-      pricing: "Mulai dari Rp 15.000 per pengiriman",
+      coverage: "Seluruh bandara di Indonesia",
+      pricing: "Mulai dari Rp 25.000 per kg",
     },
     {
-      id: "supply-chain",
+      id: "international-import",
       icon: "Users",
-      title: "Supply Chain Management",
+      title: "Freight Forwarding Internasional - Import",
       shortDescription:
-        "Optimasi rantai pasokan dengan teknologi modern untuk efisiensi operasional dan pengurangan biaya.",
+        "Layanan import dari seluruh dunia dengan pengurusan dokumen kepabeanan, custom clearance, dan pengiriman hingga tujuan akhir.",
       fullDescription:
-        "Konsultan supply chain berpengalaman kami akan menganalisis dan mengoptimalkan seluruh rantai pasokan Anda. Dari procurement hingga distribution, kami membantu meningkatkan efisiensi, mengurangi biaya, dan meningkatkan service level.",
-      features: ["SCM Consultation", "Process Optimization", "Cost Reduction"],
+        "Layanan freight forwarding import yang komprehensif dari seluruh dunia. Tim berpengalaman kami menangani seluruh proses mulai dari koordinasi dengan supplier, pengurusan dokumen, custom clearance, hingga pengiriman ke tujuan akhir.",
+      features: ["Custom Clearance", "Door-to-door", "Document Handling"],
       benefits: [
-        "Analisis mendalam terhadap supply chain existing",
-        "Rekomendasi optimasi berdasarkan best practice",
-        "Implementasi teknologi untuk automation",
-        "Pengurangan biaya operasional hingga 30%",
-        "Peningkatan service level dan customer satisfaction",
+        "Pengurusan dokumen import lengkap",
+        "Custom clearance yang cepat dan akurat",
+        "Koordinasi dengan supplier internasional",
+        "Pengiriman hingga alamat tujuan",
+        "Konsultasi regulasi import terbaru",
       ],
-      coverage: "Konsultasi tersedia secara nasional",
-      pricing: "Mulai dari Rp 25.000.000 per project",
+      coverage: "Import dari seluruh dunia",
+      pricing: "Mulai dari USD 200 per shipment",
     },
     {
-      id: "express",
-      icon: "Clock",
-      title: "Express & Urgent",
+      id: "international-export",
+      icon: "Warehouse",
+      title: "Freight Forwarding Internasional - Export",
       shortDescription:
-        "Layanan ekspres untuk pengiriman mendesak dengan prioritas tinggi dan waktu pengiriman yang dijamin.",
+        "Layanan export ke seluruh dunia dengan pengurusan dokumen ekspor, custom clearance, dan koordinasi dengan buyer internasional.",
       fullDescription:
-        "Untuk kebutuhan pengiriman mendesak, layanan express kami memberikan solusi cepat dengan jaminan waktu pengiriman. Tim khusus kami siap menangani pengiriman urgent 24/7 dengan prioritas tertinggi.",
-      features: ["Express Delivery", "Emergency Service", "Time Guarantee"],
+        "Layanan freight forwarding export yang membantu bisnis Indonesia menjangkau pasar global. Kami menangani seluruh proses export mulai dari pickup, dokumentasi, custom clearance, hingga koordinasi dengan buyer di negara tujuan.",
+      features: ["Export Documentation", "Custom Clearance", "International Network"],
       benefits: [
-        "Pengiriman dalam 2-4 jam untuk area Jakarta",
-        "Layanan emergency 24/7 termasuk weekend",
-        "Jaminan waktu pengiriman atau uang kembali",
-        "Dedicated courier untuk pengiriman urgent",
-        "Real-time tracking dengan update setiap 15 menit",
+        "Pengurusan dokumen export lengkap",
+        "Custom clearance yang profesional",
+        "Jaringan agent internasional terpercaya",
+        "Koordinasi dengan buyer di negara tujuan",
+        "Konsultasi regulasi export terbaru",
       ],
-      coverage: "Jakarta, Surabaya, Bandung dengan ekspansi ke kota lain",
-      pricing: "Mulai dari Rp 100.000 per pengiriman",
+      coverage: "Export ke seluruh dunia",
+      pricing: "Mulai dari USD 250 per shipment",
+    },
+    {
+      id: "custom-clearance",
+      icon: "Clock",
+      title: "Custom Clearance & Documentation",
+      shortDescription:
+        "Layanan pengurusan dokumen kepabeanan dan custom clearance yang cepat, akurat, dan sesuai dengan regulasi terbaru.",
+      fullDescription:
+        "Layanan custom clearance dan dokumentasi yang ditangani oleh tim berpengalaman dan tersertifikasi. Kami memastikan proses clearance berjalan lancar dan sesuai dengan regulasi kepabeanan yang berlaku.",
+      features: ["PPJK Licensed", "Document Preparation", "Regulatory Compliance"],
+      benefits: [
+        "Tim PPJK bersertifikat dan berpengalaman",
+        "Proses clearance yang cepat dan akurat",
+        "Update regulasi kepabeanan terbaru",
+        "Pengurusan dokumen lengkap dan tepat",
+        "Koordinasi dengan pihak bea cukai",
+      ],
+      coverage: "Seluruh pelabuhan dan bandara Indonesia",
+      pricing: "Mulai dari Rp 500.000 per dokumen",
     },
   ],
 

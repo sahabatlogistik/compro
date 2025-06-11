@@ -1,8 +1,8 @@
 {
   "common": {
     "company_name": "PT. Mitra Sahabat Logistik",
-    "tagline": "Solusi Logistik Terpercaya",
-    "description": "Memberikan solusi logistik terbaik untuk mendukung pertumbuhan bisnis Anda dengan teknologi modern dan layanan profesional.",
+    "tagline": "Sahabat Terpercaya untuk Semua Pengiriman Anda",
+    "description": "PT Mitra Sahabat Logistik (MSL) adalah perusahaan yang bergerak di bidang jasa freight forwarding domestik dan internasional, berbasis di Batam, Kepulauan Riau. Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama.",
     "phone": "Telepon",
     "email": "Email",
     "address": "Alamat",
@@ -25,12 +25,12 @@
   "home": {
     "metadata": {
       "title": "Beranda",
-      "description": "Selamat datang di PT. Mitra Sahabat Logistik, mitra terpercaya dalam solusi logistik di Indonesia. Kami menyediakan layanan logistik komprehensif untuk mendukung kebutuhan bisnis Anda."
+      "description": "Selamat datang di PT. Mitra Sahabat Logistik, sahabat terpercaya untuk semua pengiriman Anda. Kami menyediakan layanan freight forwarding domestik dan internasional dari Batam."
     },
     "hero": {
-      "badge": "🚛 Mitra Logistik Terpercaya",
-      "title": "Solusi Logistik Terpadu",
-      "subtitle": "Kami menyediakan layanan logistik komprehensif dengan teknologi modern, jaringan distribusi luas, dan komitmen terhadap kepuasan pelanggan.",
+      "badge": "🚛 Sahabat Logistik Terpercaya",
+      "title": "Freight Forwarding Domestik & Internasional",
+      "subtitle": "Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama. Dengan pengalaman dan jaringan yang luas, kami hadir sebagai sahabat logistik andalan yang bisa Anda percaya: cepat, aman, dan tanpa ribet.",
       "cta_primary": "Mulai Konsultasi",
       "cta_secondary": "Pelajari Layanan",
       "stats": {
@@ -41,14 +41,14 @@
     },
     "services": {
       "badge": "🎯 Layanan Unggulan",
-      "title": "Layanan Logistik Komprehensif",
-      "subtitle": "Dari transportasi hingga pergudangan, kami menyediakan solusi logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
+      "title": "Layanan Freight Forwarding Komprehensif",
+      "subtitle": "Dari pengiriman domestik hingga internasional, kami menyediakan solusi logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
       "cta": "Lihat Semua Layanan"
     },
     "about": {
       "badge": "🏢 Tentang Perusahaan",
-      "title": "Mitra Terpercaya dalam Solusi Logistik",
-      "subtitle": "PT. Mitra Sahabat Logistik berdiri sejak 2008 dengan komitmen memberikan solusi logistik terbaik di Indonesia. Dengan pengalaman lebih dari 15+ tahun, kami telah melayani berbagai industri dan membangun reputasi sebagai mitra logistik yang handal dan profesional.",
+      "title": "Sahabat Terpercaya untuk Semua Pengiriman Anda",
+      "subtitle": "PT. Mitra Sahabat Logistik berbasis di Batam, Kepulauan Riau, bergerak di bidang jasa freight forwarding domestik dan internasional. Kami hadir sebagai sahabat logistik andalan yang bisa Anda percaya dengan layanan yang cepat, aman, dan tanpa ribet.",
       "stats": {
         "experience": "Tahun Berpengalaman",
         "clients": "Klien Terlayani"
@@ -57,62 +57,62 @@
     },
     "contact": {
       "badge": "📞 Hubungi Kami",
-      "title": "Siap Melayani Kebutuhan Logistik Anda",
-      "subtitle": "Tim ahli kami siap memberikan konsultasi dan solusi terbaik untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!",
+      "title": "Siap Melayani Kebutuhan Pengiriman Anda",
+      "subtitle": "Tim ahli kami siap memberikan konsultasi dan solusi terbaik untuk kebutuhan freight forwarding bisnis Anda. Hubungi kami sekarang!",
       "form_title": "Konsultasi Gratis",
-      "form_subtitle": "Dapatkan penawaran terbaik untuk kebutuhan logistik Anda",
+      "form_subtitle": "Dapatkan penawaran terbaik untuk kebutuhan pengiriman Anda",
       "cta_primary": "Hubungi Kami",
       "cta_secondary": "Kirim Email"
     }
   },
   "services": {
     "metadata": {
-      "title": "Layanan Logistik",
-      "description": "PT. Mitra Sahabat Logistik menyediakan berbagai layanan logistik komprehensif untuk mendukung kebutuhan bisnis Anda."
+      "title": "Layanan Freight Forwarding",
+      "description": "PT. Mitra Sahabat Logistik menyediakan layanan freight forwarding domestik dan internasional yang komprehensif untuk mendukung kebutuhan bisnis Anda."
     },
     "hero": {
-      "badge": "🚛 Layanan Logistik Komprehensif",
-      "title": "Solusi Logistik Terpadu untuk Setiap Kebutuhan",
-      "subtitle": "Dari transportasi hingga supply chain management, kami menyediakan layanan logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
+      "badge": "🚛 Layanan Freight Forwarding Komprehensif",
+      "title": "Solusi Pengiriman Domestik & Internasional",
+      "subtitle": "Dari pengiriman dalam negeri hingga lintas negara, kami menyediakan layanan freight forwarding yang andal, efisien, dan mudah dijangkau untuk semua kebutuhan bisnis Anda.",
       "cta_primary": "Konsultasi Gratis",
       "cta_secondary": "Download Brosur"
     },
     "overview": {
       "badge": "🎯 Layanan Unggulan",
-      "title": "Layanan Logistik Komprehensif",
-      "subtitle": "Pilih layanan yang sesuai dengan kebutuhan bisnis Anda"
+      "title": "Layanan Freight Forwarding Komprehensif",
+      "subtitle": "Pilih layanan yang sesuai dengan kebutuhan pengiriman bisnis Anda"
     },
     "why_choose": {
-      "badge": "⭐ Mengapa Memilih Kami",
-      "title": "Komitmen Terhadap Kualitas",
-      "subtitle": "Pengalaman 15+ tahun melayani 500+ klien dengan tingkat kepuasan 99.5%",
+      "badge": "⭐ Mengapa Memilih MSL",
+      "title": "All-in-One Service untuk Semua Kebutuhan",
+      "subtitle": "Domestik & Internasional, semua kami tangani dengan profesional",
       "features": [
         {
-          "title": "Teknologi Modern",
-          "description": "Sistem tracking real-time dan platform digital untuk transparansi penuh",
-          "metric": "99.9% Uptime"
+          "title": "Real-Time Tracking",
+          "description": "Cek status pengiriman Anda kapan pun, di mana pun melalui sistem tracking modern",
+          "metric": "24/7 Monitoring"
         },
         {
-          "title": "Jaringan Luas",
-          "description": "Coverage area mencakup seluruh Indonesia dengan partner terpercaya",
-          "metric": "34 Provinsi"
+          "title": "Keamanan & Ketepatan",
+          "description": "Dikelola tim berpengalaman dengan sistem profesional dan standar keamanan tinggi",
+          "metric": "99.5% Akurasi"
         },
         {
-          "title": "Tim Profesional",
-          "description": "SDM berpengalaman dan tersertifikasi dengan komitmen tinggi",
-          "metric": "500+ Karyawan"
+          "title": "Respons Super Cepat",
+          "description": "Tim customer service yang selalu standby untuk membantu kebutuhan Anda",
+          "metric": "< 1 Jam Respon"
         },
         {
-          "title": "Harga Kompetitif",
-          "description": "Solusi cost-effective dengan value terbaik tanpa mengorbankan kualitas",
-          "metric": "Hemat 30%"
+          "title": "Harga Bersahabat",
+          "description": "Layanan berkualitas tinggi dengan harga yang kompetitif dan transparan",
+          "metric": "Hemat 25%"
         }
       ]
     },
     "cta": {
       "badge": "📞 Siap Membantu Anda",
-      "title": "Mulai Optimasi Logistik Bisnis Anda",
-      "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!",
+      "title": "Mulai Pengiriman Tanpa Ribet",
+      "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk kebutuhan freight forwarding bisnis Anda. Hubungi kami sekarang!",
       "cta_primary": "Hubungi Sekarang",
       "cta_secondary": "Kirim Email"
     }
@@ -120,12 +120,12 @@
   "about": {
     "metadata": {
       "title": "Tentang Kami",
-      "description": "Mengenal lebih dekat PT. Mitra Sahabat Logistik, mitra terpercaya dalam solusi logistik di Indonesia dengan pengalaman lebih dari 15 tahun."
+      "description": "Mengenal lebih dekat PT. Mitra Sahabat Logistik, sahabat terpercaya untuk semua pengiriman Anda dengan layanan freight forwarding domestik dan internasional."
     },
     "hero": {
       "badge": "🏢 Tentang Perusahaan",
-      "title": "Mitra Terpercaya dalam Solusi Logistik",
-      "subtitle": "PT. Mitra Sahabat Logistik berdiri sejak 2008 dengan komitmen memberikan solusi logistik terbaik di Indonesia. Dengan pengalaman lebih dari 15+ tahun, kami telah melayani berbagai industri dan membangun reputasi sebagai mitra logistik yang handal dan profesional.",
+      "title": "Sahabat Terpercaya untuk Semua Pengiriman Anda",
+      "subtitle": "PT Mitra Sahabat Logistik (MSL) adalah perusahaan yang bergerak di bidang jasa freight forwarding domestik dan internasional, berbasis di Batam, Kepulauan Riau. Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama.",
       "cta_primary": "Pelajari Lebih Lanjut",
       "cta_secondary": "Download Company Profile"
     },
@@ -141,11 +141,11 @@
       "subtitle": "Visi dan misi yang mengarahkan setiap langkah perjalanan kami",
       "vision": {
         "title": "Visi Perusahaan",
-        "content": "Menjadi perusahaan logistik terdepan di Indonesia dengan standar internasional."
+        "content": "Menjadi perusahaan freight forwarding terdepan di Indonesia yang menjadi sahabat terpercaya untuk semua kebutuhan pengiriman domestik dan internasional."
       },
       "mission": {
         "title": "Misi Perusahaan",
-        "content": "Memberikan solusi logistik inovatif, efisien, dan berkelanjutan untuk mendukung pertumbuhan bisnis klien."
+        "content": "Memberikan solusi freight forwarding yang andal, efisien, mudah dijangkau, dan menyenangkan untuk mendukung pertumbuhan bisnis klien dengan layanan yang cepat, aman, dan tanpa ribet."
       }
     },
     "values": {
@@ -156,7 +156,7 @@
     "cta": {
       "badge": "🤝 Mari Berkolaborasi",
       "title": "Bergabunglah dengan 500+ Klien Kami",
-      "subtitle": "Jadilah bagian dari klien yang telah merasakan manfaat solusi logistik terbaik dari kami. Mari diskusikan kebutuhan logistik bisnis Anda.",
+      "subtitle": "Jadilah bagian dari klien yang telah merasakan manfaat layanan freight forwarding terbaik dari kami. Mari diskusikan kebutuhan pengiriman bisnis Anda.",
       "cta_primary": "Hubungi Kami",
       "cta_secondary": "Kirim Proposal"
     }
@@ -164,12 +164,12 @@
   "contact": {
     "metadata": {
       "title": "Kontak Kami",
-      "description": "Hubungi PT. Mitra Sahabat Logistik untuk mendapatkan solusi logistik terbaik. Tim kami siap membantu Anda dengan konsultasi gratis."
+      "description": "Hubungi PT. Mitra Sahabat Logistik untuk mendapatkan solusi freight forwarding terbaik. Tim kami siap membantu Anda dengan konsultasi gratis."
     },
     "hero": {
       "badge": "📞 Hubungi Kami",
-      "title": "Mari Diskusikan Kebutuhan Logistik Anda",
-      "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk mengoptimalkan operasional logistik bisnis Anda."
+      "title": "Mari Diskusikan Kebutuhan Pengiriman Anda",
+      "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk mengoptimalkan kebutuhan freight forwarding bisnis Anda."
     },
     "info": {
       "badge": "📍 Informasi Kontak",
@@ -187,7 +187,7 @@
       },
       "address": {
         "title": "Alamat Kantor",
-        "description": "Legenda Malaka, Batam",
+        "description": "Batam, Kepulauan Riau",
         "action": "Lihat Lokasi"
       },
       "whatsapp": {
@@ -212,7 +212,7 @@
         "service": "Layanan yang Dibutuhkan",
         "service_placeholder": "Pilih layanan yang dibutuhkan",
         "message": "Pesan",
-        "message_placeholder": "Deskripsikan kebutuhan logistik Anda secara detail..."
+        "message_placeholder": "Deskripsikan kebutuhan pengiriman Anda secara detail..."
       },
       "submit": "Kirim Permintaan Konsultasi"
     },
@@ -227,23 +227,23 @@
     "why_choose": {
       "title": "Mengapa Memilih MSL?",
       "reasons": [
-        "Pengalaman 15+ tahun di industri logistik",
-        "Tim profesional dan bersertifikat",
-        "Teknologi tracking real-time",
-        "Jaringan distribusi seluruh Indonesia",
-        "Harga kompetitif dengan kualitas terjamin",
-        "Customer service responsif 24/7"
+        "All-in-One Service domestik & internasional",
+        "Real-time tracking untuk transparansi penuh",
+        "Tim berpengalaman dengan sistem profesional",
+        "Respons super cepat dan customer service standby",
+        "Harga bersahabat dengan kualitas terjamin",
+        "Jaringan mitra logistik internasional terpercaya"
       ]
     },
     "location": {
       "badge": "📍 Lokasi Kantor",
       "title": "Kunjungi Kantor Kami",
-      "subtitle": "Kantor pusat kami berlokasi strategis di Batam untuk melayani kebutuhan logistik Anda",
+      "subtitle": "Kantor kami berlokasi strategis di Batam, Kepulauan Riau untuk melayani kebutuhan freight forwarding Anda",
       "address_title": "Alamat Lengkap",
       "transportation": {
         "title": "Akses Transportasi",
         "airport": "Dari Bandara: 15 menit berkendara",
-        "port": "Dari Pelabuhan: 20 menit berkendara",
+        "port": "Dari Pelabuhan: 10 menit berkendara",
         "public": "Transportasi Umum: Tersedia angkutan kota"
       },
       "maps_action": "Buka di Google Maps"
@@ -260,7 +260,7 @@
     "sending": "Mengirim permintaan..."
   },
   "footer": {
-    "description": "Memberikan solusi logistik terbaik untuk mendukung pertumbuhan bisnis Anda dengan teknologi modern dan layanan profesional.",
+    "description": "PT Mitra Sahabat Logistik (MSL) adalah perusahaan freight forwarding domestik dan internasional berbasis di Batam. Kami hadir sebagai sahabat logistik andalan yang cepat, aman, dan tanpa ribet.",
     "services_title": "Layanan",
     "company_title": "Perusahaan",
     "contact_title": "Kontak",
