@@ -69,11 +69,11 @@ export default function LeadForm() {
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-700 flex items-center">
             <User className="w-4 h-4 mr-2" />
-            {t('contact.form.fields.fullName')} *
+            {t('contact.form.fields.name')} *
           </label>
           <Input
             type="text"
-            placeholder={t('contact.form.fields.fullNamePlaceholder')}
+            placeholder={t('contact.form.fields.name_placeholder')}
             value={formData.name}
             onChange={(e) => handleInputChange("name", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -87,7 +87,7 @@ export default function LeadForm() {
           </label>
           <Input
             type="text"
-            placeholder={t('contact.form.fields.companyPlaceholder')}
+            placeholder={t('contact.form.fields.company_placeholder')}
             value={formData.company}
             onChange={(e) => handleInputChange("company", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -103,7 +103,7 @@ export default function LeadForm() {
           </label>
           <Input
             type="email"
-            placeholder={t('contact.form.fields.emailPlaceholder')}
+            placeholder={t('contact.form.fields.email_placeholder')}
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -117,7 +117,7 @@ export default function LeadForm() {
           </label>
           <Input
             type="tel"
-            placeholder={t('contact.form.fields.phonePlaceholder')}
+            placeholder={t('contact.form.fields.phone_placeholder')}
             value={formData.phone}
             onChange={(e) => handleInputChange("phone", e.target.value)}
             className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -135,12 +135,12 @@ export default function LeadForm() {
           onValueChange={(value) => handleInputChange("service", value)}
         >
           <SelectTrigger className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange">
-            <SelectValue placeholder={t('contact.form.fields.servicePlaceholder')} />
+            <SelectValue placeholder={t('contact.form.fields.service_placeholder')} />
           </SelectTrigger>
           <SelectContent>
             {siteConfig.services.map((service) => (
               <SelectItem key={service.id} value={service.id}>
-                {t(`servicesList.${service.id}.title`)}
+                {service.title}
               </SelectItem>
             ))}
           </SelectContent>
@@ -151,7 +151,7 @@ export default function LeadForm() {
         <label className="text-sm font-medium text-gray-700">{t('contact.form.fields.message')}</label>
         <Textarea
           rows={5}
-          placeholder={t('contact.form.fields.messagePlaceholder')}
+          placeholder={t('contact.form.fields.message_placeholder')}
           value={formData.message}
           onChange={(e) => handleInputChange("message", e.target.value)}
           className="border-gray-300 focus:border-msl-orange focus:ring-msl-orange"
@@ -164,7 +164,7 @@ export default function LeadForm() {
         size="lg"
       >
         <Send className="mr-2 h-5 w-5" />
-        {t('contact.form.fields.submit')}
+        {t('contact.form.submit')}
       </Button>
     </form>
   );

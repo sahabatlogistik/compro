@@ -24,16 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import LeadForm from "@/components/forms/lead-form";
-import { useTranslations } from 'next-intl';
-
-const iconMap = {
-  Truck,
-  Warehouse,
-  Package,
-  LocationIcon,
-  Users,
-  Clock,
-};
+import { useTranslations } from "next-intl";
 
 export default function Home() {
   const t = useTranslations();
@@ -50,31 +41,31 @@ export default function Home() {
                   variant="secondary"
                   className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
                 >
-                  {t('home.hero.badge')}
+                  {t("home.hero.badge")}
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight">
-                  {t('home.hero.title')}
-                  <span className="text-msl-orange"> {t('home.hero.titleHighlight')}</span>
+                  {t("home.hero.title")}
+                  <span className="text-msl-orange">
+                    {" "}
+                    {t("common.tagline").split(" ")[1]}
+                  </span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  {t('home.hero.description')}
+                  {t("home.hero.subtitle")}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-msl-navy hover:bg-msl-dark-blue text-white"
+                <Link
+                  href={siteConfig.contact.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {t('home.hero.startConsultation')}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Link href="/services">
                   <Button
                     size="lg"
-                    variant="outline"
-                    className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white w-full"
+                    className="bg-msl-navy hover:bg-msl-dark-blue text-white"
                   >
-                    {t('home.hero.exploreServices')}
+                    {t("home.hero.cta_primary")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
               </div>
@@ -83,19 +74,25 @@ export default function Home() {
                   <div className="text-3xl font-bold text-msl-navy">
                     {siteConfig.company.clients}
                   </div>
-                  <div className="text-sm text-gray-600">{t('home.hero.stats.activeClients')}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("home.hero.stats.clients")}
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-msl-navy">
                     {siteConfig.company.experience}
                   </div>
-                  <div className="text-sm text-gray-600">{t('home.hero.stats.yearsExperience')}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("home.hero.stats.experience")}
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-msl-navy">
                     {siteConfig.company.satisfaction}
                   </div>
-                  <div className="text-sm text-gray-600">{t('home.hero.stats.satisfactionRate')}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("home.hero.stats.satisfaction")}
+                  </div>
                 </div>
               </div>
             </div>
@@ -125,53 +122,113 @@ export default function Home() {
               variant="secondary"
               className="bg-msl-navy/10 text-msl-navy border-msl-navy/20"
             >
-              {t('home.services.badge')}
+              {t("home.services.badge")}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t('home.services.title')}
+              {t("home.services.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('home.services.description')}
+              {t("home.services.subtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {siteConfig.services.map((service, index) => {
-              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
-              return (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <CardHeader className="space-y-4">
-                    <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
-                      <IconComponent className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
-                    </div>
-                    <CardTitle className="text-xl text-msl-navy">
-                      {t(`servicesList.${service.id}.title`)}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <CardDescription className="text-gray-600 leading-relaxed">
-                      {t(`servicesList.${service.id}.shortDescription`)}
-                    </CardDescription>
-                    <div className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-center text-sm text-gray-600"
-                        >
-                          <div className="w-1.5 h-1.5 bg-msl-orange rounded-full mr-3" />
-                          {t(`servicesList.${service.id}.features.${idx}`)}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {[
+              {
+                icon: Truck,
+                title: "Transportasi & Distribusi",
+                description:
+                  "Layanan transportasi darat dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
+                features: [
+                  "Armada Lengkap",
+                  "Tracking Real-time",
+                  "Asuransi Barang",
+                ],
+              },
+              {
+                icon: Warehouse,
+                title: "Pergudangan & Storage",
+                description:
+                  "Fasilitas pergudangan modern dengan sistem manajemen inventory dan keamanan tingkat tinggi untuk penyimpanan barang.",
+                features: ["Gudang Modern", "Sistem WMS", "Keamanan 24/7"],
+              },
+              {
+                icon: Package,
+                title: "Packaging & Handling",
+                description:
+                  "Layanan pengemasan profesional dan handling khusus untuk memastikan barang sampai dengan kondisi prima.",
+                features: [
+                  "Custom Packaging",
+                  "Handling Khusus",
+                  "Quality Control",
+                ],
+              },
+              {
+                icon: LocationIcon,
+                title: "Last Mile Delivery",
+                description:
+                  "Pengiriman hingga tujuan akhir dengan jaringan distribusi luas dan layanan pelanggan yang responsif.",
+                features: [
+                  "COD Available",
+                  "Same Day Delivery",
+                  "Flexible Schedule",
+                ],
+              },
+              {
+                icon: Users,
+                title: "Supply Chain Management",
+                description:
+                  "Optimasi rantai pasokan dengan teknologi modern untuk efisiensi operasional dan pengurangan biaya.",
+                features: [
+                  "SCM Consultation",
+                  "Process Optimization",
+                  "Cost Reduction",
+                ],
+              },
+              {
+                icon: Clock,
+                title: "Express & Urgent",
+                description:
+                  "Layanan ekspres untuk pengiriman mendesak dengan prioritas tinggi dan waktu pengiriman yang dijamin.",
+                features: [
+                  "Express Delivery",
+                  "Emergency Service",
+                  "Time Guarantee",
+                ],
+              },
+            ].map((service, index) => (
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <CardHeader className="space-y-4">
+                  <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
+                    <service.icon className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
+                  </div>
+                  <CardTitle className="text-xl text-msl-navy">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                  <div className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center text-sm text-gray-600"
+                      >
+                        <div className="w-1.5 h-1.5 bg-msl-orange rounded-full mr-3" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           <div className="text-center mt-12" data-aos="fade-up">
@@ -180,7 +237,7 @@ export default function Home() {
                 size="lg"
                 className="bg-msl-navy hover:bg-msl-dark-blue text-white"
               >
-                {t('home.services.viewAllServices')}
+                {t("home.services.cta")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -198,14 +255,17 @@ export default function Home() {
                   variant="secondary"
                   className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
                 >
-                  {t('home.about.badge')}
+                  {t("home.about.badge")}
                 </Badge>
                 <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-                  {t('home.about.title')}
-                  <span className="text-msl-orange"> {t('home.about.titleHighlight')}</span>
+                  {t("home.about.title")}
+                  <span className="text-msl-orange">
+                    {" "}
+                    {t("common.tagline").split(" ")[1]}
+                  </span>
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  {t('home.about.description')}
+                  {t("home.about.subtitle")}
                 </p>
               </div>
 
@@ -216,20 +276,22 @@ export default function Home() {
                       {siteConfig.company.experience}
                     </div>
                     <div className="text-sm text-gray-600">
-                      {t('home.about.stats.yearsExperience')}
+                      {t("home.about.stats.experience")}
                     </div>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-xl">
                     <div className="text-3xl font-bold text-msl-orange mb-2">
                       {siteConfig.company.clients}
                     </div>
-                    <div className="text-sm text-gray-600">{t('home.about.stats.clientsServed')}</div>
+                    <div className="text-sm text-gray-600">
+                      {t("home.about.stats.clients")}
+                    </div>
                   </div>
                 </div>
 
                 <Link href="/about">
                   <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-                    {t('common.learnMore')}
+                    {t("home.about.cta")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -275,18 +337,18 @@ export default function Home() {
                   variant="secondary"
                   className="bg-white/10 text-white border-white/20"
                 >
-                  {t('home.contact.badge')}
+                  {t("home.contact.badge")}
                 </Badge>
                 <h2 className="text-4xl lg:text-5xl font-bold text-white">
-                  {t('home.contact.title')}
+                  {t("home.contact.title")}
                   <span className="text-msl-orange">
                     {" "}
-                    {t('home.contact.titleHighlight')}
+                    {t("common.tagline").split(" ")[1]}
                   </span>{" "}
-                  {t('home.contact.titleEnd')}
+                  Anda
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  {t('home.contact.description')}
+                  {t("home.contact.subtitle")}
                 </p>
               </div>
 
@@ -296,7 +358,9 @@ export default function Home() {
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">{t('contact.info.phone.title')}</div>
+                    <div className="font-semibold text-white">
+                      {t("common.phone")}
+                    </div>
                     <div className="text-gray-300">
                       {siteConfig.contact.phone}
                     </div>
@@ -307,7 +371,9 @@ export default function Home() {
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">{t('contact.info.email.title')}</div>
+                    <div className="font-semibold text-white">
+                      {t("common.email")}
+                    </div>
                     <div className="text-gray-300">
                       {siteConfig.contact.email}
                     </div>
@@ -318,7 +384,9 @@ export default function Home() {
                     <LocationIcon className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">{t('contact.info.address.title')}</div>
+                    <div className="font-semibold text-white">
+                      {t("common.address")}
+                    </div>
                     <div className="text-gray-300">
                       {siteConfig.contact.address.street}
                       <br />
@@ -335,7 +403,7 @@ export default function Home() {
                     className="bg-msl-orange hover:bg-msl-orange/90 text-white w-full"
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    {t('common.contactUs')}
+                    {t("home.contact.cta_primary")}
                   </Button>
                 </Link>
                 <Link
@@ -349,7 +417,7 @@ export default function Home() {
                     className="border-white text-msl-navy hover:bg-slate-300 hover:text-msl-navy"
                   >
                     <Mail className="mr-2 h-5 w-5" />
-                    {t('common.sendEmail')}
+                    {t("home.contact.cta_secondary")}
                   </Button>
                 </Link>
               </div>
@@ -358,10 +426,10 @@ export default function Home() {
             <Card className="bg-white" data-aos="fade-left">
               <CardHeader>
                 <CardTitle className="text-2xl text-msl-navy">
-                  {t('home.contact.form.title')}
+                  {t("home.contact.form_title")}
                 </CardTitle>
                 <CardDescription>
-                  {t('home.contact.form.description')}
+                  {t("home.contact.form_subtitle")}
                 </CardDescription>
               </CardHeader>
               <CardContent>

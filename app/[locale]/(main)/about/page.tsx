@@ -31,8 +31,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'about' });
   
   return {
-    title: t('navigation.about'),
-    description: t('hero.description'),
+    title: t('hero.title'),
+    description: t('hero.subtitle'),
   };
 }
 
@@ -55,10 +55,10 @@ export default function AboutPage() {
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight">
                   {t('about.hero.title')}
-                  <span className="text-msl-orange"> {t('about.hero.titleHighlight')}</span>
+                  <span className="text-msl-orange"> {t('common.tagline').split(' ')[1]}</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  {t('about.hero.description')}
+                  {t('about.hero.subtitle')}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -66,7 +66,7 @@ export default function AboutPage() {
                   size="lg"
                   className="bg-msl-navy hover:bg-msl-dark-blue text-white"
                 >
-                  {t('common.learnMore')}
+                  {t('about.hero.cta_primary')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
@@ -74,7 +74,7 @@ export default function AboutPage() {
                   variant="outline"
                   className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white"
                 >
-                  {t('about.hero.downloadProfile')}
+                  {t('about.hero.cta_secondary')}
                 </Button>
               </div>
             </div>
@@ -103,22 +103,22 @@ export default function AboutPage() {
             {[
               {
                 value: siteConfig.company.experience,
-                label: t('about.stats.yearsExperience'),
+                label: t('about.stats.experience'),
                 color: "msl-navy",
               },
               {
                 value: siteConfig.company.clients,
-                label: t('about.stats.clientsServed'),
+                label: t('about.stats.clients'),
                 color: "msl-orange",
               },
               {
                 value: siteConfig.company.satisfaction,
-                label: t('about.stats.satisfactionRate'),
+                label: t('about.stats.satisfaction'),
                 color: "msl-brown",
               },
               {
                 value: siteConfig.company.certification,
-                label: t('about.stats.certified'),
+                label: t('about.stats.certification'),
                 color: "msl-dark-brown",
               },
             ].map((stat, index) => (
@@ -146,13 +146,13 @@ export default function AboutPage() {
               variant="secondary"
               className="bg-msl-navy/10 text-msl-navy border-msl-navy/20"
             >
-              {t('about.visionMission.badge')}
+              {t('about.vision_mission.badge')}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t('about.visionMission.title')}
+              {t('about.vision_mission.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('about.visionMission.description')}
+              {t('about.vision_mission.subtitle')}
             </p>
           </div>
 
@@ -166,12 +166,12 @@ export default function AboutPage() {
                   <Eye className="h-8 w-8 text-msl-orange" />
                 </div>
                 <CardTitle className="text-2xl text-msl-navy">
-                  {t('about.visionMission.vision.title')}
+                  {t('about.vision_mission.vision.title')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-gray-600 text-center leading-relaxed">
-                  {siteConfig.company.vision}
+                  {t('about.vision_mission.vision.content')}
                 </p>
               </CardContent>
             </Card>
@@ -185,12 +185,12 @@ export default function AboutPage() {
                   <Target className="h-8 w-8 text-msl-navy" />
                 </div>
                 <CardTitle className="text-2xl text-msl-navy">
-                  {t('about.visionMission.mission.title')}
+                  {t('about.vision_mission.mission.title')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-gray-600 text-center leading-relaxed">
-                  {siteConfig.company.mission}
+                  {t('about.vision_mission.mission.content')}
                 </p>
               </CardContent>
             </Card>
@@ -212,7 +212,7 @@ export default function AboutPage() {
               {t('about.values.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('about.values.description')}
+              {t('about.values.subtitle')}
             </p>
           </div>
 
@@ -227,7 +227,6 @@ export default function AboutPage() {
                 "msl-dark-brown",
               ];
               const color = colors[index];
-              const valueKeys = ['integrity', 'innovation', 'quality', 'customerSatisfaction'];
 
               return (
                 <Card
@@ -243,10 +242,10 @@ export default function AboutPage() {
                       <IconComponent className={`h-8 w-8 text-${color}`} />
                     </div>
                     <h3 className="text-xl font-semibold text-msl-navy">
-                      {t(`companyValues.${valueKeys[index]}.title`)}
+                      {value.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      {t(`companyValues.${valueKeys[index]}.description`)}
+                      {value.description}
                     </p>
                   </CardContent>
                 </Card>
@@ -270,12 +269,12 @@ export default function AboutPage() {
               {t('about.cta.title')}
               <span className="text-msl-orange">
                 {" "}
-                {t('about.cta.titleHighlight')}
+                {siteConfig.company.clients} {t('about.cta.title').split(' ')[2]}
               </span>{" "}
-              {t('about.cta.titleEnd')}
+              Kami
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              {t('about.cta.description')}
+              {t('about.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -284,7 +283,7 @@ export default function AboutPage() {
                   className="bg-msl-orange hover:bg-msl-orange/90 text-white"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  {t('common.contactUs')}
+                  {t('about.cta.cta_primary')}
                 </Button>
               </Link>
               <Button
@@ -293,7 +292,7 @@ export default function AboutPage() {
                 className="border-white text-white hover:bg-white hover:text-msl-navy"
               >
                 <Mail className="mr-2 h-5 w-5" />
-                {t('about.cta.sendProposal')}
+                {t('about.cta.cta_secondary')}
               </Button>
             </div>
           </div>

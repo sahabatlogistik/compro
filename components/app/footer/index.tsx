@@ -4,17 +4,20 @@ import { siteConfig } from "@/lib/config";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from "next-intl";
+
+import Logo from "@/app/logo.png"; // Adjust the path as necessary
 
 export default function AppFooter() {
   const t = useTranslations();
+  const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
   const navigation = [
-    { name: t('navigation.home'), href: "/" },
-    { name: t('navigation.services'), href: "/services" },
-    { name: t('navigation.about'), href: "/about" },
-    { name: t('navigation.contact'), href: "/contact" },
+    { name: t("navigation.home"), href: `/${locale}` },
+    { name: t("navigation.services"), href: `/${locale}/services` },
+    { name: t("navigation.about"), href: `/${locale}/about` },
+    { name: t("navigation.contact"), href: `/${locale}/contact` },
   ];
 
   return (
@@ -23,49 +26,53 @@ export default function AppFooter() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Image
-              src="/logo.png"
+              src={Logo}
               alt="MSL Logo"
               width={180}
               height={60}
               className="h-12 w-auto brightness-0 invert"
             />
             <p className="text-gray-400 text-sm leading-relaxed">
-              {t('footer.description')}
+              {t("footer.description")}
             </p>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">{t('footer.services')}</h4>
+            <h4 className="font-semibold text-white">
+              {t("footer.services_title")}
+            </h4>
             <div className="space-y-2 text-sm">
               <Link
-                href="/services"
+                href={`/${locale}/services`}
                 className="text-gray-400 hover:text-white transition-colors block"
               >
-                {t('servicesList.transportation.title')}
+                Transportasi
               </Link>
               <Link
-                href="/services"
+                href={`/${locale}/services`}
                 className="text-gray-400 hover:text-white transition-colors block"
               >
-                {t('servicesList.warehousing.title')}
+                Pergudangan
               </Link>
               <Link
-                href="/services"
+                href={`/${locale}/services`}
                 className="text-gray-400 hover:text-white transition-colors block"
               >
-                {t('servicesList.packaging.title')}
+                Packaging
               </Link>
               <Link
-                href="/services"
+                href={`/${locale}/services`}
                 className="text-gray-400 hover:text-white transition-colors block"
               >
-                {t('servicesList.lastmile.title')}
+                Last Mile
               </Link>
             </div>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">{t('footer.company')}</h4>
+            <h4 className="font-semibold text-white">
+              {t("footer.company_title")}
+            </h4>
             <div className="space-y-2 text-sm">
               {navigation.map((item) => (
                 <Link
@@ -80,7 +87,9 @@ export default function AppFooter() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">{t('footer.contact')}</h4>
+            <h4 className="font-semibold text-white">
+              {t("footer.contact_title")}
+            </h4>
             <div className="space-y-2 text-sm text-gray-400">
               <div>{siteConfig.contact.phone}</div>
               <div>{siteConfig.contact.email}</div>
@@ -95,7 +104,7 @@ export default function AppFooter() {
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} {siteConfig.name}. {t('footer.copyright')}
+            © {currentYear} {siteConfig.name}. {t("footer.copyright")}
           </p>
         </div>
       </div>

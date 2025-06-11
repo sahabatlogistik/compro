@@ -1,87 +1,83 @@
 {
+  "common": {
+    "company_name": "PT. Mitra Sahabat Logistik",
+    "tagline": "Solusi Logistik Terpercaya",
+    "description": "Memberikan solusi logistik terbaik untuk mendukung pertumbuhan bisnis Anda dengan teknologi modern dan layanan profesional.",
+    "phone": "Telepon",
+    "email": "Email",
+    "address": "Alamat",
+    "contact_us": "Hubungi Kami",
+    "learn_more": "Pelajari Lebih Lanjut",
+    "get_started": "Mulai Sekarang",
+    "send_message": "Kirim Pesan",
+    "view_all": "Lihat Semua",
+    "download": "Unduh",
+    "read_more": "Baca Selengkapnya",
+    "back_to_home": "Kembali ke Beranda"
+  },
   "navigation": {
     "home": "Beranda",
     "services": "Layanan",
     "about": "Tentang",
-    "contact": "Kontak"
-  },
-  "common": {
-    "learnMore": "Pelajari Lebih Lanjut",
-    "contactUs": "Hubungi Kami",
-    "getQuote": "Dapatkan Penawaran",
-    "freeConsultation": "Konsultasi Gratis",
-    "sendMessage": "Kirim Pesan",
-    "loading": "Memuat...",
-    "submit": "Kirim",
-    "required": "Wajib diisi",
-    "optional": "Opsional",
-    "downloadBrochure": "Download Brosur",
-    "viewLocation": "Lihat Lokasi",
-    "sendEmail": "Kirim Email",
-    "chatWhatsApp": "Chat WhatsApp",
-    "callNow": "Hubungi Sekarang",
-    "openGoogleMaps": "Buka di Google Maps"
+    "contact": "Kontak",
+    "language": "Bahasa"
   },
   "home": {
     "hero": {
       "badge": "🚛 Mitra Logistik Terpercaya",
-      "title": "Solusi Logistik",
-      "titleHighlight": "Terpadu",
-      "description": "Kami menyediakan layanan logistik komprehensif dengan teknologi modern, jaringan distribusi luas, dan komitmen terhadap kepuasan pelanggan.",
-      "startConsultation": "Mulai Konsultasi",
-      "exploreServices": "Pelajari Layanan",
+      "title": "Solusi Logistik Terpadu",
+      "subtitle": "Kami menyediakan layanan logistik komprehensif dengan teknologi modern, jaringan distribusi luas, dan komitmen terhadap kepuasan pelanggan.",
+      "cta_primary": "Mulai Konsultasi",
+      "cta_secondary": "Pelajari Layanan",
       "stats": {
-        "activeClients": "Klien Aktif",
-        "yearsExperience": "Tahun Pengalaman",
-        "satisfactionRate": "Tingkat Kepuasan"
+        "clients": "Klien Aktif",
+        "experience": "Tahun Pengalaman",
+        "satisfaction": "Tingkat Kepuasan"
       }
     },
     "services": {
       "badge": "🎯 Layanan Unggulan",
       "title": "Layanan Logistik Komprehensif",
-      "description": "Dari transportasi hingga pergudangan, kami menyediakan solusi logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
-      "viewAllServices": "Lihat Semua Layanan"
+      "subtitle": "Dari transportasi hingga pergudangan, kami menyediakan solusi logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
+      "cta": "Lihat Semua Layanan"
     },
     "about": {
       "badge": "🏢 Tentang Perusahaan",
-      "title": "Mitra Terpercaya dalam",
-      "titleHighlight": "Solusi Logistik",
-      "description": "PT. Mitra Sahabat Logistik berdiri sejak 2008 dengan komitmen memberikan solusi logistik terbaik di Indonesia. Dengan pengalaman lebih dari 15+ tahun, kami telah melayani berbagai industri dan membangun reputasi sebagai mitra logistik yang handal dan profesional.",
+      "title": "Mitra Terpercaya dalam Solusi Logistik",
+      "subtitle": "PT. Mitra Sahabat Logistik berdiri sejak 2008 dengan komitmen memberikan solusi logistik terbaik di Indonesia. Dengan pengalaman lebih dari 15+ tahun, kami telah melayani berbagai industri dan membangun reputasi sebagai mitra logistik yang handal dan profesional.",
       "stats": {
-        "yearsExperience": "Tahun Berpengalaman",
-        "clientsServed": "Klien Terlayani"
-      }
+        "experience": "Tahun Berpengalaman",
+        "clients": "Klien Terlayani"
+      },
+      "cta": "Pelajari Lebih Lanjut"
     },
     "contact": {
       "badge": "📞 Hubungi Kami",
-      "title": "Siap Melayani",
-      "titleHighlight": "Kebutuhan Logistik",
-      "titleEnd": "Anda",
-      "description": "Tim ahli kami siap memberikan konsultasi dan solusi terbaik untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!",
-      "form": {
-        "title": "Konsultasi Gratis",
-        "description": "Dapatkan penawaran terbaik untuk kebutuhan logistik Anda"
-      }
+      "title": "Siap Melayani Kebutuhan Logistik Anda",
+      "subtitle": "Tim ahli kami siap memberikan konsultasi dan solusi terbaik untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!",
+      "form_title": "Konsultasi Gratis",
+      "form_subtitle": "Dapatkan penawaran terbaik untuk kebutuhan logistik Anda",
+      "cta_primary": "Hubungi Kami",
+      "cta_secondary": "Kirim Email"
     }
   },
   "services": {
     "hero": {
       "badge": "🚛 Layanan Logistik Komprehensif",
-      "title": "Solusi Logistik",
-      "titleHighlight": "Terpadu",
-      "titleEnd": "untuk",
-      "titleEnd2": "Setiap Kebutuhan",
-      "description": "Dari transportasi hingga supply chain management, kami menyediakan layanan logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda."
+      "title": "Solusi Logistik Terpadu untuk Setiap Kebutuhan",
+      "subtitle": "Dari transportasi hingga supply chain management, kami menyediakan layanan logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
+      "cta_primary": "Konsultasi Gratis",
+      "cta_secondary": "Download Brosur"
     },
     "overview": {
       "badge": "🎯 Layanan Unggulan",
       "title": "Layanan Logistik Komprehensif",
-      "description": "Pilih layanan yang sesuai dengan kebutuhan bisnis Anda"
+      "subtitle": "Pilih layanan yang sesuai dengan kebutuhan bisnis Anda"
     },
-    "whyChoose": {
+    "why_choose": {
       "badge": "⭐ Mengapa Memilih Kami",
       "title": "Komitmen Terhadap Kualitas",
-      "description": "Pengalaman 15+ tahun melayani 500+ klien dengan tingkat kepuasan 99.5%",
+      "subtitle": "Pengalaman 15+ tahun melayani 500+ klien dengan tingkat kepuasan 99.5%",
       "features": [
         {
           "title": "Teknologi Modern",
@@ -95,7 +91,7 @@
         },
         {
           "title": "Tim Profesional",
-          "description": "SDM berpengalaman dan tersertifikat dengan komitmen tinggi",
+          "description": "SDM berpengalaman dan tersertifikasi dengan komitmen tinggi",
           "metric": "500+ Karyawan"
         },
         {
@@ -107,202 +103,151 @@
     },
     "cta": {
       "badge": "📞 Siap Membantu Anda",
-      "title": "Mulai Optimasi",
-      "titleHighlight": "Logistik Bisnis",
-      "titleEnd": "Anda",
-      "description": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!",
-      "contactNow": "Hubungi Sekarang"
+      "title": "Mulai Optimasi Logistik Bisnis Anda",
+      "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk kebutuhan logistik bisnis Anda. Hubungi kami sekarang!",
+      "cta_primary": "Hubungi Sekarang",
+      "cta_secondary": "Kirim Email"
     }
   },
   "about": {
     "hero": {
       "badge": "🏢 Tentang Perusahaan",
-      "title": "Mitra Terpercaya dalam",
-      "titleHighlight": "Solusi Logistik",
-      "description": "PT. Mitra Sahabat Logistik berdiri sejak 2008 dengan komitmen memberikan solusi logistik terbaik di Indonesia. Dengan pengalaman lebih dari 15+ tahun, kami telah melayani berbagai industri dan membangun reputasi sebagai mitra logistik yang handal dan profesional.",
-      "downloadProfile": "Download Company Profile"
+      "title": "Mitra Terpercaya dalam Solusi Logistik",
+      "subtitle": "PT. Mitra Sahabat Logistik berdiri sejak 2008 dengan komitmen memberikan solusi logistik terbaik di Indonesia. Dengan pengalaman lebih dari 15+ tahun, kami telah melayani berbagai industri dan membangun reputasi sebagai mitra logistik yang handal dan profesional.",
+      "cta_primary": "Pelajari Lebih Lanjut",
+      "cta_secondary": "Download Company Profile"
     },
     "stats": {
-      "yearsExperience": "Tahun Pengalaman",
-      "clientsServed": "Klien Terlayani",
-      "satisfactionRate": "Tingkat Kepuasan",
-      "certified": "Certified"
+      "experience": "Tahun Pengalaman",
+      "clients": "Klien Terlayani",
+      "satisfaction": "Tingkat Kepuasan",
+      "certification": "Certified"
     },
-    "visionMission": {
+    "vision_mission": {
       "badge": "🎯 Visi & Misi",
       "title": "Komitmen Kami",
-      "description": "Visi dan misi yang mengarahkan setiap langkah perjalanan kami",
+      "subtitle": "Visi dan misi yang mengarahkan setiap langkah perjalanan kami",
       "vision": {
-        "title": "Visi Perusahaan"
+        "title": "Visi Perusahaan",
+        "content": "Menjadi perusahaan logistik terdepan di Indonesia dengan standar internasional."
       },
       "mission": {
-        "title": "Misi Perusahaan"
+        "title": "Misi Perusahaan",
+        "content": "Memberikan solusi logistik inovatif, efisien, dan berkelanjutan untuk mendukung pertumbuhan bisnis klien."
       }
     },
     "values": {
       "badge": "💎 Nilai-Nilai Perusahaan",
       "title": "Nilai yang Kami Junjung",
-      "description": "Prinsip-prinsip yang menjadi fondasi dalam setiap layanan yang kami berikan"
+      "subtitle": "Prinsip-prinsip yang menjadi fondasi dalam setiap layanan yang kami berikan"
     },
     "cta": {
       "badge": "🤝 Mari Berkolaborasi",
-      "title": "Bergabunglah dengan",
-      "titleHighlight": "500+ Klien",
-      "titleEnd": "Kami",
-      "description": "Jadilah bagian dari klien yang telah merasakan manfaat solusi logistik terbaik dari kami. Mari diskusikan kebutuhan logistik bisnis Anda.",
-      "sendProposal": "Kirim Proposal"
+      "title": "Bergabunglah dengan 500+ Klien Kami",
+      "subtitle": "Jadilah bagian dari klien yang telah merasakan manfaat solusi logistik terbaik dari kami. Mari diskusikan kebutuhan logistik bisnis Anda.",
+      "cta_primary": "Hubungi Kami",
+      "cta_secondary": "Kirim Proposal"
     }
   },
   "contact": {
     "hero": {
       "badge": "📞 Hubungi Kami",
-      "title": "Mari Diskusikan",
-      "titleHighlight": "Kebutuhan Logistik",
-      "titleEnd": "Anda",
-      "description": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk mengoptimalkan operasional logistik bisnis Anda."
+      "title": "Mari Diskusikan Kebutuhan Logistik Anda",
+      "subtitle": "Tim ahli kami siap memberikan konsultasi gratis dan solusi terbaik untuk mengoptimalkan operasional logistik bisnis Anda."
     },
     "info": {
       "badge": "📍 Informasi Kontak",
       "title": "Berbagai Cara Menghubungi Kami",
-      "description": "Pilih cara yang paling nyaman untuk Anda berkomunikasi dengan tim kami",
+      "subtitle": "Pilih cara yang paling nyaman untuk Anda berkomunikasi dengan tim kami",
       "phone": {
         "title": "Telepon",
-        "description": "Senin - Jumat, 08:00 - 17:00 WIB"
+        "description": "Senin - Jumat, 08:00 - 17:00 WIB",
+        "action": "Hubungi Sekarang"
       },
       "email": {
         "title": "Email",
-        "description": "Respon dalam 24 jam"
+        "description": "Respon dalam 24 jam",
+        "action": "Kirim Email"
       },
       "address": {
-        "title": "Alamat Kantor"
+        "title": "Alamat Kantor",
+        "description": "Legenda Malaka, Batam",
+        "action": "Lihat Lokasi"
       },
       "whatsapp": {
         "title": "WhatsApp",
-        "description": "Chat langsung dengan tim kami"
+        "description": "Chat langsung dengan tim kami",
+        "action": "Chat WhatsApp"
       }
     },
     "form": {
       "badge": "📝 Formulir Kontak",
       "title": "Dapatkan Konsultasi Gratis",
-      "description": "Isi formulir di bawah ini dan tim kami akan menghubungi Anda dalam 24 jam untuk memberikan solusi terbaik.",
+      "subtitle": "Isi formulir di bawah ini dan tim kami akan menghubungi Anda dalam 24 jam untuk memberikan solusi terbaik.",
       "fields": {
-        "fullName": "Nama Lengkap",
-        "fullNamePlaceholder": "Masukkan nama lengkap",
+        "name": "Nama Lengkap",
+        "name_placeholder": "Masukkan nama lengkap",
         "company": "Nama Perusahaan",
-        "companyPlaceholder": "Nama perusahaan",
+        "company_placeholder": "Nama perusahaan",
         "email": "Email",
-        "emailPlaceholder": "email@perusahaan.com",
+        "email_placeholder": "email@perusahaan.com",
         "phone": "Nomor Telepon",
-        "phonePlaceholder": "08xx-xxxx-xxxx",
+        "phone_placeholder": "08xx-xxxx-xxxx",
         "service": "Layanan yang Dibutuhkan",
-        "servicePlaceholder": "Pilih layanan yang dibutuhkan",
+        "service_placeholder": "Pilih layanan yang dibutuhkan",
         "message": "Pesan",
-        "messagePlaceholder": "Deskripsikan kebutuhan logistik Anda secara detail...",
-        "submit": "Kirim Permintaan Konsultasi"
-      }
-    },
-    "companyInfo": {
-      "operatingHours": {
-        "title": "Jam Operasional",
-        "weekdays": "Senin - Jumat",
-        "saturday": "Sabtu",
-        "sunday": "Minggu",
-        "closed": "Tutup",
-        "emergency": "Emergency Service: 24/7 untuk layanan urgent"
+        "message_placeholder": "Deskripsikan kebutuhan logistik Anda secara detail..."
       },
-      "whyChoose": {
-        "title": "Mengapa Memilih MSL?",
-        "reasons": [
-          "Pengalaman 15+ tahun di industri logistik",
-          "Tim profesional dan bersertifikat",
-          "Teknologi tracking real-time",
-          "Jaringan distribusi seluruh Indonesia",
-          "Harga kompetitif dengan kualitas terjamin",
-          "Customer service responsif 24/7"
-        ]
-      }
+      "submit": "Kirim Permintaan Konsultasi"
+    },
+    "office_hours": {
+      "title": "Jam Operasional",
+      "weekdays": "Senin - Jumat",
+      "saturday": "Sabtu",
+      "sunday": "Minggu",
+      "closed": "Tutup",
+      "emergency": "Emergency Service: 24/7 untuk layanan urgent"
+    },
+    "why_choose": {
+      "title": "Mengapa Memilih MSL?",
+      "reasons": [
+        "Pengalaman 15+ tahun di industri logistik",
+        "Tim profesional dan bersertifikat",
+        "Teknologi tracking real-time",
+        "Jaringan distribusi seluruh Indonesia",
+        "Harga kompetitif dengan kualitas terjamin",
+        "Customer service responsif 24/7"
+      ]
     },
     "location": {
       "badge": "📍 Lokasi Kantor",
       "title": "Kunjungi Kantor Kami",
-      "description": "Kantor pusat kami berlokasi strategis di Batam untuk melayani kebutuhan logistik Anda",
-      "fullAddress": {
-        "title": "Alamat Lengkap"
-      },
+      "subtitle": "Kantor pusat kami berlokasi strategis di Batam untuk melayani kebutuhan logistik Anda",
+      "address_title": "Alamat Lengkap",
       "transportation": {
         "title": "Akses Transportasi",
-        "fromAirport": "Dari Bandara: 15 menit berkendara",
-        "fromPort": "Dari Pelabuhan: 20 menit berkendara",
-        "publicTransport": "Transportasi Umum: Tersedia angkutan kota"
-      }
+        "airport": "Dari Bandara: 15 menit berkendara",
+        "port": "Dari Pelabuhan: 20 menit berkendara",
+        "public": "Transportasi Umum: Tersedia angkutan kota"
+      },
+      "maps_action": "Buka di Google Maps"
     }
   },
   "form": {
-    "sending": "Mengirim permintaan...",
+    "validation": {
+      "required": "Field ini wajib diisi",
+      "email": "Masukkan alamat email yang valid",
+      "phone": "Masukkan nomor telepon yang valid"
+    },
     "success": "Permintaan konsultasi berhasil dikirim!",
-    "error": "Gagal mengirim permintaan, silakan coba lagi."
+    "error": "Gagal mengirim permintaan, silakan coba lagi.",
+    "sending": "Mengirim permintaan..."
   },
   "footer": {
     "description": "Memberikan solusi logistik terbaik untuk mendukung pertumbuhan bisnis Anda dengan teknologi modern dan layanan profesional.",
-    "services": "Layanan",
-    "company": "Perusahaan",
-    "contact": "Kontak",
-    "copyright": "All rights reserved."
-  },
-  "servicesList": {
-    "transportation": {
-      "title": "Transportasi & Distribusi",
-      "shortDescription": "Layanan transportasi darat dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
-      "features": ["Armada Lengkap", "Tracking Real-time", "Asuransi Barang"],
-      "pricing": "Mulai dari Rp 50.000 per pengiriman"
-    },
-    "warehousing": {
-      "title": "Pergudangan & Storage",
-      "shortDescription": "Fasilitas pergudangan modern dengan sistem manajemen inventory dan keamanan tingkat tinggi untuk penyimpanan barang.",
-      "features": ["Gudang Modern", "Sistem WMS", "Keamanan 24/7"],
-      "pricing": "Mulai dari Rp 15.000 per m³ per bulan"
-    },
-    "packaging": {
-      "title": "Packaging & Handling",
-      "shortDescription": "Layanan pengemasan profesional dan handling khusus untuk memastikan barang sampai dengan kondisi prima.",
-      "features": ["Custom Packaging", "Handling Khusus", "Quality Control"],
-      "pricing": "Mulai dari Rp 5.000 per item"
-    },
-    "lastmile": {
-      "title": "Last Mile Delivery",
-      "shortDescription": "Pengiriman hingga tujuan akhir dengan jaringan distribusi luas dan layanan pelanggan yang responsif.",
-      "features": ["COD Available", "Same Day Delivery", "Flexible Schedule"],
-      "pricing": "Mulai dari Rp 15.000 per pengiriman"
-    },
-    "supplyChain": {
-      "title": "Supply Chain Management",
-      "shortDescription": "Optimasi rantai pasokan dengan teknologi modern untuk efisiensi operasional dan pengurangan biaya.",
-      "features": ["SCM Consultation", "Process Optimization", "Cost Reduction"],
-      "pricing": "Mulai dari Rp 25.000.000 per project"
-    },
-    "express": {
-      "title": "Express & Urgent",
-      "shortDescription": "Layanan ekspres untuk pengiriman mendesak dengan prioritas tinggi dan waktu pengiriman yang dijamin.",
-      "features": ["Express Delivery", "Emergency Service", "Time Guarantee"],
-      "pricing": "Mulai dari Rp 100.000 per pengiriman"
-    }
-  },
-  "companyValues": {
-    "integrity": {
-      "title": "Integritas",
-      "description": "Berkomitmen pada kejujuran dan transparansi dalam setiap layanan"
-    },
-    "innovation": {
-      "title": "Inovasi",
-      "description": "Menggunakan teknologi terdepan untuk solusi logistik yang efisien"
-    },
-    "quality": {
-      "title": "Kualitas",
-      "description": "Menjaga standar tinggi dalam setiap aspek operasional"
-    },
-    "customerSatisfaction": {
-      "title": "Kepuasan Pelanggan",
-      "description": "Mengutamakan kebutuhan dan kepuasan klien sebagai prioritas utama"
-    }
+    "services_title": "Layanan",
+    "company_title": "Perusahaan",
+    "contact_title": "Kontak",
+    "copyright": "Hak cipta dilindungi."
   }
 }

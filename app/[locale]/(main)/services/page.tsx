@@ -24,8 +24,8 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import { Metadata } from "next";
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 const iconMap = {
   Truck,
@@ -37,15 +37,15 @@ const iconMap = {
 };
 
 export async function generateMetadata({
-  params: { locale }
+  params: { locale },
 }: {
-  params: { locale: string }
+  params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'services' });
-  
+  const t = await getTranslations({ locale, namespace: "services" });
+
   return {
-    title: t('navigation.services'),
-    description: t('hero.description'),
+    title: t("hero.title"),
+    description: t("hero.subtitle"),
   };
 }
 
@@ -62,15 +62,17 @@ export default function ServicesPage() {
               variant="secondary"
               className="bg-msl-orange/10 text-msl-navy border-msl-orange/20 mb-6"
             >
-              {t('services.hero.badge')}
+              {t("services.hero.badge")}
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight mb-6">
-              {t('services.hero.title')}
-              <span className="text-msl-orange"> {t('services.hero.titleHighlight')}</span> {t('services.hero.titleEnd')}
-              <span className="text-msl-navy"> {t('services.hero.titleEnd2')}</span>
+              {t("services.hero.title")}
+              <span className="text-msl-orange">
+                {" "}
+                {t("common.tagline").split(" ")[1]}
+              </span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
-              {t('services.hero.description')}
+              {t("services.hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -78,7 +80,7 @@ export default function ServicesPage() {
                   size="lg"
                   className="bg-msl-navy hover:bg-msl-dark-blue text-white"
                 >
-                  {t('common.freeConsultation')}
+                  {t("services.hero.cta_primary")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -87,7 +89,7 @@ export default function ServicesPage() {
                 variant="outline"
                 className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white"
               >
-                {t('common.downloadBrochure')}
+                {t("services.hero.cta_secondary")}
               </Button>
             </div>
           </div>
@@ -102,13 +104,13 @@ export default function ServicesPage() {
               variant="secondary"
               className="bg-msl-navy/10 text-msl-navy border-msl-navy/20"
             >
-              {t('services.overview.badge')}
+              {t("services.overview.badge")}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t('services.overview.title')}
+              {t("services.overview.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('services.overview.description')}
+              {t("services.overview.subtitle")}
             </p>
           </div>
 
@@ -128,12 +130,12 @@ export default function ServicesPage() {
                       <IconComponent className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
                     </div>
                     <CardTitle className="text-xl text-msl-navy">
-                      {t(`servicesList.${service.id}.title`)}
+                      {service.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <CardDescription className="text-gray-600 leading-relaxed">
-                      {t(`servicesList.${service.id}.shortDescription`)}
+                      {service.shortDescription}
                     </CardDescription>
                     <div className="space-y-2">
                       {service.features.map((feature, idx) => (
@@ -142,17 +144,17 @@ export default function ServicesPage() {
                           className="flex items-center text-sm text-gray-600"
                         >
                           <CheckCircle className="w-4 h-4 text-msl-orange mr-3" />
-                          {t(`servicesList.${service.id}.features.${idx}`)}
+                          {feature}
                         </div>
                       ))}
                     </div>
-                    <div className="pt-4 border-t border-gray-100">
+                    {/* <div className="pt-4 border-t border-gray-100">
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-medium text-msl-navy">
-                          {t(`servicesList.${service.id}.pricing`)}
+                          {service.pricing}
                         </span>
                       </div>
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               );
@@ -169,42 +171,50 @@ export default function ServicesPage() {
               variant="secondary"
               className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
             >
-              {t('services.whyChoose.badge')}
+              {t("services.why_choose.badge")}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t('services.whyChoose.title')}
+              {t("services.why_choose.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('services.whyChoose.description')}
+              {t("services.why_choose.subtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[0, 1, 2, 3].map((index) => (
-              <Card
-                key={index}
-                className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <CardContent className="pt-8 space-y-4">
-                  <div className="text-4xl mb-4">
-                    {index === 0 ? "🚀" : index === 1 ? "🌐" : index === 2 ? "👥" : "💰"}
-                  </div>
-                  <h3 className="text-xl font-semibold text-msl-navy">
-                    {t(`services.whyChoose.features.${index}.title`)}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t(`services.whyChoose.features.${index}.description`)}
-                  </p>
-                  <div className="pt-4 border-t border-gray-100">
-                    <span className="text-lg font-bold text-msl-orange">
-                      {t(`services.whyChoose.features.${index}.metric`)}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {t
+              .raw("services.why_choose.features")
+              .map((item: any, index: number) => (
+                <Card
+                  key={index}
+                  className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <CardContent className="pt-8 space-y-4">
+                    <div className="text-4xl mb-4">
+                      {index === 0
+                        ? "🚀"
+                        : index === 1
+                        ? "🌐"
+                        : index === 2
+                        ? "👥"
+                        : "💰"}
+                    </div>
+                    <h3 className="text-xl font-semibold text-msl-navy">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                    <div className="pt-4 border-t border-gray-100">
+                      <span className="text-lg font-bold text-msl-orange">
+                        {item.metric}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
           </div>
         </div>
       </section>
@@ -217,14 +227,17 @@ export default function ServicesPage() {
               variant="secondary"
               className="bg-white/10 text-white border-white/20"
             >
-              {t('services.cta.badge')}
+              {t("services.cta.badge")}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
-              {t('services.cta.title')}
-              <span className="text-msl-orange"> {t('services.cta.titleHighlight')}</span> {t('services.cta.titleEnd')}
+              {t("services.cta.title")}
+              <span className="text-msl-orange">
+                {" "}
+                {t("common.tagline").split(" ")[1]}
+              </span>
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              {t('services.cta.description')}
+              {t("services.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -233,7 +246,7 @@ export default function ServicesPage() {
                   className="bg-msl-orange hover:bg-msl-orange/90 text-white"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  {t('services.cta.contactNow')}
+                  {t("services.cta.cta_primary")}
                 </Button>
               </Link>
               <Button
@@ -242,7 +255,7 @@ export default function ServicesPage() {
                 className="border-white text-white hover:bg-white hover:text-msl-navy"
               >
                 <Mail className="mr-2 h-5 w-5" />
-                {t('common.sendEmail')}
+                {t("services.cta.cta_secondary")}
               </Button>
             </div>
           </div>

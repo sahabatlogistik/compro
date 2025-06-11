@@ -7,6 +7,9 @@ interface LoadingProps {
   className?: string;
 }
 
+import Logo from "@/app/logo.png"; // Adjust the path as necessary
+import Image from "next/image";
+
 export function Loading({ className }: LoadingProps) {
   return (
     <div
@@ -85,8 +88,8 @@ export function PageLoading({
       <div className="flex flex-col items-center space-y-6 max-w-md mx-auto px-4">
         {/* Logo */}
         <div className="relative">
-          <img
-            src="/logo.png"
+          <Image
+            src={Logo}
             alt="MSL Logo"
             className="h-16 w-auto animate-pulse"
           />

@@ -1,87 +1,83 @@
 {
+  "common": {
+    "company_name": "PT. Mitra Sahabat Logistik",
+    "tagline": "Trusted Logistics Solutions",
+    "description": "Providing the best logistics solutions to support your business growth with modern technology and professional services.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "contact_us": "Contact Us",
+    "learn_more": "Learn More",
+    "get_started": "Get Started",
+    "send_message": "Send Message",
+    "view_all": "View All",
+    "download": "Download",
+    "read_more": "Read More",
+    "back_to_home": "Back to Home"
+  },
   "navigation": {
     "home": "Home",
     "services": "Services",
     "about": "About",
-    "contact": "Contact"
-  },
-  "common": {
-    "learnMore": "Learn More",
-    "contactUs": "Contact Us",
-    "getQuote": "Get Quote",
-    "freeConsultation": "Free Consultation",
-    "sendMessage": "Send Message",
-    "loading": "Loading...",
-    "submit": "Submit",
-    "required": "Required",
-    "optional": "Optional",
-    "downloadBrochure": "Download Brochure",
-    "viewLocation": "View Location",
-    "sendEmail": "Send Email",
-    "chatWhatsApp": "Chat WhatsApp",
-    "callNow": "Call Now",
-    "openGoogleMaps": "Open in Google Maps"
+    "contact": "Contact",
+    "language": "Language"
   },
   "home": {
     "hero": {
       "badge": "🚛 Trusted Logistics Partner",
-      "title": "Integrated Logistics",
-      "titleHighlight": "Solutions",
-      "description": "We provide comprehensive logistics services with modern technology, extensive distribution network, and commitment to customer satisfaction.",
-      "startConsultation": "Start Consultation",
-      "exploreServices": "Explore Services",
+      "title": "Integrated Logistics Solutions",
+      "subtitle": "We provide comprehensive logistics services with modern technology, extensive distribution network, and commitment to customer satisfaction.",
+      "cta_primary": "Start Consultation",
+      "cta_secondary": "Learn Services",
       "stats": {
-        "activeClients": "Active Clients",
-        "yearsExperience": "Years Experience",
-        "satisfactionRate": "Satisfaction Rate"
+        "clients": "Active Clients",
+        "experience": "Years Experience",
+        "satisfaction": "Satisfaction Rate"
       }
     },
     "services": {
       "badge": "🎯 Featured Services",
       "title": "Comprehensive Logistics Services",
-      "description": "From transportation to warehousing, we provide end-to-end logistics solutions tailored to your business needs.",
-      "viewAllServices": "View All Services"
+      "subtitle": "From transportation to warehousing, we provide end-to-end logistics solutions tailored to your business needs.",
+      "cta": "View All Services"
     },
     "about": {
       "badge": "🏢 About Company",
-      "title": "Trusted Partner in",
-      "titleHighlight": "Logistics Solutions",
-      "description": "PT. Mitra Sahabat Logistik was established in 2008 with a commitment to providing the best logistics solutions in Indonesia. With more than 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
+      "title": "Trusted Partner in Logistics Solutions",
+      "subtitle": "PT. Mitra Sahabat Logistik has been established since 2008 with a commitment to providing the best logistics solutions in Indonesia. With over 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
       "stats": {
-        "yearsExperience": "Years Experience",
-        "clientsServed": "Clients Served"
-      }
+        "experience": "Years of Experience",
+        "clients": "Clients Served"
+      },
+      "cta": "Learn More"
     },
     "contact": {
       "badge": "📞 Contact Us",
-      "title": "Ready to Serve Your",
-      "titleHighlight": "Logistics Needs",
-      "titleEnd": "",
-      "description": "Our expert team is ready to provide consultation and the best solutions for your business logistics needs. Contact us now!",
-      "form": {
-        "title": "Free Consultation",
-        "description": "Get the best offer for your logistics needs"
-      }
+      "title": "Ready to Serve Your Logistics Needs",
+      "subtitle": "Our expert team is ready to provide consultation and the best solutions for your business logistics needs. Contact us now!",
+      "form_title": "Free Consultation",
+      "form_subtitle": "Get the best offer for your logistics needs",
+      "cta_primary": "Contact Us",
+      "cta_secondary": "Send Email"
     }
   },
   "services": {
     "hero": {
       "badge": "🚛 Comprehensive Logistics Services",
-      "title": "Integrated Logistics",
-      "titleHighlight": "Solutions",
-      "titleEnd": "for",
-      "titleEnd2": "Every Need",
-      "description": "From transportation to supply chain management, we provide end-to-end logistics services tailored to your business needs."
+      "title": "Integrated Logistics Solutions for Every Need",
+      "subtitle": "From transportation to supply chain management, we provide end-to-end logistics services tailored to your business needs.",
+      "cta_primary": "Free Consultation",
+      "cta_secondary": "Download Brochure"
     },
     "overview": {
       "badge": "🎯 Featured Services",
       "title": "Comprehensive Logistics Services",
-      "description": "Choose services that suit your business needs"
+      "subtitle": "Choose services that suit your business needs"
     },
-    "whyChoose": {
+    "why_choose": {
       "badge": "⭐ Why Choose Us",
       "title": "Commitment to Quality",
-      "description": "15+ years of experience serving 500+ clients with 99.5% satisfaction rate",
+      "subtitle": "15+ years of experience serving 500+ clients with 99.5% satisfaction rate",
       "features": [
         {
           "title": "Modern Technology",
@@ -100,209 +96,158 @@
         },
         {
           "title": "Competitive Pricing",
-          "description": "Cost-effective solutions with the best value without compromising quality",
+          "description": "Cost-effective solutions with the best value without sacrificing quality",
           "metric": "Save 30%"
         }
       ]
     },
     "cta": {
       "badge": "📞 Ready to Help You",
-      "title": "Start Optimizing Your",
-      "titleHighlight": "Business Logistics",
-      "titleEnd": "",
-      "description": "Our expert team is ready to provide free consultation and the best solutions for your business logistics needs. Contact us now!",
-      "contactNow": "Contact Now"
+      "title": "Start Optimizing Your Business Logistics",
+      "subtitle": "Our expert team is ready to provide free consultation and the best solutions for your business logistics needs. Contact us now!",
+      "cta_primary": "Contact Now",
+      "cta_secondary": "Send Email"
     }
   },
   "about": {
     "hero": {
       "badge": "🏢 About Company",
-      "title": "Trusted Partner in",
-      "titleHighlight": "Logistics Solutions",
-      "description": "PT. Mitra Sahabat Logistik was established in 2008 with a commitment to providing the best logistics solutions in Indonesia. With more than 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
-      "downloadProfile": "Download Company Profile"
+      "title": "Trusted Partner in Logistics Solutions",
+      "subtitle": "PT. Mitra Sahabat Logistik has been established since 2008 with a commitment to providing the best logistics solutions in Indonesia. With over 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
+      "cta_primary": "Learn More",
+      "cta_secondary": "Download Company Profile"
     },
     "stats": {
-      "yearsExperience": "Years Experience",
-      "clientsServed": "Clients Served",
-      "satisfactionRate": "Satisfaction Rate",
-      "certified": "Certified"
+      "experience": "Years Experience",
+      "clients": "Clients Served",
+      "satisfaction": "Satisfaction Rate",
+      "certification": "Certified"
     },
-    "visionMission": {
+    "vision_mission": {
       "badge": "🎯 Vision & Mission",
       "title": "Our Commitment",
-      "description": "Vision and mission that guide every step of our journey",
+      "subtitle": "Vision and mission that guide every step of our journey",
       "vision": {
-        "title": "Company Vision"
+        "title": "Company Vision",
+        "content": "To become the leading logistics company in Indonesia with international standards."
       },
       "mission": {
-        "title": "Company Mission"
+        "title": "Company Mission",
+        "content": "Providing innovative, efficient, and sustainable logistics solutions to support client business growth."
       }
     },
     "values": {
       "badge": "💎 Company Values",
       "title": "Values We Uphold",
-      "description": "Principles that become the foundation in every service we provide"
+      "subtitle": "Principles that become the foundation in every service we provide"
     },
     "cta": {
       "badge": "🤝 Let's Collaborate",
-      "title": "Join Our",
-      "titleHighlight": "500+ Clients",
-      "titleEnd": "",
-      "description": "Be part of clients who have experienced the benefits of our best logistics solutions. Let's discuss your business logistics needs.",
-      "sendProposal": "Send Proposal"
+      "title": "Join Our 500+ Clients",
+      "subtitle": "Be part of clients who have experienced the benefits of the best logistics solutions from us. Let's discuss your business logistics needs.",
+      "cta_primary": "Contact Us",
+      "cta_secondary": "Send Proposal"
     }
   },
   "contact": {
     "hero": {
       "badge": "📞 Contact Us",
-      "title": "Let's Discuss Your",
-      "titleHighlight": "Logistics Needs",
-      "titleEnd": "",
-      "description": "Our expert team is ready to provide free consultation and the best solutions to optimize your business logistics operations."
+      "title": "Let's Discuss Your Logistics Needs",
+      "subtitle": "Our expert team is ready to provide free consultation and the best solutions to optimize your business logistics operations."
     },
     "info": {
       "badge": "📍 Contact Information",
       "title": "Various Ways to Contact Us",
-      "description": "Choose the most convenient way for you to communicate with our team",
+      "subtitle": "Choose the most convenient way for you to communicate with our team",
       "phone": {
         "title": "Phone",
-        "description": "Monday - Friday, 08:00 - 17:00 WIB"
+        "description": "Monday - Friday, 08:00 - 17:00 WIB",
+        "action": "Call Now"
       },
       "email": {
         "title": "Email",
-        "description": "Response within 24 hours"
+        "description": "Response within 24 hours",
+        "action": "Send Email"
       },
       "address": {
-        "title": "Office Address"
+        "title": "Office Address",
+        "description": "Legenda Malaka, Batam",
+        "action": "View Location"
       },
       "whatsapp": {
         "title": "WhatsApp",
-        "description": "Chat directly with our team"
+        "description": "Chat directly with our team",
+        "action": "Chat WhatsApp"
       }
     },
     "form": {
       "badge": "📝 Contact Form",
       "title": "Get Free Consultation",
-      "description": "Fill out the form below and our team will contact you within 24 hours to provide the best solution.",
+      "subtitle": "Fill out the form below and our team will contact you within 24 hours to provide the best solution.",
       "fields": {
-        "fullName": "Full Name",
-        "fullNamePlaceholder": "Enter full name",
+        "name": "Full Name",
+        "name_placeholder": "Enter full name",
         "company": "Company Name",
-        "companyPlaceholder": "Company name",
+        "company_placeholder": "Company name",
         "email": "Email",
-        "emailPlaceholder": "email@company.com",
+        "email_placeholder": "email@company.com",
         "phone": "Phone Number",
-        "phonePlaceholder": "08xx-xxxx-xxxx",
+        "phone_placeholder": "08xx-xxxx-xxxx",
         "service": "Required Service",
-        "servicePlaceholder": "Select required service",
+        "service_placeholder": "Select required service",
         "message": "Message",
-        "messagePlaceholder": "Describe your logistics needs in detail...",
-        "submit": "Send Consultation Request"
-      }
-    },
-    "companyInfo": {
-      "operatingHours": {
-        "title": "Operating Hours",
-        "weekdays": "Monday - Friday",
-        "saturday": "Saturday",
-        "sunday": "Sunday",
-        "closed": "Closed",
-        "emergency": "Emergency Service: 24/7 for urgent services"
+        "message_placeholder": "Describe your logistics needs in detail..."
       },
-      "whyChoose": {
-        "title": "Why Choose MSL?",
-        "reasons": [
-          "15+ years experience in logistics industry",
-          "Professional and certified team",
-          "Real-time tracking technology",
-          "Distribution network throughout Indonesia",
-          "Competitive prices with guaranteed quality",
-          "Responsive customer service 24/7"
-        ]
-      }
+      "submit": "Send Consultation Request"
+    },
+    "office_hours": {
+      "title": "Operating Hours",
+      "weekdays": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed",
+      "emergency": "Emergency Service: 24/7 for urgent services"
+    },
+    "why_choose": {
+      "title": "Why Choose MSL?",
+      "reasons": [
+        "15+ years experience in logistics industry",
+        "Professional and certified team",
+        "Real-time tracking technology",
+        "Distribution network throughout Indonesia",
+        "Competitive prices with guaranteed quality",
+        "Responsive customer service 24/7"
+      ]
     },
     "location": {
       "badge": "📍 Office Location",
       "title": "Visit Our Office",
-      "description": "Our head office is strategically located in Batam to serve your logistics needs",
-      "fullAddress": {
-        "title": "Full Address"
-      },
+      "subtitle": "Our head office is strategically located in Batam to serve your logistics needs",
+      "address_title": "Complete Address",
       "transportation": {
         "title": "Transportation Access",
-        "fromAirport": "From Airport: 15 minutes drive",
-        "fromPort": "From Port: 20 minutes drive",
-        "publicTransport": "Public Transport: City transport available"
-      }
+        "airport": "From Airport: 15 minutes drive",
+        "port": "From Port: 20 minutes drive",
+        "public": "Public Transportation: City transport available"
+      },
+      "maps_action": "Open in Google Maps"
     }
   },
   "form": {
-    "sending": "Sending request...",
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number"
+    },
     "success": "Consultation request sent successfully!",
-    "error": "Failed to send request, please try again."
+    "error": "Failed to send request, please try again.",
+    "sending": "Sending request..."
   },
   "footer": {
     "description": "Providing the best logistics solutions to support your business growth with modern technology and professional services.",
-    "services": "Services",
-    "company": "Company",
-    "contact": "Contact",
+    "services_title": "Services",
+    "company_title": "Company",
+    "contact_title": "Contact",
     "copyright": "All rights reserved."
-  },
-  "servicesList": {
-    "transportation": {
-      "title": "Transportation & Distribution",
-      "shortDescription": "Land transportation services with modern fleet and optimal routes for efficient and timely goods distribution.",
-      "features": ["Complete Fleet", "Real-time Tracking", "Goods Insurance"],
-      "pricing": "Starting from Rp 50,000 per shipment"
-    },
-    "warehousing": {
-      "title": "Warehousing & Storage",
-      "shortDescription": "Modern warehousing facilities with inventory management system and high-level security for goods storage.",
-      "features": ["Modern Warehouse", "WMS System", "24/7 Security"],
-      "pricing": "Starting from Rp 15,000 per m³ per month"
-    },
-    "packaging": {
-      "title": "Packaging & Handling",
-      "shortDescription": "Professional packaging services and special handling to ensure goods arrive in prime condition.",
-      "features": ["Custom Packaging", "Special Handling", "Quality Control"],
-      "pricing": "Starting from Rp 5,000 per item"
-    },
-    "lastmile": {
-      "title": "Last Mile Delivery",
-      "shortDescription": "Delivery to final destination with extensive distribution network and responsive customer service.",
-      "features": ["COD Available", "Same Day Delivery", "Flexible Schedule"],
-      "pricing": "Starting from Rp 15,000 per shipment"
-    },
-    "supplyChain": {
-      "title": "Supply Chain Management",
-      "shortDescription": "Supply chain optimization with modern technology for operational efficiency and cost reduction.",
-      "features": ["SCM Consultation", "Process Optimization", "Cost Reduction"],
-      "pricing": "Starting from Rp 25,000,000 per project"
-    },
-    "express": {
-      "title": "Express & Urgent",
-      "shortDescription": "Express service for urgent deliveries with high priority and guaranteed delivery time.",
-      "features": ["Express Delivery", "Emergency Service", "Time Guarantee"],
-      "pricing": "Starting from Rp 100,000 per shipment"
-    }
-  },
-  "companyValues": {
-    "integrity": {
-      "title": "Integrity",
-      "description": "Committed to honesty and transparency in every service"
-    },
-    "innovation": {
-      "title": "Innovation",
-      "description": "Using cutting-edge technology for efficient logistics solutions"
-    },
-    "quality": {
-      "title": "Quality",
-      "description": "Maintaining high standards in every operational aspect"
-    },
-    "customerSatisfaction": {
-      "title": "Customer Satisfaction",
-      "description": "Prioritizing client needs and satisfaction as our top priority"
-    }
   }
 }

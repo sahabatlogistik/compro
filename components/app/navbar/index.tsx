@@ -1,12 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/config";
 import { ArrowRight, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,27 +15,25 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import Logo from "@/app/logo.png"; // Adjust the path as necessary
+
 export default function AppNavbar() {
   const t = useTranslations();
   const locale = useLocale();
-  const router = useRouter();
   const pathname = usePathname();
+  const router = useRouter();
 
   const navigation = [
-    { name: t('navigation.home'), href: "/" },
-    { name: t('navigation.services'), href: "/services" },
-    { name: t('navigation.about'), href: "/about" },
-    { name: t('navigation.contact'), href: "/contact" },
+    { name: t("navigation.home"), href: `/${locale}` },
+    { name: t("navigation.services"), href: `/${locale}/services` },
+    { name: t("navigation.about"), href: `/${locale}/about` },
+    { name: t("navigation.contact"), href: `/${locale}/contact` },
   ];
 
-  const switchLocale = (newLocale: string) => {
-    const segments = pathname.split('/');
-    if (segments[1] === 'en' || segments[1] === 'id') {
-      segments[1] = newLocale;
-    } else {
-      segments.splice(1, 0, newLocale);
-    }
-    const newPath = segments.join('/');
+  const switchLanguage = (newLocale: string) => {
+    const segments = pathname.split("/");
+    segments[1] = newLocale;
+    const newPath = segments.join("/");
     router.push(newPath);
   };
 
@@ -43,9 +42,9 @@ export default function AppNavbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <Link href="/">
+            <Link href={`/${locale}`}>
               <Image
-                src="/logo.png"
+                src={Logo}
                 alt="MSL Logo"
                 width={180}
                 height={60}
@@ -63,32 +62,32 @@ export default function AppNavbar() {
                 {item.name}
               </Link>
             ))}
-            
+
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                <Button variant="outline" size="sm" className="gap-2">
                   <Globe className="h-4 w-4" />
-                  <span className="uppercase">{locale}</span>
+                  {locale === "id" ? "ID" : "EN"}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => switchLocale('id')}>
+                <DropdownMenuItem onClick={() => switchLanguage("id")}>
                   🇮🇩 Bahasa Indonesia
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => switchLocale('en')}>
+                <DropdownMenuItem onClick={() => switchLanguage("en")}>
                   🇺🇸 English
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             <Link
-              href="https://wa.me/6281266020295"
+              href={siteConfig.contact.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-                {t('common.freeConsultation')}
+                {t("common.contact_us")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

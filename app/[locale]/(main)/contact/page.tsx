@@ -32,8 +32,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'contact' });
   
   return {
-    title: t('navigation.contact'),
-    description: t('hero.description'),
+    title: t('hero.title'),
+    description: t('hero.subtitle'),
   };
 }
 
@@ -54,10 +54,10 @@ export default function ContactPage() {
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
               {t('contact.hero.title')}
-              <span className="text-msl-orange"> {t('contact.hero.titleHighlight')}</span> {t('contact.hero.titleEnd')}
+              <span className="text-msl-orange"> {t('common.tagline').split(' ')[1]}</span> Anda
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              {t('contact.hero.description')}
+              {t('contact.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
               {t('contact.info.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('contact.info.description')}
+              {t('contact.info.subtitle')}
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 title: t('contact.info.phone.title'),
                 value: siteConfig.contact.phone,
                 description: t('contact.info.phone.description'),
-                action: t('common.callNow'),
+                action: t('contact.info.phone.action'),
                 href: `tel:${siteConfig.contact.phone}`,
                 color: "msl-orange",
               },
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 title: t('contact.info.email.title'),
                 value: siteConfig.contact.email,
                 description: t('contact.info.email.description'),
-                action: t('common.sendEmail'),
+                action: t('contact.info.email.action'),
                 href: `mailto:${siteConfig.contact.email}`,
                 color: "msl-orange",
               },
@@ -105,8 +105,8 @@ export default function ContactPage() {
                 icon: MapPin,
                 title: t('contact.info.address.title'),
                 value: siteConfig.contact.address.street,
-                description: siteConfig.contact.address.city,
-                action: t('common.viewLocation'),
+                description: t('contact.info.address.description'),
+                action: t('contact.info.address.action'),
                 href: "#",
                 color: "msl-orange",
               },
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 title: t('contact.info.whatsapp.title'),
                 value: siteConfig.contact.phone,
                 description: t('contact.info.whatsapp.description'),
-                action: t('common.chatWhatsApp'),
+                action: t('contact.info.whatsapp.action'),
                 href: `https://wa.me/${siteConfig.contact.phone.replace(
                   /[^0-9]/g,
                   ""
@@ -185,7 +185,7 @@ export default function ContactPage() {
                   {t('contact.form.title')}
                 </h2>
                 <p className="text-lg text-gray-600">
-                  {t('contact.form.description')}
+                  {t('contact.form.subtitle')}
                 </p>
               </div>
 
@@ -204,25 +204,25 @@ export default function ContactPage() {
                   <CardHeader>
                     <CardTitle className="text-xl text-msl-navy flex items-center">
                       <Clock className="w-5 h-5 mr-2" />
-                      {t('contact.companyInfo.operatingHours.title')}
+                      {t('contact.office_hours.title')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t('contact.companyInfo.operatingHours.weekdays')}</span>
+                      <span className="text-gray-600">{t('contact.office_hours.weekdays')}</span>
                       <span className="font-medium">08:00 - 17:00 WIB</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t('contact.companyInfo.operatingHours.saturday')}</span>
+                      <span className="text-gray-600">{t('contact.office_hours.saturday')}</span>
                       <span className="font-medium">08:00 - 12:00 WIB</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t('contact.companyInfo.operatingHours.sunday')}</span>
-                      <span className="font-medium text-red-600">{t('contact.companyInfo.operatingHours.closed')}</span>
+                      <span className="text-gray-600">{t('contact.office_hours.sunday')}</span>
+                      <span className="font-medium text-red-600">{t('contact.office_hours.closed')}</span>
                     </div>
                     <div className="pt-3 border-t border-gray-200">
                       <p className="text-sm text-gray-600">
-                        <strong>Emergency Service:</strong> {t('contact.companyInfo.operatingHours.emergency')}
+                        <strong>Emergency Service:</strong> {t('contact.office_hours.emergency')}
                       </p>
                     </div>
                   </CardContent>
@@ -232,14 +232,14 @@ export default function ContactPage() {
                 <Card className="border-gray-200">
                   <CardHeader>
                     <CardTitle className="text-xl text-msl-navy">
-                      {t('contact.companyInfo.whyChoose.title')}
+                      {t('contact.why_choose.title')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {[0, 1, 2, 3, 4, 5].map((index) => (
+                    {t.raw('contact.why_choose.reasons').map((item: string, index: number) => (
                       <div key={index} className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-msl-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700">{t(`contact.companyInfo.whyChoose.reasons.${index}`)}</span>
+                        <span className="text-gray-700">{item}</span>
                       </div>
                     ))}
                   </CardContent>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                         {siteConfig.company.clients}
                       </div>
                       <div className="text-sm text-gray-600">
-                        {t('about.stats.clientsServed')}
+                        {t('about.stats.clients')}
                       </div>
                     </CardContent>
                   </Card>
@@ -263,7 +263,7 @@ export default function ContactPage() {
                         {siteConfig.company.satisfaction}
                       </div>
                       <div className="text-sm text-gray-600">
-                        {t('about.stats.satisfactionRate')}
+                        {t('about.stats.satisfaction')}
                       </div>
                     </CardContent>
                   </Card>
@@ -288,7 +288,7 @@ export default function ContactPage() {
               {t('contact.location.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('contact.location.description')}
+              {t('contact.location.subtitle')}
             </p>
           </div>
 
@@ -315,7 +315,7 @@ export default function ContactPage() {
               <Card className="border-gray-200">
                 <CardHeader>
                   <CardTitle className="text-lg text-msl-navy">
-                    {t('contact.location.fullAddress.title')}
+                    {t('contact.location.address_title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
@@ -342,13 +342,13 @@ export default function ContactPage() {
                 <CardContent className="space-y-3">
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600">
-                      <strong>{t('contact.location.transportation.fromAirport')}</strong>
+                      <strong>Dari Bandara:</strong> {t('contact.location.transportation.airport')}
                     </p>
                     <p className="text-sm text-gray-600">
-                      <strong>{t('contact.location.transportation.fromPort')}</strong>
+                      <strong>Dari Pelabuhan:</strong> {t('contact.location.transportation.port')}
                     </p>
                     <p className="text-sm text-gray-600">
-                      <strong>{t('contact.location.transportation.publicTransport')}</strong>
+                      <strong>Transportasi Umum:</strong> {t('contact.location.transportation.public')}
                     </p>
                   </div>
                 </CardContent>
@@ -360,7 +360,7 @@ export default function ContactPage() {
               >
                 <a href="#" target="_blank">
                   <MapPin className="mr-2 h-4 w-4" />
-                  {t('common.openGoogleMaps')}
+                  {t('contact.location.maps_action')}
                 </a>
               </Button>
             </div>
