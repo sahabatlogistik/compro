@@ -21,21 +21,21 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import LeadForm from "@/components/forms/lead-form";
 import { Metadata } from "next";
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({
-  params: { locale }
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'contact' });
-  
-  return {
-    title: t('hero.title'),
-    description: t('hero.subtitle'),
-  };
-}
+// export async function generateMetadata({
+//   params: { locale }
+// }: {
+//   params: { locale: string }
+// }): Promise<Metadata> {
+//   const t = await getTranslations({ locale, namespace: 'contact' });
+
+//   return {
+//     title: t('hero.title'),
+//     description: t('hero.subtitle'),
+//   };
+// }
 
 export default function ContactPage() {
   const t = useTranslations();
@@ -50,14 +50,18 @@ export default function ContactPage() {
               variant="secondary"
               className="bg-white/10 text-white border-white/20"
             >
-              {t('contact.hero.badge')}
+              {t("contact.hero.badge")}
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-              {t('contact.hero.title')}
-              <span className="text-msl-orange"> {t('common.tagline').split(' ')[1]}</span> Anda
+              {t("contact.hero.title")}
+              <span className="text-msl-orange">
+                {" "}
+                {t("common.tagline").split(" ")[1]}
+              </span>{" "}
+              Anda
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              {t('contact.hero.subtitle')}
+              {t("contact.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -71,13 +75,13 @@ export default function ContactPage() {
               variant="secondary"
               className="bg-msl-navy/10 text-msl-navy border-msl-navy/20"
             >
-              {t('contact.info.badge')}
+              {t("contact.info.badge")}
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-msl-navy">
-              {t('contact.info.title')}
+              {t("contact.info.title")}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('contact.info.subtitle')}
+              {t("contact.info.subtitle")}
             </p>
           </div>
 
@@ -85,37 +89,37 @@ export default function ContactPage() {
             {[
               {
                 icon: Phone,
-                title: t('contact.info.phone.title'),
+                title: t("contact.info.phone.title"),
                 value: siteConfig.contact.phone,
-                description: t('contact.info.phone.description'),
-                action: t('contact.info.phone.action'),
+                description: t("contact.info.phone.description"),
+                action: t("contact.info.phone.action"),
                 href: `tel:${siteConfig.contact.phone}`,
                 color: "msl-orange",
               },
               {
                 icon: Mail,
-                title: t('contact.info.email.title'),
+                title: t("contact.info.email.title"),
                 value: siteConfig.contact.email,
-                description: t('contact.info.email.description'),
-                action: t('contact.info.email.action'),
+                description: t("contact.info.email.description"),
+                action: t("contact.info.email.action"),
                 href: `mailto:${siteConfig.contact.email}`,
                 color: "msl-orange",
               },
               {
                 icon: MapPin,
-                title: t('contact.info.address.title'),
+                title: t("contact.info.address.title"),
                 value: siteConfig.contact.address.street,
-                description: t('contact.info.address.description'),
-                action: t('contact.info.address.action'),
+                description: t("contact.info.address.description"),
+                action: t("contact.info.address.action"),
                 href: "#",
                 color: "msl-orange",
               },
               {
                 icon: MessageCircle,
-                title: t('contact.info.whatsapp.title'),
+                title: t("contact.info.whatsapp.title"),
                 value: siteConfig.contact.phone,
-                description: t('contact.info.whatsapp.description'),
-                action: t('contact.info.whatsapp.action'),
+                description: t("contact.info.whatsapp.description"),
+                action: t("contact.info.whatsapp.action"),
                 href: `https://wa.me/${siteConfig.contact.phone.replace(
                   /[^0-9]/g,
                   ""
@@ -179,13 +183,13 @@ export default function ContactPage() {
                   variant="secondary"
                   className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
                 >
-                  {t('contact.form.badge')}
+                  {t("contact.form.badge")}
                 </Badge>
                 <h2 className="text-3xl lg:text-4xl font-bold text-msl-navy">
-                  {t('contact.form.title')}
+                  {t("contact.form.title")}
                 </h2>
                 <p className="text-lg text-gray-600">
-                  {t('contact.form.subtitle')}
+                  {t("contact.form.subtitle")}
                 </p>
               </div>
 
@@ -204,25 +208,34 @@ export default function ContactPage() {
                   <CardHeader>
                     <CardTitle className="text-xl text-msl-navy flex items-center">
                       <Clock className="w-5 h-5 mr-2" />
-                      {t('contact.office_hours.title')}
+                      {t("contact.office_hours.title")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t('contact.office_hours.weekdays')}</span>
+                      <span className="text-gray-600">
+                        {t("contact.office_hours.weekdays")}
+                      </span>
                       <span className="font-medium">08:00 - 17:00 WIB</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t('contact.office_hours.saturday')}</span>
+                      <span className="text-gray-600">
+                        {t("contact.office_hours.saturday")}
+                      </span>
                       <span className="font-medium">08:00 - 12:00 WIB</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">{t('contact.office_hours.sunday')}</span>
-                      <span className="font-medium text-red-600">{t('contact.office_hours.closed')}</span>
+                      <span className="text-gray-600">
+                        {t("contact.office_hours.sunday")}
+                      </span>
+                      <span className="font-medium text-red-600">
+                        {t("contact.office_hours.closed")}
+                      </span>
                     </div>
                     <div className="pt-3 border-t border-gray-200">
                       <p className="text-sm text-gray-600">
-                        <strong>Emergency Service:</strong> {t('contact.office_hours.emergency')}
+                        <strong>Emergency Service:</strong>{" "}
+                        {t("contact.office_hours.emergency")}
                       </p>
                     </div>
                   </CardContent>
@@ -232,16 +245,18 @@ export default function ContactPage() {
                 <Card className="border-gray-200">
                   <CardHeader>
                     <CardTitle className="text-xl text-msl-navy">
-                      {t('contact.why_choose.title')}
+                      {t("contact.why_choose.title")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {t.raw('contact.why_choose.reasons').map((item: string, index: number) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-msl-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700">{item}</span>
-                      </div>
-                    ))}
+                    {t
+                      .raw("contact.why_choose.reasons")
+                      .map((item: string, index: number) => (
+                        <div key={index} className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-msl-orange rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700">{item}</span>
+                        </div>
+                      ))}
                   </CardContent>
                 </Card>
 
@@ -253,7 +268,7 @@ export default function ContactPage() {
                         {siteConfig.company.clients}
                       </div>
                       <div className="text-sm text-gray-600">
-                        {t('about.stats.clients')}
+                        {t("about.stats.clients")}
                       </div>
                     </CardContent>
                   </Card>
@@ -263,7 +278,7 @@ export default function ContactPage() {
                         {siteConfig.company.satisfaction}
                       </div>
                       <div className="text-sm text-gray-600">
-                        {t('about.stats.satisfaction')}
+                        {t("about.stats.satisfaction")}
                       </div>
                     </CardContent>
                   </Card>
@@ -282,13 +297,13 @@ export default function ContactPage() {
               variant="secondary"
               className="bg-msl-navy/10 text-msl-navy border-msl-navy/20"
             >
-              {t('contact.location.badge')}
+              {t("contact.location.badge")}
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-msl-navy">
-              {t('contact.location.title')}
+              {t("contact.location.title")}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('contact.location.subtitle')}
+              {t("contact.location.subtitle")}
             </p>
           </div>
 
@@ -315,7 +330,7 @@ export default function ContactPage() {
               <Card className="border-gray-200">
                 <CardHeader>
                   <CardTitle className="text-lg text-msl-navy">
-                    {t('contact.location.address_title')}
+                    {t("contact.location.address_title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
@@ -336,19 +351,22 @@ export default function ContactPage() {
               <Card className="border-gray-200">
                 <CardHeader>
                   <CardTitle className="text-lg text-msl-navy">
-                    {t('contact.location.transportation.title')}
+                    {t("contact.location.transportation.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600">
-                      <strong>Dari Bandara:</strong> {t('contact.location.transportation.airport')}
+                      <strong>Dari Bandara:</strong>{" "}
+                      {t("contact.location.transportation.airport")}
                     </p>
                     <p className="text-sm text-gray-600">
-                      <strong>Dari Pelabuhan:</strong> {t('contact.location.transportation.port')}
+                      <strong>Dari Pelabuhan:</strong>{" "}
+                      {t("contact.location.transportation.port")}
                     </p>
                     <p className="text-sm text-gray-600">
-                      <strong>Transportasi Umum:</strong> {t('contact.location.transportation.public')}
+                      <strong>Transportasi Umum:</strong>{" "}
+                      {t("contact.location.transportation.public")}
                     </p>
                   </div>
                 </CardContent>
@@ -360,7 +378,7 @@ export default function ContactPage() {
               >
                 <a href="#" target="_blank">
                   <MapPin className="mr-2 h-4 w-4" />
-                  {t('contact.location.maps_action')}
+                  {t("contact.location.maps_action")}
                 </a>
               </Button>
             </div>

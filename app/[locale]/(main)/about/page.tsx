@@ -20,24 +20,28 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import { Metadata } from "next";
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({
-  params: { locale }
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'about' });
-  
-  return {
-    title: t('hero.title'),
-    description: t('hero.subtitle'),
-  };
-}
+// export async function generateMetadata(props: {
+//   params: { locale: string };
+// }): Promise<Metadata> {
+//   const locale = props.params.locale;
+
+//   const t = await getTranslations({ locale, namespace: "about" });
+
+//   console.log({
+//     t: t("meta"),
+//   });
+
+//   return {
+//     title: t("meta.title"),
+//     description: t("meta.description"),
+//   };
+// }
 
 export default function AboutPage() {
-  const t = useTranslations();
+  const t = useTranslations("");
 
   return (
     <>
@@ -51,14 +55,17 @@ export default function AboutPage() {
                   variant="secondary"
                   className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
                 >
-                  {t('about.hero.badge')}
+                  {t("about.hero.badge")}
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight">
-                  {t('about.hero.title')}
-                  <span className="text-msl-orange"> {t('common.tagline').split(' ')[1]}</span>
+                  {t("about.hero.title")}
+                  <span className="text-msl-orange">
+                    {" "}
+                    {t("common.tagline").split(" ")[1]}
+                  </span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  {t('about.hero.subtitle')}
+                  {t("about.hero.subtitle")}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -66,7 +73,7 @@ export default function AboutPage() {
                   size="lg"
                   className="bg-msl-navy hover:bg-msl-dark-blue text-white"
                 >
-                  {t('about.hero.cta_primary')}
+                  {t("about.hero.cta_primary")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
@@ -74,7 +81,7 @@ export default function AboutPage() {
                   variant="outline"
                   className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white"
                 >
-                  {t('about.hero.cta_secondary')}
+                  {t("about.hero.cta_secondary")}
                 </Button>
               </div>
             </div>
@@ -103,22 +110,22 @@ export default function AboutPage() {
             {[
               {
                 value: siteConfig.company.experience,
-                label: t('about.stats.experience'),
+                label: t("about.stats.experience"),
                 color: "msl-navy",
               },
               {
                 value: siteConfig.company.clients,
-                label: t('about.stats.clients'),
+                label: t("about.stats.clients"),
                 color: "msl-orange",
               },
               {
                 value: siteConfig.company.satisfaction,
-                label: t('about.stats.satisfaction'),
+                label: t("about.stats.satisfaction"),
                 color: "msl-brown",
               },
               {
                 value: siteConfig.company.certification,
-                label: t('about.stats.certification'),
+                label: t("about.stats.certification"),
                 color: "msl-dark-brown",
               },
             ].map((stat, index) => (
@@ -146,13 +153,13 @@ export default function AboutPage() {
               variant="secondary"
               className="bg-msl-navy/10 text-msl-navy border-msl-navy/20"
             >
-              {t('about.vision_mission.badge')}
+              {t("about.vision_mission.badge")}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t('about.vision_mission.title')}
+              {t("about.vision_mission.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('about.vision_mission.subtitle')}
+              {t("about.vision_mission.subtitle")}
             </p>
           </div>
 
@@ -166,12 +173,12 @@ export default function AboutPage() {
                   <Eye className="h-8 w-8 text-msl-orange" />
                 </div>
                 <CardTitle className="text-2xl text-msl-navy">
-                  {t('about.vision_mission.vision.title')}
+                  {t("about.vision_mission.vision.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-gray-600 text-center leading-relaxed">
-                  {t('about.vision_mission.vision.content')}
+                  {t("about.vision_mission.vision.content")}
                 </p>
               </CardContent>
             </Card>
@@ -185,12 +192,12 @@ export default function AboutPage() {
                   <Target className="h-8 w-8 text-msl-navy" />
                 </div>
                 <CardTitle className="text-2xl text-msl-navy">
-                  {t('about.vision_mission.mission.title')}
+                  {t("about.vision_mission.mission.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-gray-600 text-center leading-relaxed">
-                  {t('about.vision_mission.mission.content')}
+                  {t("about.vision_mission.mission.content")}
                 </p>
               </CardContent>
             </Card>
@@ -206,13 +213,13 @@ export default function AboutPage() {
               variant="secondary"
               className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
             >
-              {t('about.values.badge')}
+              {t("about.values.badge")}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-msl-navy">
-              {t('about.values.title')}
+              {t("about.values.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('about.values.subtitle')}
+              {t("about.values.subtitle")}
             </p>
           </div>
 
@@ -263,18 +270,19 @@ export default function AboutPage() {
               variant="secondary"
               className="bg-white/10 text-white border-white/20"
             >
-              {t('about.cta.badge')}
+              {t("about.cta.badge")}
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
-              {t('about.cta.title')}
+              {t("about.cta.title")}
               <span className="text-msl-orange">
                 {" "}
-                {siteConfig.company.clients} {t('about.cta.title').split(' ')[2]}
+                {siteConfig.company.clients}{" "}
+                {t("about.cta.title").split(" ")[2]}
               </span>{" "}
               Kami
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              {t('about.cta.subtitle')}
+              {t("about.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -283,7 +291,7 @@ export default function AboutPage() {
                   className="bg-msl-orange hover:bg-msl-orange/90 text-white"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  {t('about.cta.cta_primary')}
+                  {t("about.cta.cta_primary")}
                 </Button>
               </Link>
               <Button
@@ -292,7 +300,7 @@ export default function AboutPage() {
                 className="border-white text-white hover:bg-white hover:text-msl-navy"
               >
                 <Mail className="mr-2 h-5 w-5" />
-                {t('about.cta.cta_secondary')}
+                {t("about.cta.cta_secondary")}
               </Button>
             </div>
           </div>
