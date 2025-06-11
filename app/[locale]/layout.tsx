@@ -24,7 +24,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <main className="min-h-screen bg-white">
+          <main className="min-h-screen w-full bg-white overflow-x-hidden">
             <AppNavbar />
             {children}
             <AppFooter />
