@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import LeadForm from "@/components/forms/lead-form";
 import { useTranslations } from "next-intl";
 

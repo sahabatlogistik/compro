@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config";
 import { ArrowRight, Globe } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,28 +21,20 @@ export default function AppNavbar() {
   const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
 
   const navigation = [
-    { name: t("navigation.home"), href: `/${locale}` },
-    { name: t("navigation.services"), href: `/${locale}/services` },
-    { name: t("navigation.about"), href: `/${locale}/about` },
-    { name: t("navigation.contact"), href: `/${locale}/contact` },
+    { name: t("navigation.home"), href: "/" },
+    { name: t("navigation.services"), href: "/services" },
+    { name: t("navigation.about"), href: "/about" },
+    { name: t("navigation.contact"), href: "/contact" },
   ];
-
-  const switchLanguage = (newLocale: string) => {
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    const newPath = segments.join("/");
-    router.push(newPath);
-  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <Link href={`/${locale}`}>
+            <Link href="/">
               <Image
                 src={Logo}
                 alt="MSL Logo"
@@ -72,11 +64,15 @@ export default function AppNavbar() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => switchLanguage("id")}>
-                  🇮🇩 Bahasa Indonesia
+                <DropdownMenuItem asChild>
+                  <Link href={pathname} locale="id">
+                    🇮🇩 Bahasa Indonesia
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => switchLanguage("en")}>
-                  🇺🇸 English
+                <DropdownMenuItem asChild>
+                  <Link href={pathname} locale="en">
+                    🇺🇸 English
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
