@@ -73,6 +73,19 @@ const config: Config = {
           '5': 'hsl(var(--chart-5))',
         },
       },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'spin-slow': 'spin 8s linear infinite',
+        'spin-reverse': 'spin-reverse 12s linear infinite',
+        'orbit': 'orbit 4s linear infinite',
+        'orbit-reverse': 'orbit-reverse 6s linear infinite',
+        'orbit-slow': 'orbit 10s linear infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'float-delayed': 'float 3s ease-in-out infinite 1.5s',
+        'twinkle': 'twinkle 2s ease-in-out infinite',
+        'twinkle-delayed': 'twinkle 2s ease-in-out infinite 1s',
+      },
       keyframes: {
         'accordion-down': {
           from: {
@@ -90,10 +103,50 @@ const config: Config = {
             height: '0',
           },
         },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        'spin-reverse': {
+          from: {
+            transform: 'rotate(360deg)',
+          },
+          to: {
+            transform: 'rotate(0deg)',
+          },
+        },
+        'orbit': {
+          '0%': {
+            transform: 'rotate(0deg) translateX(64px) rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg) translateX(64px) rotate(-360deg)',
+          },
+        },
+        'orbit-reverse': {
+          '0%': {
+            transform: 'rotate(360deg) translateX(64px) rotate(-360deg)',
+          },
+          '100%': {
+            transform: 'rotate(0deg) translateX(64px) rotate(0deg)',
+          },
+        },
+        'float': {
+          '0%, 100%': {
+            transform: 'translateY(0px)',
+            opacity: '0.3',
+          },
+          '50%': {
+            transform: 'translateY(-10px)',
+            opacity: '0.6',
+          },
+        },
+        'twinkle': {
+          '0%, 100%': {
+            opacity: '0.3',
+            transform: 'scale(1)',
+          },
+          '50%': {
+            opacity: '1',
+            transform: 'scale(1.2)',
+          },
+        },
       },
     },
   },
