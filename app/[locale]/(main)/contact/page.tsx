@@ -24,18 +24,19 @@ import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-// export async function generateMetadata({
-//   params: { locale }
-// }: {
-//   params: { locale: string }
-// }): Promise<Metadata> {
-//   const t = await getTranslations({ locale, namespace: 'contact' });
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
 
-//   return {
-//     title: t('hero.title'),
-//     description: t('hero.subtitle'),
-//   };
-// }
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function ContactPage() {
   const t = useTranslations();

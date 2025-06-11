@@ -62,6 +62,10 @@
     }
   },
   "services": {
+    "metadata": {
+      "title": "Layanan Logistik",
+      "description": "PT. Mitra Sahabat Logistik menyediakan berbagai layanan logistik komprehensif untuk mendukung kebutuhan bisnis Anda."
+    },
     "hero": {
       "badge": "🚛 Layanan Logistik Komprehensif",
       "title": "Solusi Logistik Terpadu untuk Setiap Kebutuhan",
@@ -110,6 +114,10 @@
     }
   },
   "about": {
+    "metadata": {
+      "title": "Tentang Kami",
+      "description": "Mengenal lebih dekat PT. Mitra Sahabat Logistik, mitra terpercaya dalam solusi logistik di Indonesia dengan pengalaman lebih dari 15 tahun."
+    },
     "hero": {
       "badge": "🏢 Tentang Perusahaan",
       "title": "Mitra Terpercaya dalam Solusi Logistik",
@@ -150,6 +158,10 @@
     }
   },
   "contact": {
+    "metadata": {
+      "title": "Kontak Kami",
+      "description": "Hubungi PT. Mitra Sahabat Logistik untuk mendapatkan solusi logistik terbaik. Tim kami siap membantu Anda dengan konsultasi gratis."
+    },
     "hero": {
       "badge": "📞 Hubungi Kami",
       "title": "Mari Diskusikan Kebutuhan Logistik Anda",

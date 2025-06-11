@@ -23,22 +23,19 @@ import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-// export async function generateMetadata(props: {
-//   params: { locale: string };
-// }): Promise<Metadata> {
-//   const locale = props.params.locale;
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
 
-//   const t = await getTranslations({ locale, namespace: "about" });
-
-//   console.log({
-//     t: t("meta"),
-//   });
-
-//   return {
-//     title: t("meta.title"),
-//     description: t("meta.description"),
-//   };
-// }
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function AboutPage() {
   const t = useTranslations("");
