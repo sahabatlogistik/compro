@@ -63,6 +63,9 @@ export default function LeadForm() {
     );
   };
 
+  // Get services from translations
+  const services = t.raw("home.services.items");
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -138,7 +141,7 @@ export default function LeadForm() {
             <SelectValue placeholder={t('contact.form.fields.service_placeholder')} />
           </SelectTrigger>
           <SelectContent>
-            {siteConfig.services.map((service) => (
+            {services.map((service: any) => (
               <SelectItem key={service.id} value={service.id}>
                 {service.title}
               </SelectItem>

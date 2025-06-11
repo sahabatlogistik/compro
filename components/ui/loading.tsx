@@ -4,12 +4,15 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Logo from "@/app/logo.png";
+import { useTranslations } from "next-intl";
 
 interface LoadingProps {
   className?: string;
 }
 
 export function Loading({ className }: LoadingProps) {
+  const t = useTranslations("loading");
+
   return (
     <div
       className={cn(
@@ -81,10 +84,10 @@ export function Loading({ className }: LoadingProps) {
             className="h-12 w-auto brightness-0 invert mx-auto"
           />
           <h3 className="text-xl font-bold text-white">
-            PT. Mitra Sahabat Logistik
+            {t("company_name")}
           </h3>
           <p className="text-blue-200 text-sm">
-            Sahabat Terpercaya untuk Semua Pengiriman Anda
+            {t("tagline")}
           </p>
 
           {/* Loading dots */}
@@ -125,6 +128,7 @@ export function PageLoading({
   onLoadingComplete,
 }: PageLoadingProps) {
   const [progress, setProgress] = useState(0);
+  const t = useTranslations("loading");
 
   useEffect(() => {
     if (isLoading) {
@@ -223,13 +227,13 @@ export function PageLoading({
             className="h-12 w-auto brightness-0 invert mx-auto"
           />
           <h3 className="text-xl font-bold text-white">
-            PT. Mitra Sahabat Logistik
+            {t("company_name")}
           </h3>
           <p className="text-blue-200 text-sm">
-            Sahabat Terpercaya untuk Semua Pengiriman Anda
+            {t("tagline")}
           </p>
           <p className="text-slate-300 text-xs">
-            Memuat halaman... {Math.round(progress)}%
+            {t("loading_text")} {Math.round(progress)}%
           </p>
         </div>
       </div>

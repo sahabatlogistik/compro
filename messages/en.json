@@ -1,8 +1,8 @@
 {
   "common": {
     "company_name": "PT. Mitra Sahabat Logistik",
-    "tagline": "Trusted Logistics Solutions",
-    "description": "Providing the best logistics solutions to support your business growth with modern technology and professional services.",
+    "tagline": "Trusted Partner for All Your Shipments",
+    "description": "PT Mitra Sahabat Logistik (MSL) is a company engaged in domestic and international freight forwarding services, based in Batam, Riau Islands. We are here as a logistics solution that is not only reliable and efficient, but also accessible and pleasant to work with.",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
@@ -15,6 +15,11 @@
     "read_more": "Read More",
     "back_to_home": "Back to Home"
   },
+  "loading": {
+    "company_name": "PT. Mitra Sahabat Logistik",
+    "tagline": "Trusted Partner for All Your Shipments",
+    "loading_text": "Loading page..."
+  },
   "navigation": {
     "home": "Home",
     "services": "Services",
@@ -25,12 +30,12 @@
   "home": {
     "metadata": {
       "title": "Home",
-      "description": "Welcome to PT. Mitra Sahabat Logistik, your trusted partner in logistics solutions in Indonesia. Explore our services and get a free consultation."
+      "description": "Welcome to PT. Mitra Sahabat Logistik, your trusted partner for all your shipments. We provide domestic and international freight forwarding services from Batam."
     },
     "hero": {
       "badge": "🚛 Trusted Logistics Partner",
-      "title": "Integrated Logistics Solutions",
-      "subtitle": "We provide comprehensive logistics services with modern technology, extensive distribution network, and commitment to customer satisfaction.",
+      "title": "Domestic & International Freight Forwarding",
+      "subtitle": "We are here as a logistics solution that is not only reliable and efficient, but also accessible and pleasant to work with. With extensive experience and network, we are here as your reliable logistics partner: fast, safe, and hassle-free.",
       "cta_primary": "Start Consultation",
       "cta_secondary": "Learn Services",
       "stats": {
@@ -41,14 +46,58 @@
     },
     "services": {
       "badge": "🎯 Featured Services",
-      "title": "Comprehensive Logistics Services",
-      "subtitle": "From transportation to warehousing, we provide end-to-end logistics solutions tailored to your business needs.",
-      "cta": "View All Services"
+      "title": "Comprehensive Freight Forwarding Services",
+      "subtitle": "From domestic to international shipping, we provide end-to-end logistics solutions tailored to your business needs.",
+      "cta": "View All Services",
+      "items": [
+        {
+          "id": "domestic-land",
+          "icon": "Truck",
+          "title": "Domestic Freight Forwarding - Land",
+          "shortDescription": "Land shipping services throughout Indonesia with modern fleet and optimal routes for efficient and timely goods distribution.",
+          "features": ["Door-to-door Service", "Real-time Tracking", "Cargo Insurance"]
+        },
+        {
+          "id": "domestic-sea",
+          "icon": "Package",
+          "title": "Domestic Freight Forwarding - Sea",
+          "shortDescription": "Domestic sea shipping services for large cargo with efficient costs and regular schedules to major Indonesian ports.",
+          "features": ["FCL & LCL Service", "Port-to-port", "Custom Handling"]
+        },
+        {
+          "id": "domestic-air",
+          "icon": "LocationIcon",
+          "title": "Domestic Freight Forwarding - Air",
+          "shortDescription": "Domestic air shipping services for urgent goods with fastest transit time to all airports in Indonesia.",
+          "features": ["Same Day Service", "Express Delivery", "Temperature Control"]
+        },
+        {
+          "id": "international-import",
+          "icon": "Users",
+          "title": "International Freight Forwarding - Import",
+          "shortDescription": "Import services from worldwide with customs documentation, custom clearance, and delivery to final destination.",
+          "features": ["Custom Clearance", "Door-to-door", "Document Handling"]
+        },
+        {
+          "id": "international-export",
+          "icon": "Warehouse",
+          "title": "International Freight Forwarding - Export",
+          "shortDescription": "Export services worldwide with export documentation, custom clearance, and coordination with international buyers.",
+          "features": ["Export Documentation", "Custom Clearance", "International Network"]
+        },
+        {
+          "id": "custom-clearance",
+          "icon": "Clock",
+          "title": "Custom Clearance & Documentation",
+          "shortDescription": "Customs documentation and custom clearance services that are fast, accurate, and compliant with latest regulations.",
+          "features": ["PPJK Licensed", "Document Preparation", "Regulatory Compliance"]
+        }
+      ]
     },
     "about": {
       "badge": "🏢 About Company",
-      "title": "Trusted Partner in Logistics Solutions",
-      "subtitle": "PT. Mitra Sahabat Logistik has been established since 2008 with a commitment to providing the best logistics solutions in Indonesia. With over 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
+      "title": "Trusted Partner for All Your Shipments",
+      "subtitle": "PT. Mitra Sahabat Logistik is based in Batam, Riau Islands, engaged in domestic and international freight forwarding services. We are here as your reliable logistics partner with fast, safe, and hassle-free services.",
       "stats": {
         "experience": "Years of Experience",
         "clients": "Clients Served"
@@ -57,62 +106,62 @@
     },
     "contact": {
       "badge": "📞 Contact Us",
-      "title": "Ready to Serve Your Logistics Needs",
-      "subtitle": "Our expert team is ready to provide consultation and the best solutions for your business logistics needs. Contact us now!",
+      "title": "Ready to Serve Your Shipping Needs",
+      "subtitle": "Our expert team is ready to provide consultation and the best solutions for your business freight forwarding needs. Contact us now!",
       "form_title": "Free Consultation",
-      "form_subtitle": "Get the best offer for your logistics needs",
+      "form_subtitle": "Get the best offer for your shipping needs",
       "cta_primary": "Contact Us",
       "cta_secondary": "Send Email"
     }
   },
   "services": {
     "metadata": {
-      "title": "Our Services",
-      "description": "Explore our comprehensive logistics services designed to meet your business needs with modern technology and professional support."
+      "title": "Freight Forwarding Services",
+      "description": "PT. Mitra Sahabat Logistik provides comprehensive domestic and international freight forwarding services to support your business needs."
     },
     "hero": {
-      "badge": "🚛 Comprehensive Logistics Services",
-      "title": "Integrated Logistics Solutions for Every Need",
-      "subtitle": "From transportation to supply chain management, we provide end-to-end logistics services tailored to your business needs.",
+      "badge": "🚛 Comprehensive Freight Forwarding Services",
+      "title": "Domestic & International Shipping Solutions",
+      "subtitle": "From domestic shipping to cross-border delivery, we provide reliable, efficient, and accessible freight forwarding services for all your business needs.",
       "cta_primary": "Free Consultation",
       "cta_secondary": "Download Brochure"
     },
     "overview": {
       "badge": "🎯 Featured Services",
-      "title": "Comprehensive Logistics Services",
-      "subtitle": "Choose services that suit your business needs"
+      "title": "Comprehensive Freight Forwarding Services",
+      "subtitle": "Choose services that suit your business shipping needs"
     },
     "why_choose": {
-      "badge": "⭐ Why Choose Us",
-      "title": "Commitment to Quality",
-      "subtitle": "15+ years of experience serving 500+ clients with 99.5% satisfaction rate",
+      "badge": "⭐ Why Choose MSL",
+      "title": "All-in-One Service for Every Need",
+      "subtitle": "Domestic & International, we handle everything professionally",
       "features": [
         {
-          "title": "Modern Technology",
-          "description": "Real-time tracking system and digital platform for full transparency",
-          "metric": "99.9% Uptime"
+          "title": "Real-Time Tracking",
+          "description": "Check your shipment status anytime, anywhere through our modern tracking system",
+          "metric": "24/7 Monitoring"
         },
         {
-          "title": "Wide Network",
-          "description": "Coverage area includes all of Indonesia with trusted partners",
-          "metric": "34 Provinces"
+          "title": "Security & Accuracy",
+          "description": "Managed by experienced team with professional systems and high security standards",
+          "metric": "99.5% Accuracy"
         },
         {
-          "title": "Professional Team",
-          "description": "Experienced and certified human resources with high commitment",
-          "metric": "500+ Employees"
+          "title": "Super Fast Response",
+          "description": "Customer service team always on standby to help your needs",
+          "metric": "< 1 Hour Response"
         },
         {
-          "title": "Competitive Pricing",
-          "description": "Cost-effective solutions with the best value without sacrificing quality",
-          "metric": "Save 30%"
+          "title": "Friendly Pricing",
+          "description": "High-quality services with competitive and transparent pricing",
+          "metric": "Save 25%"
         }
       ]
     },
     "cta": {
       "badge": "📞 Ready to Help You",
-      "title": "Start Optimizing Your Business Logistics",
-      "subtitle": "Our expert team is ready to provide free consultation and the best solutions for your business logistics needs. Contact us now!",
+      "title": "Start Hassle-Free Shipping",
+      "subtitle": "Our expert team is ready to provide free consultation and the best solutions for your business freight forwarding needs. Contact us now!",
       "cta_primary": "Contact Now",
       "cta_secondary": "Send Email"
     }
@@ -120,12 +169,12 @@
   "about": {
     "metadata": {
       "title": "About Us",
-      "description": "Get to know PT. Mitra Sahabat Logistik, your trusted partner in logistics solutions in Indonesia with over 15 years of experience."
+      "description": "Get to know PT. Mitra Sahabat Logistik, your trusted partner for all your shipments with domestic and international freight forwarding services."
     },
     "hero": {
       "badge": "🏢 About Company",
-      "title": "Trusted Partner in Logistics Solutions",
-      "subtitle": "PT. Mitra Sahabat Logistik has been established since 2008 with a commitment to providing the best logistics solutions in Indonesia. With over 15+ years of experience, we have served various industries and built a reputation as a reliable and professional logistics partner.",
+      "title": "Trusted Partner for All Your Shipments",
+      "subtitle": "PT Mitra Sahabat Logistik (MSL) is a company engaged in domestic and international freight forwarding services, based in Batam, Riau Islands. We are here as a logistics solution that is not only reliable and efficient, but also accessible and pleasant to work with.",
       "cta_primary": "Learn More",
       "cta_secondary": "Download Company Profile"
     },
@@ -141,11 +190,11 @@
       "subtitle": "Vision and mission that guide every step of our journey",
       "vision": {
         "title": "Company Vision",
-        "content": "To become the leading logistics company in Indonesia with international standards."
+        "content": "To become the leading freight forwarding company in Indonesia that serves as a trusted partner for all domestic and international shipping needs."
       },
       "mission": {
         "title": "Company Mission",
-        "content": "Providing innovative, efficient, and sustainable logistics solutions to support client business growth."
+        "content": "Providing reliable, efficient, accessible, and pleasant freight forwarding solutions to support client business growth with fast, safe, and hassle-free services."
       }
     },
     "values": {
@@ -156,7 +205,7 @@
     "cta": {
       "badge": "🤝 Let's Collaborate",
       "title": "Join Our 500+ Clients",
-      "subtitle": "Be part of clients who have experienced the benefits of the best logistics solutions from us. Let's discuss your business logistics needs.",
+      "subtitle": "Be part of clients who have experienced the benefits of the best freight forwarding services from us. Let's discuss your business shipping needs.",
       "cta_primary": "Contact Us",
       "cta_secondary": "Send Proposal"
     }
@@ -164,12 +213,12 @@
   "contact": {
     "metadata": {
       "title": "Contact Us",
-      "description": "Get in touch with PT. Mitra Sahabat Logistik for free consultation and the best logistics solutions tailored to your business needs."
+      "description": "Contact PT. Mitra Sahabat Logistik to get the best freight forwarding solutions. Our team is ready to help you with free consultation."
     },
     "hero": {
       "badge": "📞 Contact Us",
-      "title": "Let's Discuss Your Logistics Needs",
-      "subtitle": "Our expert team is ready to provide free consultation and the best solutions to optimize your business logistics operations."
+      "title": "Let's Discuss Your Shipping Needs",
+      "subtitle": "Our expert team is ready to provide free consultation and the best solutions to optimize your business freight forwarding needs."
     },
     "info": {
       "badge": "📍 Contact Information",
@@ -187,7 +236,7 @@
       },
       "address": {
         "title": "Office Address",
-        "description": "Legenda Malaka, Batam",
+        "description": "Batam, Riau Islands",
         "action": "View Location"
       },
       "whatsapp": {
@@ -212,7 +261,7 @@
         "service": "Required Service",
         "service_placeholder": "Select required service",
         "message": "Message",
-        "message_placeholder": "Describe your logistics needs in detail..."
+        "message_placeholder": "Describe your shipping needs in detail..."
       },
       "submit": "Send Consultation Request"
     },
@@ -227,23 +276,23 @@
     "why_choose": {
       "title": "Why Choose MSL?",
       "reasons": [
-        "15+ years experience in logistics industry",
-        "Professional and certified team",
-        "Real-time tracking technology",
-        "Distribution network throughout Indonesia",
-        "Competitive prices with guaranteed quality",
-        "Responsive customer service 24/7"
+        "All-in-One Service domestic & international",
+        "Real-time tracking for full transparency",
+        "Experienced team with professional systems",
+        "Super fast response and standby customer service",
+        "Friendly pricing with guaranteed quality",
+        "Trusted international logistics partner network"
       ]
     },
     "location": {
       "badge": "📍 Office Location",
       "title": "Visit Our Office",
-      "subtitle": "Our head office is strategically located in Batam to serve your logistics needs",
+      "subtitle": "Our office is strategically located in Batam, Riau Islands to serve your freight forwarding needs",
       "address_title": "Complete Address",
       "transportation": {
         "title": "Transportation Access",
         "airport": "From Airport: 15 minutes drive",
-        "port": "From Port: 20 minutes drive",
+        "port": "From Port: 10 minutes drive",
         "public": "Public Transportation: City transport available"
       },
       "maps_action": "Open in Google Maps"
@@ -260,7 +309,7 @@
     "sending": "Sending request..."
   },
   "footer": {
-    "description": "Providing the best logistics solutions to support your business growth with modern technology and professional services.",
+    "description": "PT Mitra Sahabat Logistik (MSL) is a domestic and international freight forwarding company based in Batam. We are here as your reliable logistics partner that is fast, safe, and hassle-free.",
     "services_title": "Services",
     "company_title": "Company",
     "contact_title": "Contact",

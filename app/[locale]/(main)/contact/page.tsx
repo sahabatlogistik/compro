@@ -20,23 +20,26 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import LeadForm from "@/components/forms/lead-form";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: { locale: string };
-// }) {
-//   const { locale } = params;
-//   const t = await getTranslations({ locale, namespace: "contact" });
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-//   return {
-//     title: t("metadata.title"),
-//     description: t("metadata.description"),
-//   };
-// }
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function ContactPage() {
   const t = useTranslations();

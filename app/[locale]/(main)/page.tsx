@@ -24,6 +24,15 @@ import { Link } from "@/i18n/navigation";
 import LeadForm from "@/components/forms/lead-form";
 import { useTranslations } from "next-intl";
 
+const iconMap = {
+  Truck,
+  Warehouse,
+  Package,
+  LocationIcon,
+  Users,
+  Clock,
+};
+
 export default function Home() {
   const t = useTranslations();
 
@@ -131,102 +140,42 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Truck,
-                title: "Transportasi & Distribusi",
-                description:
-                  "Layanan transportasi darat dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
-                features: [
-                  "Armada Lengkap",
-                  "Tracking Real-time",
-                  "Asuransi Barang",
-                ],
-              },
-              {
-                icon: Warehouse,
-                title: "Pergudangan & Storage",
-                description:
-                  "Fasilitas pergudangan modern dengan sistem manajemen inventory dan keamanan tingkat tinggi untuk penyimpanan barang.",
-                features: ["Gudang Modern", "Sistem WMS", "Keamanan 24/7"],
-              },
-              {
-                icon: Package,
-                title: "Packaging & Handling",
-                description:
-                  "Layanan pengemasan profesional dan handling khusus untuk memastikan barang sampai dengan kondisi prima.",
-                features: [
-                  "Custom Packaging",
-                  "Handling Khusus",
-                  "Quality Control",
-                ],
-              },
-              {
-                icon: LocationIcon,
-                title: "Last Mile Delivery",
-                description:
-                  "Pengiriman hingga tujuan akhir dengan jaringan distribusi luas dan layanan pelanggan yang responsif.",
-                features: [
-                  "COD Available",
-                  "Same Day Delivery",
-                  "Flexible Schedule",
-                ],
-              },
-              {
-                icon: Users,
-                title: "Supply Chain Management",
-                description:
-                  "Optimasi rantai pasokan dengan teknologi modern untuk efisiensi operasional dan pengurangan biaya.",
-                features: [
-                  "SCM Consultation",
-                  "Process Optimization",
-                  "Cost Reduction",
-                ],
-              },
-              {
-                icon: Clock,
-                title: "Express & Urgent",
-                description:
-                  "Layanan ekspres untuk pengiriman mendesak dengan prioritas tinggi dan waktu pengiriman yang dijamin.",
-                features: [
-                  "Express Delivery",
-                  "Emergency Service",
-                  "Time Guarantee",
-                ],
-              },
-            ].map((service, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <CardHeader className="space-y-4">
-                  <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
-                    <service.icon className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
-                  </div>
-                  <CardTitle className="text-xl text-msl-navy">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-gray-600 leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                  <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center text-sm text-gray-600"
-                      >
-                        <div className="w-1.5 h-1.5 bg-msl-orange rounded-full mr-3" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {t.raw("home.services.items").map((service: any, index: number) => {
+              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
+              return (
+                <Card
+                  key={service.id}
+                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <CardHeader className="space-y-4">
+                    <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
+                      <IconComponent className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
+                    </div>
+                    <CardTitle className="text-xl text-msl-navy">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <CardDescription className="text-gray-600 leading-relaxed">
+                      {service.shortDescription}
+                    </CardDescription>
+                    <div className="space-y-2">
+                      {service.features.map((feature: string, idx: number) => (
+                        <div
+                          key={idx}
+                          className="flex items-center text-sm text-gray-600"
+                        >
+                          <div className="w-1.5 h-1.5 bg-msl-orange rounded-full mr-3" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           <div className="text-center mt-12" data-aos="fade-up">

@@ -23,7 +23,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import { Link } from "@/i18n/navigation";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
@@ -36,19 +36,22 @@ const iconMap = {
   Clock,
 };
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: { locale: string };
-// }) {
-//   const { locale } = params;
-//   const t = await getTranslations({ locale, namespace: "services" });
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-//   return {
-//     title: t("metadata.title"),
-//     description: t("metadata.description"),
-//   };
-// }
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function ServicesPage() {
   const t = useTranslations();
@@ -116,12 +119,12 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {siteConfig.services.map((service, index) => {
+            {t.raw("home.services.items").map((service: any, index: number) => {
               const IconComponent =
                 iconMap[service.icon as keyof typeof iconMap];
               return (
                 <Card
-                  key={index}
+                  key={service.id}
                   className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -139,7 +142,7 @@ export default function ServicesPage() {
                       {service.shortDescription}
                     </CardDescription>
                     <div className="space-y-2">
-                      {service.features.map((feature, idx) => (
+                      {service.features.map((feature: string, idx: number) => (
                         <div
                           key={idx}
                           className="flex items-center text-sm text-gray-600"
@@ -149,13 +152,6 @@ export default function ServicesPage() {
                         </div>
                       ))}
                     </div>
-                    {/* <div className="pt-4 border-t border-gray-100">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-msl-navy">
-                          {service.pricing}
-                        </span>
-                      </div>
-                    </div> */}
                   </CardContent>
                 </Card>
               );
@@ -197,9 +193,9 @@ export default function ServicesPage() {
                       {index === 0
                         ? "🚀"
                         : index === 1
-                        ? "🌐"
+                        ? "🛡️"
                         : index === 2
-                        ? "👥"
+                        ? "⚡"
                         : "💰"}
                     </div>
                     <h3 className="text-xl font-semibold text-msl-navy">

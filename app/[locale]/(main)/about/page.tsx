@@ -19,23 +19,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
 import { Link } from "@/i18n/navigation";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: { locale: string }; // ✅ FIXED type
-// }) {
-//   const { locale } = params; // ✅ NO AWAIT here
-//   const t = await getTranslations({ locale, namespace: "about" });
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-//   return {
-//     title: t("metadata.title"),
-//     description: t("metadata.description"),
-//   };
-// }
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default function AboutPage() {
   const t = useTranslations("");
@@ -56,10 +59,6 @@ export default function AboutPage() {
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-msl-navy leading-tight">
                   {t("about.hero.title")}
-                  <span className="text-msl-orange">
-                    {" "}
-                    {t("common.tagline").split(" ")[1]}
-                  </span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {t("about.hero.subtitle")}
@@ -108,22 +107,22 @@ export default function AboutPage() {
               {
                 value: siteConfig.company.experience,
                 label: t("about.stats.experience"),
-                color: "msl-navy",
+                color: "text-msl-navy",
               },
               {
                 value: siteConfig.company.clients,
                 label: t("about.stats.clients"),
-                color: "msl-orange",
+                color: "text-msl-orange",
               },
               {
                 value: siteConfig.company.satisfaction,
                 label: t("about.stats.satisfaction"),
-                color: "msl-brown",
+                color: "text-msl-brown",
               },
               {
                 value: siteConfig.company.certification,
                 label: t("about.stats.certification"),
-                color: "msl-dark-brown",
+                color: "text-msl-dark-brown",
               },
             ].map((stat, index) => (
               <div
@@ -132,7 +131,7 @@ export default function AboutPage() {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className={`text-4xl font-bold text-${stat.color} mb-2`}>
+                <div className={`text-4xl font-bold ${stat.color} mb-2`}>
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -225,12 +224,19 @@ export default function AboutPage() {
               const icons = [Shield, Lightbulb, Star, Heart];
               const IconComponent = icons[index];
               const colors = [
-                "msl-navy",
-                "msl-orange",
-                "msl-brown",
-                "msl-dark-brown",
+                "text-msl-navy",
+                "text-msl-orange",
+                "text-msl-brown",
+                "text-msl-dark-brown",
+              ];
+              const bgColors = [
+                "bg-msl-navy/10",
+                "bg-msl-orange/10",
+                "bg-msl-brown/10",
+                "bg-msl-dark-brown/10",
               ];
               const color = colors[index];
+              const bgColor = bgColors[index];
 
               return (
                 <Card
@@ -240,10 +246,8 @@ export default function AboutPage() {
                   data-aos-delay={index * 100}
                 >
                   <CardContent className="pt-8 space-y-4">
-                    <div
-                      className={`w-16 h-16 bg-${color}/10 rounded-full flex items-center justify-center mx-auto mb-4`}
-                    >
-                      <IconComponent className={`h-8 w-8 text-${color}`} />
+                    <div className={`w-16 h-16 ${bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <IconComponent className={`h-8 w-8 ${color}`} />
                     </div>
                     <h3 className="text-xl font-semibold text-msl-navy">
                       {value.title}
@@ -271,12 +275,6 @@ export default function AboutPage() {
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               {t("about.cta.title")}
-              <span className="text-msl-orange">
-                {" "}
-                {siteConfig.company.clients}{" "}
-                {t("about.cta.title").split(" ")[2]}
-              </span>{" "}
-              Kami
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("about.cta.subtitle")}
