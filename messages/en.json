@@ -23,6 +23,10 @@
     "language": "Language"
   },
   "home": {
+    "metadata": {
+      "title": "Home",
+      "description": "Welcome to PT. Mitra Sahabat Logistik, your trusted partner in logistics solutions in Indonesia. Explore our services and get a free consultation."
+    },
     "hero": {
       "badge": "🚛 Trusted Logistics Partner",
       "title": "Integrated Logistics Solutions",
@@ -62,6 +66,10 @@
     }
   },
   "services": {
+    "metadata": {
+      "title": "Our Services",
+      "description": "Explore our comprehensive logistics services designed to meet your business needs with modern technology and professional support."
+    },
     "hero": {
       "badge": "🚛 Comprehensive Logistics Services",
       "title": "Integrated Logistics Solutions for Every Need",
@@ -110,6 +118,10 @@
     }
   },
   "about": {
+    "metadata": {
+      "title": "About Us",
+      "description": "Get to know PT. Mitra Sahabat Logistik, your trusted partner in logistics solutions in Indonesia with over 15 years of experience."
+    },
     "hero": {
       "badge": "🏢 About Company",
       "title": "Trusted Partner in Logistics Solutions",
@@ -150,6 +162,10 @@
     }
   },
   "contact": {
+    "metadata": {
+      "title": "Contact Us",
+      "description": "Get in touch with PT. Mitra Sahabat Logistik for free consultation and the best logistics solutions tailored to your business needs."
+    },
     "hero": {
       "badge": "📞 Contact Us",
       "title": "Let's Discuss Your Logistics Needs",

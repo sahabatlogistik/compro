@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/lib/config";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -37,15 +37,16 @@ const iconMap = {
 };
 
 // export async function generateMetadata({
-//   params: { locale },
+//   params,
 // }: {
 //   params: { locale: string };
-// }): Promise<Metadata> {
+// }) {
+//   const { locale } = params;
 //   const t = await getTranslations({ locale, namespace: "services" });
 
 //   return {
-//     title: t("hero.title"),
-//     description: t("hero.subtitle"),
+//     title: t("metadata.title"),
+//     description: t("metadata.description"),
 //   };
 // }
 
