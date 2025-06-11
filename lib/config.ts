@@ -26,7 +26,7 @@ export const siteConfig = {
   company: {
     founded: 2008,
     experience: "15+",
-    clients: "500+",
+    clients: "100+",
     satisfaction: "99.5%",
     certification: "ISO 9001:2015",
 
