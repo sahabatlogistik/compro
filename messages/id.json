@@ -23,6 +23,10 @@
     "language": "Bahasa"
   },
   "home": {
+    "metadata": {
+      "title": "Beranda",
+      "description": "Selamat datang di PT. Mitra Sahabat Logistik, mitra terpercaya dalam solusi logistik di Indonesia. Kami menyediakan layanan logistik komprehensif untuk mendukung kebutuhan bisnis Anda."
+    },
     "hero": {
       "badge": "🚛 Mitra Logistik Terpercaya",
       "title": "Solusi Logistik Terpadu",

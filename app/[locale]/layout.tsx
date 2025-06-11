@@ -4,17 +4,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { AppFooter, AppNavbar } from "@/components/app";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
-
-import { Toaster } from "sonner";
-import { AppFooter, AppNavbar } from "@/components/app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name + " | " + siteConfig.tagline,
-    template: "%s | " + siteConfig.name,
+    default: `${siteConfig.name} | ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   openGraph: {
@@ -39,36 +38,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: [
-    {
-      url: "/favicon.ico",
-      sizes: "32x32",
-      type: "image/x-icon",
-    },
-    {
-      url: "/android-chrome-192x192.png",
-      sizes: "192x192",
-      type: "image/png",
-    },
-    {
-      url: "/android-chrome-512x512.png",
-      sizes: "512x512",
-      type: "image/png",
-    },
-    {
-      url: "/apple-touch-icon.png",
-      sizes: "180x180",
-      type: "image/png",
-    },
-    {
-      url: "/favicon-16x16.png",
-      sizes: "16x16",
-      type: "image/png",
-    },
-    {
-      url: "/favicon-32x32.png",
-      sizes: "32x32",
-      type: "image/png",
-    },
+    { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+    { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+    { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
   ],
   alternates: {
     canonical: siteConfig.url,
@@ -80,10 +55,10 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string }; // ✅ fixed: no more Promise here
 }) {
-  const { locale } = await params;
-  const messages = await getMessages();
+  const { locale } = params; // ✅ no more `await`
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>

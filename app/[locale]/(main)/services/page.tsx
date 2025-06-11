@@ -36,19 +36,19 @@ const iconMap = {
   Clock,
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "services" });
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string };
+// }) {
+//   const { locale } = params;
+//   const t = await getTranslations({ locale, namespace: "services" });
 
-  return {
-    title: t("metadata.title"),
-    description: t("metadata.description"),
-  };
-}
+//   return {
+//     title: t("metadata.title"),
+//     description: t("metadata.description"),
+//   };
+// }
 
 export default function ServicesPage() {
   const t = useTranslations();
