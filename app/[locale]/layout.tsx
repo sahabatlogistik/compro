@@ -66,7 +66,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <main className="min-h-screen w-full bg-white overflow-x-hidden">
             <AppNavbar />
-            {children}
+            <div className="pt-16">{children}</div>
             <AppFooter />
           </main>
 
