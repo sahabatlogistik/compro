@@ -26,6 +26,7 @@ import LeadForm from "@/components/forms/lead-form";
 import { useTranslations } from "next-intl";
 import H1 from "@/components/ui/h1";
 import HeroSection from "@/components/sections/hero-section";
+import GallerySwiperSection from "@/components/sections/gallery-swiper-section";
 
 const iconMap = {
   Truck,
@@ -114,35 +115,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="tentang" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8" data-aos="fade-right">
-              <div className="space-y-4">
-                <Badge
-                  variant="secondary"
-                  className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
-                >
-                  {t("home.about.badge")}
-                </Badge>
-                <H1 text={t("home.about.title")} size="lg" />
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {t("home.about.subtitle")}
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <Link href="/about">
-                  <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white mt-3">
-                    {t("home.about.cta")}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GallerySwiperSection />
 
       {/* Contact Section */}
       <section id="kontak" className="py-24 bg-msl-navy">

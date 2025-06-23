@@ -61,17 +61,28 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-24 lg:py-32 bg-msl-navy">
+        <div className="absolute inset-0">
+          <div
+            className="w-full h-full absolute top-0 left-0  bg-[url('/images/hero-service-background.webp')] bg-cover bg-center opacity-60"
+            aria-hidden="true"
+          />
+          <div className="w-full h-full absolute  top-0 left-0  bg-black/40" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div data-aos="fade-up">
             <Badge
               variant="secondary"
-              className="bg-msl-orange/10 text-msl-navy border-msl-orange/20 mb-6"
+              className="bg-msl-orange/10 text-white border-msl-orange/20 mb-6"
             >
               {t("services.hero.badge")}
             </Badge>
-            <H1 text={t("services.hero.title")} size="xl" className="mb-6" />
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+            <H1
+              text={t("services.hero.title")}
+              size="xl"
+              className="mb-6 text-white"
+            />
+            <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto mb-8">
               {t("services.hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,13 +95,6 @@ export default function ServicesPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white"
-              >
-                {t("services.hero.cta_secondary")}
-              </Button>
             </div>
           </div>
         </div>
