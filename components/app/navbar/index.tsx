@@ -42,7 +42,7 @@ export default function AppNavbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" onClick={closeMenu}>
@@ -69,43 +69,10 @@ export default function AppNavbar() {
                 {item.name}
               </Link>
             ))}
-
-            {/* Language Switcher */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Globe className="h-4 w-4" />
-                  {locale === "id" ? "ID" : "EN"}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem asChild>
-                  <Link href={pathname} locale="id">
-                    🇮🇩 Bahasa Indonesia
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href={pathname} locale="en">
-                    🇺🇸 English
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Link
-              href={siteConfig.contact.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-                {t("common.contact_us")}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex justify-end">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button
@@ -201,6 +168,41 @@ export default function AppNavbar() {
                 </div>
               </SheetContent>
             </Sheet>
+          </div>
+
+          <div className="hidden md:flex items-center justify-end space-x-4">
+            {/* Language Switcher */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="gap-2">
+                  <Globe className="h-4 w-4" />
+                  {locale === "id" ? "ID" : "EN"}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link href={pathname} locale="id">
+                    🇮🇩 Bahasa Indonesia
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href={pathname} locale="en">
+                    🇺🇸 English
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link
+              href={siteConfig.contact.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
+                {t("common.contact_us")}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

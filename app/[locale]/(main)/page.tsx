@@ -25,6 +25,7 @@ import { Link } from "@/i18n/navigation";
 import LeadForm from "@/components/forms/lead-form";
 import { useTranslations } from "next-intl";
 import H1 from "@/components/ui/h1";
+import HeroSection from "@/components/sections/hero-section";
 
 const iconMap = {
   Truck,
@@ -41,57 +42,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section id="beranda" className="relative py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8" data-aos="fade-right">
-              <div className="space-y-6">
-                <Badge
-                  variant="secondary"
-                  className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
-                >
-                  {t("home.hero.badge")}
-                </Badge>
-                <H1 text={t("home.hero.title")} size="xl" />
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  {t("home.hero.subtitle")}
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href={siteConfig.contact.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    size="lg"
-                    className="bg-msl-navy hover:bg-msl-dark-blue text-white"
-                  >
-                    {t("home.hero.cta_primary")}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className="relative" data-aos="fade-left">
-              <div className="relative z-10 bg-white rounded-2xl shadow-xl p-8">
-                <img
-                  src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Logistics Operations"
-                  className="w-full h-80 object-cover rounded-xl"
-                />
-                <div className="absolute -top-4 -right-4 bg-msl-orange text-white p-4 rounded-xl shadow-lg">
-                  <Award className="h-8 w-8" />
-                </div>
-              </div>
-              <div className="absolute -top-8 -left-8 w-32 h-32 bg-msl-orange/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-msl-navy/20 rounded-full blur-2xl" />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <HeroSection />
       {/* Services Section */}
       <section id="layanan" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,25 +132,6 @@ export default function Home() {
               </div>
 
               <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <div className="text-3xl font-bold text-msl-navy mb-2">
-                      {siteConfig.company.experience}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {t("home.about.stats.experience")}
-                    </div>
-                  </div>
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <div className="text-3xl font-bold text-msl-orange mb-2">
-                      {siteConfig.company.clients}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {t("home.about.stats.clients")}
-                    </div>
-                  </div>
-                </div>
-
                 <Link href="/about">
                   <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white mt-3">
                     {t("home.about.cta")}
