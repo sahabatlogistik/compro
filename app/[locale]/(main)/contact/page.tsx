@@ -57,7 +57,11 @@ export default function ContactPage() {
             >
               {t("contact.hero.badge")}
             </Badge>
-            <H1 text={t("contact.hero.title")} size="lg" className="text-white" />
+            <H1
+              text={t("contact.hero.title")}
+              size="lg"
+              className="text-white"
+            />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("contact.hero.subtitle")}
             </p>

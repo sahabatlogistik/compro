@@ -9,6 +9,7 @@ import {
   Phone,
   Mail,
   MapPin as LocationIcon,
+  Forklift,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,6 +25,8 @@ import { Link } from "@/i18n/navigation";
 import LeadForm from "@/components/forms/lead-form";
 import { useTranslations } from "next-intl";
 import H1 from "@/components/ui/h1";
+import HeroSection from "@/components/sections/hero-section";
+import GallerySwiperSection from "@/components/sections/gallery-swiper-section";
 
 const iconMap = {
   Truck,
@@ -32,6 +35,7 @@ const iconMap = {
   LocationIcon,
   Users,
   Clock,
+  Forklift,
 };
 
 export default function Home() {
@@ -39,83 +43,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section id="beranda" className="relative py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8" data-aos="fade-right">
-              <div className="space-y-6">
-                <Badge
-                  variant="secondary"
-                  className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
-                >
-                  {t("home.hero.badge")}
-                </Badge>
-                <H1 text={t("home.hero.title")} size="xl" />
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  {t("home.hero.subtitle")}
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href={siteConfig.contact.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    size="lg"
-                    className="bg-msl-navy hover:bg-msl-dark-blue text-white"
-                  >
-                    {t("home.hero.cta_primary")}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-100">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-msl-navy">
-                    {siteConfig.company.clients}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {t("home.hero.stats.clients")}
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-msl-navy">
-                    {siteConfig.company.experience}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {t("home.hero.stats.experience")}
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-msl-navy">
-                    {siteConfig.company.satisfaction}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {t("home.hero.stats.satisfaction")}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative" data-aos="fade-left">
-              <div className="relative z-10 bg-white rounded-2xl shadow-xl p-8">
-                <img
-                  src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Logistics Operations"
-                  className="w-full h-80 object-cover rounded-xl"
-                />
-                <div className="absolute -top-4 -right-4 bg-msl-orange text-white p-4 rounded-xl shadow-lg">
-                  <Award className="h-8 w-8" />
-                </div>
-              </div>
-              <div className="absolute -top-8 -left-8 w-32 h-32 bg-msl-orange/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-msl-navy/20 rounded-full blur-2xl" />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <HeroSection />
       {/* Services Section */}
       <section id="layanan" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,80 +115,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="tentang" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8" data-aos="fade-right">
-              <div className="space-y-4">
-                <Badge
-                  variant="secondary"
-                  className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
-                >
-                  {t("home.about.badge")}
-                </Badge>
-                <H1 text={t("home.about.title")} size="lg" />
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {t("home.about.subtitle")}
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <div className="text-3xl font-bold text-msl-navy mb-2">
-                      {siteConfig.company.experience}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {t("home.about.stats.experience")}
-                    </div>
-                  </div>
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <div className="text-3xl font-bold text-msl-orange mb-2">
-                      {siteConfig.company.clients}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {t("home.about.stats.clients")}
-                    </div>
-                  </div>
-                </div>
-
-                <Link href="/about">
-                  <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-                    {t("home.about.cta")}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div className="relative" data-aos="fade-left">
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  alt="Warehouse Operations"
-                  className="w-full h-48 object-cover rounded-xl shadow-lg"
-                />
-                <img
-                  src="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  alt="Container Shipping"
-                  className="w-full h-48 object-cover rounded-xl shadow-lg mt-8"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-6 rounded-xl shadow-xl">
-                <div className="flex items-center space-x-3">
-                  <Award className="h-8 w-8 text-msl-orange" />
-                  <div>
-                    <div className="font-semibold text-msl-navy">
-                      {siteConfig.company.certification}
-                    </div>
-                    <div className="text-sm text-gray-600">Certified</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GallerySwiperSection />
 
       {/* Contact Section */}
       <section id="kontak" className="py-24 bg-msl-navy">
@@ -274,7 +129,11 @@ export default function Home() {
                 >
                   {t("home.contact.badge")}
                 </Badge>
-                <H1 text={t("home.contact.title")} size="lg" className="text-white" />
+                <H1
+                  text={t("home.contact.title")}
+                  size="lg"
+                  className="text-white"
+                />
                 <p className="text-xl text-gray-300 leading-relaxed">
                   {t("home.contact.subtitle")}
                 </p>

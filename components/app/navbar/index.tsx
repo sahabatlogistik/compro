@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/sheet";
 
 import Logo from "@/app/logo.png";
+import { cn } from "@/lib/utils";
 
 export default function AppNavbar() {
   const t = useTranslations();
@@ -40,9 +41,9 @@ export default function AppNavbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="grid grid-cols-2 lg:grid-cols-3 justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" onClick={closeMenu}>
@@ -57,55 +58,27 @@ export default function AppNavbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center justify-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-gray-700 hover:text-msl-navy transition-colors font-medium ${
-                  pathname === item.href ? "text-msl-navy" : ""
-                }`}
+                className={cn(
+                  "text-gray-700 hover:text-msl-navy transition-colors font-medium relative",
+                  pathname === item.href && "text-msl-navy font-semibold"
+                )}
               >
                 {item.name}
+
+                {pathname === item.href && (
+                  <span className="absolute inset-x-0 bottom-0 h-[2px] bg-msl-navy rounded-full" />
+                )}
               </Link>
             ))}
-
-            {/* Language Switcher */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Globe className="h-4 w-4" />
-                  {locale === "id" ? "ID" : "EN"}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem asChild>
-                  <Link href={pathname} locale="id">
-                    🇮🇩 Bahasa Indonesia
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href={pathname} locale="en">
-                    🇺🇸 English
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Link
-              href={siteConfig.contact.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
-                {t("common.contact_us")}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden flex justify-end">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button
@@ -129,7 +102,7 @@ export default function AppNavbar() {
                     />
                   </SheetTitle>
                 </SheetHeader>
-                
+
                 <div className="flex flex-col space-y-6 mt-8">
                   {/* Navigation Links */}
                   <div className="flex flex-col space-y-4">
@@ -138,11 +111,12 @@ export default function AppNavbar() {
                         key={item.name}
                         href={item.href}
                         onClick={closeMenu}
-                        className={`text-lg font-medium transition-colors py-2 px-3 rounded-lg ${
+                        className={cn(
+                          "text-lg font-medium transition-colors py-2 px-3 rounded-lg",
                           pathname === item.href
-                            ? "text-msl-navy bg-msl-navy/10"
+                            ? "text-msl-navy bg-msl-navy/10 font-semibold"
                             : "text-gray-700 hover:text-msl-navy hover:bg-gray-50"
-                        }`}
+                        )}
                       >
                         {item.name}
                       </Link>
@@ -201,6 +175,41 @@ export default function AppNavbar() {
                 </div>
               </SheetContent>
             </Sheet>
+          </div>
+
+          <div className="hidden lg:flex items-center justify-end space-x-4">
+            {/* Language Switcher */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="gap-2">
+                  <Globe className="h-4 w-4" />
+                  {locale === "id" ? "ID" : "EN"}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link href={pathname} locale="id">
+                    🇮🇩 Bahasa Indonesia
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href={pathname} locale="en">
+                    🇺🇸 English
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link
+              href={siteConfig.contact.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
+                {t("common.contact_us")}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -48,100 +48,42 @@ export default function AboutPage() {
     <>
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8" data-aos="fade-right">
-              <div className="space-y-4">
-                <Badge
-                  variant="secondary"
-                  className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
-                >
-                  {t("about.hero.badge")}
-                </Badge>
-                <H1 text={t("about.hero.title")} size="xl" />
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  {t("about.hero.subtitle")}
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-msl-navy hover:bg-msl-dark-blue text-white"
-                >
-                  {t("about.hero.cta_primary")}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white"
-                >
-                  {t("about.hero.cta_secondary")}
-                </Button>
-              </div>
-            </div>
-            <div className="relative" data-aos="fade-left">
-              <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8">
-                <img
-                  src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Company Operations"
-                  className="w-full h-80 object-cover rounded-xl"
-                />
-                <div className="absolute -top-4 -right-4 bg-msl-orange text-white p-4 rounded-xl shadow-lg">
-                  <Award className="h-8 w-8" />
-                </div>
-              </div>
-              <div className="absolute -top-8 -left-8 w-32 h-32 bg-msl-orange/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-msl-navy/20 rounded-full blur-2xl" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Stats */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                value: siteConfig.company.experience,
-                label: t("about.stats.experience"),
-                color: "text-msl-navy",
-              },
-              {
-                value: siteConfig.company.clients,
-                label: t("about.stats.clients"),
-                color: "text-msl-orange",
-              },
-              {
-                value: siteConfig.company.satisfaction,
-                label: t("about.stats.satisfaction"),
-                color: "text-msl-brown",
-              },
-              {
-                value: siteConfig.company.certification,
-                label: t("about.stats.certification"),
-                color: "text-msl-dark-brown",
-              },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8" data-aos="fade-right">
+            <div className="space-y-4">
+              <Badge
+                variant="secondary"
+                className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
               >
-                <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                  {stat.value}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
+                {t("about.hero.badge")}
+              </Badge>
+              <H1 text={t("about.hero.title")} size="xl" />
+              <p className="text-xl text-gray-600 leading-relaxed">
+                {t("about.hero.subtitle")}
+              </p>
+            </div>
+            <div className="flex flex-col justify-center sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="bg-msl-navy hover:bg-msl-dark-blue text-white"
+              >
+                {t("about.hero.cta_primary")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white"
+              >
+                {t("about.hero.cta_secondary")}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16" data-aos="fade-up">
             <Badge
@@ -194,66 +136,6 @@ export default function AboutPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16" data-aos="fade-up">
-            <Badge
-              variant="secondary"
-              className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
-            >
-              {t("about.values.badge")}
-            </Badge>
-            <H1 text={t("about.values.title")} size="lg" />
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("about.values.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {siteConfig.company.values.map((value, index) => {
-              const icons = [Shield, Lightbulb, Star, Heart];
-              const IconComponent = icons[index];
-              const colors = [
-                "text-msl-navy",
-                "text-msl-orange",
-                "text-msl-brown",
-                "text-msl-dark-brown",
-              ];
-              const bgColors = [
-                "bg-msl-navy/10",
-                "bg-msl-orange/10",
-                "bg-msl-brown/10",
-                "bg-msl-dark-brown/10",
-              ];
-              const color = colors[index];
-              const bgColor = bgColors[index];
-
-              return (
-                <Card
-                  key={index}
-                  className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <CardContent className="pt-8 space-y-4">
-                    <div className={`w-16 h-16 ${bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <IconComponent className={`h-8 w-8 ${color}`} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-msl-navy">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
           </div>
         </div>
       </section>
