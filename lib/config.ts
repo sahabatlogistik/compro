@@ -8,7 +8,7 @@ export const siteConfig = {
   contact: {
     phone: "0812-6602-0295",
     whatsapp: "https://wa.me/6281266020295",
-    email: "ops@sahabatlogistik.com",
+    email: "admin@sahabatlogistik.com",
     address: {
       street: "Komp. Glory View, Blok B No.12",
       city: "Legenda Malaka, Batam, Kepulauan Riau",

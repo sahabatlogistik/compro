@@ -154,60 +154,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Why Choose Our Services */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16" data-aos="fade-up">
-            <Badge
-              variant="secondary"
-              className="bg-msl-orange/10 text-msl-navy border-msl-orange/20"
-            >
-              {t("services.why_choose.badge")}
-            </Badge>
-            <H1 text={t("services.why_choose.title")} size="lg" />
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("services.why_choose.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {t
-              .raw("services.why_choose.features")
-              .map((item: any, index: number) => (
-                <Card
-                  key={index}
-                  className="text-center group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <CardContent className="pt-8 space-y-4">
-                    <div className="text-4xl mb-4">
-                      {index === 0
-                        ? "📡"
-                        : index === 1
-                        ? "🛡️"
-                        : index === 2
-                        ? "⚡"
-                        : "💰"}
-                    </div>
-                    <h3 className="text-xl font-semibold text-msl-navy">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                    <div className="pt-4 border-t border-gray-100">
-                      <span className="text-lg font-bold text-msl-orange">
-                        {item.metric}
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-msl-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -227,7 +173,7 @@ export default function ServicesPage() {
               {t("services.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
+              <Link href={siteConfig.contact.whatsapp}>
                 <Button
                   size="lg"
                   className="bg-msl-orange hover:bg-msl-orange/90 text-white"
@@ -236,14 +182,16 @@ export default function ServicesPage() {
                   {t("services.cta.cta_primary")}
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-msl-navy"
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                {t("services.cta.cta_secondary")}
-              </Button>
+              <Link target="_blank" href={`mailto:${siteConfig.contact.email}`}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-primary hover:bg-white hover:text-msl-navy"
+                >
+                  <Mail className="mr-2 h-5 w-5" />
+                  {t("services.cta.cta_secondary")}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

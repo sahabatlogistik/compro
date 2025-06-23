@@ -46,7 +46,7 @@
     },
     "services": {
       "badge": "🎯 Featured Services",
-      "title": "Comprehensive *Freight Forwarding* Services",
+      "title": "*Freight Forwarding* Services",
       "subtitle": "From domestic to international shipping, we provide end-to-end logistics solutions tailored to your business needs.",
       "cta": "View All Services",
       "items": [
@@ -144,7 +144,7 @@
       "description": "PT. Mitra Sahabat Logistik provides comprehensive domestic and international freight forwarding services to support your business needs."
     },
     "hero": {
-      "badge": "🚛 Comprehensive Freight Forwarding Services",
+      "badge": "🚛 Freight Forwarding Services",
       "title": "Domestic & International *Shipping Solutions*",
       "subtitle": "From domestic shipping to cross-border delivery, we provide reliable, efficient, and accessible freight forwarding services for all your business needs.",
       "cta_primary": "Free Consultation",
@@ -152,7 +152,7 @@
     },
     "overview": {
       "badge": "🎯 Featured Services",
-      "title": "Comprehensive *Freight Forwarding* Services",
+      "title": "*Freight Forwarding* Services",
       "subtitle": "Choose services that suit your business shipping needs"
     },
     "why_choose": {
@@ -333,7 +333,7 @@
     "sending": "Sending request..."
   },
   "footer": {
-    "description": "PT Mitra Sahabat Logistik (MSL) is a domestic and international freight forwarding company based in Batam. We are here as your reliable logistics partner that is fast, safe, and hassle-free.",
+    "description": "PT Mitra Sahabat Logistik (MSL) is a domestic and international freight forwarding company based in Batam.",
     "services_title": "Services",
     "company_title": "Company",
     "contact_title": "Contact",
