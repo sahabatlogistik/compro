@@ -11,6 +11,7 @@ import {
   MapPin as LocationIcon,
   CheckCircle,
   Star,
+  Forklift,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -34,7 +35,7 @@ const iconMap = {
   Package,
   LocationIcon,
   Users,
-  Clock,
+  Forklift,
 };
 
 interface Props {
@@ -217,7 +218,11 @@ export default function ServicesPage() {
             >
               {t("services.cta.badge")}
             </Badge>
-            <H1 text={t("services.cta.title")} size="lg" className="text-white" />
+            <H1
+              text={t("services.cta.title")}
+              size="lg"
+              className="text-white"
+            />
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
               {t("services.cta.subtitle")}
             </p>

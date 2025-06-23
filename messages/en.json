@@ -34,9 +34,9 @@
     },
     "hero": {
       "badge": "🚛 Trusted Logistics Partner",
-      "title": "*Trusted* Domestic & International Logistics Solution",
-      "subtitle": "We are here as a logistics solution that is not only reliable and efficient, but also accessible and pleasant to work with. With extensive experience and network, we are here as your reliable logistics partner: fast, safe, and hassle-free.",
-      "cta_primary": "Start Consultation",
+      "title": "Domestic & International *Shipping Solutions*",
+      "subtitle": "We provide reliable shipping wherever you need it. With us, you get precision, speed, and confidence at every step.",
+      "cta_primary": "Learn More",
       "cta_secondary": "Learn Services",
       "stats": {
         "clients": "Active Clients",
@@ -54,9 +54,9 @@
           "id": "domestic-land",
           "icon": "Truck",
           "title": "Domestic Freight Forwarding - Land",
-          "shortDescription": "Land shipping services throughout Indonesia with modern fleet and optimal routes for efficient and timely goods distribution.",
+          "shortDescription": "Ship goods across Indonesia quickly, safely, and efficiently. Our modern fleet ensures reliable and on-time land freight.",
           "features": [
-            "Door-to-door Service",
+            "Door-to-Door Service",
             "Real-time Tracking",
             "Cargo Insurance"
           ]
@@ -65,47 +65,55 @@
           "id": "domestic-sea",
           "icon": "Package",
           "title": "Domestic Freight Forwarding - Sea",
-          "shortDescription": "Domestic sea shipping services for large cargo with efficient costs and regular schedules to major Indonesian ports.",
-          "features": ["FCL & LCL Service", "Port-to-port", "Custom Handling"]
+          "shortDescription": "Transport large cargo between islands at the most efficient cost. We provide scheduled and reliable sea services to all major ports.",
+          "features": [
+            "FCL & LCL Services",
+            "Port-to-Port Shipment",
+            "Professional Cargo Handling"
+          ]
         },
         {
           "id": "domestic-air",
           "icon": "LocationIcon",
           "title": "Domestic Freight Forwarding - Air",
-          "shortDescription": "Domestic air shipping services for urgent goods with fastest transit time to all airports in Indonesia.",
+          "shortDescription": "Need a fast shipment? Our air cargo service is the quickest solution for your urgent goods, reaching all airports in Indonesia.",
           "features": [
-            "Same Day Service",
+            "Same-Day Delivery Service",
             "Express Delivery",
-            "Temperature Control"
+            "Temperature Control (Optional)"
           ]
         },
         {
           "id": "international-import",
           "icon": "Users",
           "title": "International Freight Forwarding - Import",
-          "shortDescription": "Import services from worldwide with customs documentation, custom clearance, and delivery to final destination.",
-          "features": ["Custom Clearance", "Door-to-door", "Document Handling"]
+          "shortDescription": "Simplify your import process from any country. We handle everything from pickup and customs clearance to direct delivery to your location.",
+          "features": [
+            "Integrated Customs Clearance",
+            "Global Door-to-Door Service",
+            "Professional Import Consultation"
+          ]
         },
         {
           "id": "international-export",
           "icon": "Warehouse",
           "title": "International Freight Forwarding - Export",
-          "shortDescription": "Export services worldwide with export documentation, custom clearance, and coordination with international buyers.",
+          "shortDescription": "Export your products worldwide, hassle-free. We ensure your goods arrive at their international destination safely, quickly, and with complete documentation.",
           "features": [
-            "Export Documentation",
-            "Custom Clearance",
-            "International Network"
+            "Easy Export Documentation",
+            "Extensive Global Network",
+            "On-Time Delivery"
           ]
         },
         {
-          "id": "custom-clearance",
-          "icon": "Clock",
-          "title": "Custom Clearance & Documentation",
-          "shortDescription": "Customs documentation and custom clearance services that are fast, accurate, and compliant with latest regulations.",
+          "id": "heavy-equipment-rental",
+          "icon": "Forklift",
+          "title": "Heavy Equipment Rental",
+          "shortDescription": "Support your project's success with modern, well-maintained heavy equipment. A complete solution with professional operators for construction, mining, and industry.",
           "features": [
-            "PPJK Licensed",
-            "Document Preparation",
-            "Regulatory Compliance"
+            "Complete & Modern Fleet",
+            "Professional & Certified Operators",
+            "24/7 Technical Support"
           ]
         }
       ]

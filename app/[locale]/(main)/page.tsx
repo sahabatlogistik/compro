@@ -9,6 +9,7 @@ import {
   Phone,
   Mail,
   MapPin as LocationIcon,
+  Forklift,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -32,6 +33,7 @@ const iconMap = {
   LocationIcon,
   Users,
   Clock,
+  Forklift,
 };
 
 export default function Home() {
@@ -70,32 +72,6 @@ export default function Home() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-              </div>
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-100">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-msl-navy">
-                    {siteConfig.company.clients}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {t("home.hero.stats.clients")}
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-msl-navy">
-                    {siteConfig.company.experience}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {t("home.hero.stats.experience")}
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-msl-navy">
-                    {siteConfig.company.satisfaction}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {t("home.hero.stats.satisfaction")}
-                  </div>
-                </div>
               </div>
             </div>
             <div className="relative" data-aos="fade-left">
@@ -225,37 +201,11 @@ export default function Home() {
                 </div>
 
                 <Link href="/about">
-                  <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
+                  <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white mt-3">
                     {t("home.about.cta")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-              </div>
-            </div>
-
-            <div className="relative" data-aos="fade-left">
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  alt="Warehouse Operations"
-                  className="w-full h-48 object-cover rounded-xl shadow-lg"
-                />
-                <img
-                  src="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  alt="Container Shipping"
-                  className="w-full h-48 object-cover rounded-xl shadow-lg mt-8"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-6 rounded-xl shadow-xl">
-                <div className="flex items-center space-x-3">
-                  <Award className="h-8 w-8 text-msl-orange" />
-                  <div>
-                    <div className="font-semibold text-msl-navy">
-                      {siteConfig.company.certification}
-                    </div>
-                    <div className="text-sm text-gray-600">Certified</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -274,7 +224,11 @@ export default function Home() {
                 >
                   {t("home.contact.badge")}
                 </Badge>
-                <H1 text={t("home.contact.title")} size="lg" className="text-white" />
+                <H1
+                  text={t("home.contact.title")}
+                  size="lg"
+                  className="text-white"
+                />
                 <p className="text-xl text-gray-300 leading-relaxed">
                   {t("home.contact.subtitle")}
                 </p>

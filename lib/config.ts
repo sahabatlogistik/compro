@@ -17,8 +17,8 @@ export const siteConfig = {
 
   social: {
     facebook: "https://facebook.com/mitrasahabatlogistik",
-    instagram: "https://instagram.com/mitrasahabatlogistik",
-    linkedin: "https://linkedin.com/company/mitrasahabatlogistik",
+    instagram: "https://www.instagram.com/msl_batam",
+    linkedin: "https://www.linkedin.com/in/sahabat-logistik-751922370",
     twitter: "https://twitter.com/mitrasahabat",
     youtube: "https://youtube.com/@mitrasahabatlogistik",
   },
@@ -48,7 +48,8 @@ export const siteConfig = {
       },
       {
         title: "Kemudahan",
-        description: "Menyediakan layanan yang mudah dijangkau dan user-friendly",
+        description:
+          "Menyediakan layanan yang mudah dijangkau dan user-friendly",
       },
       {
         title: "Kepuasan Pelanggan",

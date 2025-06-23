@@ -35,8 +35,8 @@
     "hero": {
       "badge": "🚛 Sahabat Logistik Terpercaya",
       "title": "Solusi Logistik Domestik & Internasional *Terpercaya*",
-      "subtitle": "Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama. Dengan pengalaman dan jaringan yang luas, kami hadir sebagai sahabat logistik andalan yang bisa Anda percaya: cepat, aman, dan tanpa ribet.",
-      "cta_primary": "Mulai Konsultasi",
+      "subtitle": "Kami menyediakan pengiriman yang andal di mana pun Anda membutuhkannya. Dengan kami, Anda mendapatkan presisi, kecepatan, dan kepercayaan di setiap langkah.",
+      "cta_primary": "Pelajari Lebih Lanjut",
       "cta_secondary": "Pelajari Layanan",
       "stats": {
         "clients": "Klien Aktif",
@@ -49,63 +49,72 @@
       "title": "Layanan *Freight Forwarding* Komprehensif",
       "subtitle": "Dari pengiriman domestik hingga internasional, kami menyediakan solusi logistik end-to-end yang disesuaikan dengan kebutuhan bisnis Anda.",
       "cta": "Lihat Semua Layanan",
+
       "items": [
         {
           "id": "domestic-land",
           "icon": "Truck",
           "title": "Freight Forwarding Domestik - Darat",
-          "shortDescription": "Layanan pengiriman darat ke seluruh Indonesia dengan armada modern dan rute optimal untuk distribusi barang yang efisien dan tepat waktu.",
+          "shortDescription": "Kirim barang ke seluruh Indonesia dengan cepat, aman, dan efisien. Armada modern kami menjamin pengiriman darat yang andal dan tepat waktu.",
           "features": [
-            "Door-to-door Service",
-            "Tracking Real-time",
-            "Asuransi Barang"
+            "Layanan Door-to-Door",
+            "Pelacakan Real-time",
+            "Asuransi Keamanan Barang"
           ]
         },
         {
           "id": "domestic-sea",
           "icon": "Package",
           "title": "Freight Forwarding Domestik - Laut",
-          "shortDescription": "Layanan pengiriman laut domestik untuk cargo besar dengan biaya efisien dan jadwal reguler ke pelabuhan utama Indonesia.",
-          "features": ["FCL & LCL Service", "Port-to-port", "Custom Handling"]
+          "shortDescription": "Angkut kargo besar antar pulau dengan biaya paling efisien. Kami menyediakan layanan laut yang terjadwal dan terpercaya ke semua pelabuhan utama.",
+          "features": [
+            "Layanan FCL & LCL",
+            "Pengiriman Antar Pelabuhan",
+            "Penanganan Kargo Profesional"
+          ]
         },
         {
           "id": "domestic-air",
           "icon": "LocationIcon",
           "title": "Freight Forwarding Domestik - Udara",
-          "shortDescription": "Layanan pengiriman udara domestik untuk barang urgent dengan waktu tempuh tercepat ke seluruh bandara di Indonesia.",
+          "shortDescription": "Butuh kiriman cepat? Layanan kargo udara kami adalah solusi tercepat untuk barang mendesak Anda, menjangkau seluruh bandara di Indonesia.",
           "features": [
-            "Same Day Service",
-            "Express Delivery",
-            "Temperature Control"
+            "Layanan Pengiriman di Hari yang Sama",
+            "Pengiriman Ekspres Tercepat",
+            "Kontrol Suhu (Opsional)"
           ]
         },
         {
           "id": "international-import",
           "icon": "Users",
           "title": "Freight Forwarding Internasional - Import",
-          "shortDescription": "Layanan import dari seluruh dunia dengan pengurusan dokumen kepabeanan, custom clearance, dan pengiriman hingga tujuan akhir.",
-          "features": ["Custom Clearance", "Door-to-door", "Document Handling"]
+          "shortDescription": "Permudah proses import Anda dari negara manapun. Kami urus semuanya mulai dari penjemputan, bea cukai, hingga pengiriman langsung ke lokasi Anda.",
+          "features": [
+            "Pengurusan Pabean Terpadu",
+            "Layanan Door-to-Door Global",
+            "Konsultasi Import Profesional"
+          ]
         },
         {
           "id": "international-export",
           "icon": "Warehouse",
           "title": "Freight Forwarding Internasional - Export",
-          "shortDescription": "Layanan export ke seluruh dunia dengan pengurusan dokumen ekspor, custom clearance, dan koordinasi dengan buyer internasional.",
+          "shortDescription": "Ekspor produk Anda ke seluruh dunia tanpa ribet. Kami pastikan barang Anda tiba di tujuan internasional dengan aman, cepat, dan dokumentasi lengkap.",
           "features": [
-            "Export Documentation",
-            "Custom Clearance",
-            "International Network"
+            "Kemudahan Dokumen Ekspor",
+            "Jaringan Global Luas",
+            "Pengiriman Tepat Waktu"
           ]
         },
         {
-          "id": "custom-clearance",
-          "icon": "Clock",
-          "title": "Custom Clearance & Documentation",
-          "shortDescription": "Layanan pengurusan dokumen kepabeanan dan custom clearance yang cepat, akurat, dan sesuai dengan regulasi terbaru.",
+          "id": "heavy-equipment-rental",
+          "icon": "Forklift",
+          "title": "Rental Alat Berat (Heavy Equipment)",
+          "shortDescription": "Dukung kesuksesan proyek Anda dengan rental alat berat modern dan terawat. Solusi lengkap dengan operator profesional untuk konstruksi, tambang, dan industri.",
           "features": [
-            "PPJK Licensed",
-            "Document Preparation",
-            "Regulatory Compliance"
+            "Armada Lengkap & Modern",
+            "Operator Profesional & Bersertifikat",
+            "Dukungan Teknis 24/7"
           ]
         }
       ]
