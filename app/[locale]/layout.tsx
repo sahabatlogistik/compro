@@ -6,6 +6,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { AppFooter, AppNavbar } from "@/components/app";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,6 +71,14 @@ export default async function LocaleLayout({
             <div className="pt-20">{children}</div>
             <AppFooter />
           </main>
+
+          {process.env.NODE_ENV === "production" && (
+            <>
+              <Analytics />
+              <SpeedInsights />
+              {/* <GoogleAnalytics gaId="G-1PMGV3HD5T" /> */}
+            </>
+          )}
 
           <Toaster richColors position="bottom-right" />
         </NextIntlClientProvider>
