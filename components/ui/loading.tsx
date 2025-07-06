@@ -30,7 +30,9 @@ export function Loading({ className }: LoadingProps) {
             height={60}
             className="h-12 w-auto brightness-0 invert mx-auto"
           />
-          <h3 className="text-xl font-bold text-white">{t("company_name")}</h3>
+          <h3 className="text-xl font-bold text-msl-navy">
+            {t("company_name")}
+          </h3>
           <p className="text-blue-200 text-sm">{t("tagline")}</p>
 
           {/* Loading dots */}
@@ -85,7 +87,7 @@ export function PageLoading({
   if (!isLoading) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-300 flex flex-col items-center justify-center">
       <div className="flex flex-col items-center space-y-8 max-w-md mx-auto px-4">
         {/* Loading Text */}
         <div className="text-center space-y-3">
@@ -94,22 +96,24 @@ export function PageLoading({
             alt="MSL Logo"
             width={180}
             height={60}
-            className="h-16 w-auto brightness-0 invert mx-auto mb-10"
+            className="h-10 w-auto  mx-auto mb-10"
           />
 
           {/* Progress Bar */}
 
-          <h3 className="text-xl font-bold text-white">{t("company_name")}</h3>
-          <p className="text-blue-200 text-sm">{t("tagline")}</p>
+          <h3 className="text-xl font-bold text-msl-navy">
+            {t("company_name")}
+          </h3>
+          <p className="text-gray-500 text-sm">{t("tagline")}</p>
           <div className="w-96 bg-slate-700 rounded-full h-2 overflow-hidden">
             <div
-              className="bg-gradient-to-r from-blue-400 via-green-400 to-blue-500 h-2 rounded-full transition-all duration-300 ease-out relative"
+              className="relative h-full bg-gradient-to-r from-blue-500 to-green-500 rounded-full transition-all duration-300 ease-in-out"
               style={{ width: `${progress}%` }}
             >
               <div className="absolute inset-0 bg-white opacity-30 animate-pulse"></div>
             </div>
           </div>
-          <p className="text-slate-300 text-xs">
+          <p className="text-slate-600 text-xs">
             {t("loading_text")} {Math.round(progress)}%
           </p>
         </div>

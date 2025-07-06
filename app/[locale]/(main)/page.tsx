@@ -27,6 +27,7 @@ import { useTranslations } from "next-intl";
 import H1 from "@/components/ui/h1";
 import HeroSection from "@/components/sections/hero-section";
 import GallerySwiperSection from "@/components/sections/gallery-swiper-section";
+import ServiceCard from "@/components/cards/service-card";
 
 const iconMap = {
   Truck,
@@ -43,7 +44,38 @@ export default function Home() {
 
   return (
     <>
-      <HeroSection />
+      <section className="relative py-24 lg:py-32 bg-msl-navy">
+        <div className="absolute inset-0">
+          <div
+            className="w-full h-full absolute top-0 left-0  bg-[url('/images/hero-background.webp')] bg-cover bg-center opacity-60"
+            aria-hidden="true"
+          />
+          <div className="w-full h-full absolute  top-0 left-0  bg-black/40" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div data-aos="fade-up">
+            <H1
+              text={t("home.hero.title")}
+              size="xl"
+              className="mb-6 text-white"
+            />
+            <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto mb-8">
+              {t("home.hero.subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-msl-navy hover:bg-msl-dark-blue text-white"
+                >
+                  {t("home.hero.cta_primary")}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Services Section */}
       <section id="layanan" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,43 +93,13 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t.raw("home.services.items").map((service: any, index: number) => {
-              const IconComponent =
-                iconMap[service.icon as keyof typeof iconMap];
-              return (
-                <Card
-                  key={service.id}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 bg-white"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <CardHeader className="space-y-4">
-                    <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
-                      <IconComponent className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
-                    </div>
-                    <CardTitle className="text-xl text-msl-navy">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <CardDescription className="text-gray-600 leading-relaxed">
-                      {service.shortDescription}
-                    </CardDescription>
-                    <div className="space-y-2">
-                      {service.features.map((feature: string, idx: number) => (
-                        <div
-                          key={idx}
-                          className="flex items-center text-sm text-gray-600"
-                        >
-                          <div className="w-1.5 h-1.5 bg-msl-orange rounded-full mr-3" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {t.raw("home.services.items").map((service: any, index: number) => (
+              <ServiceCard
+                index={index}
+                key={index + service.id}
+                service={service}
+              />
+            ))}
           </div>
 
           <div className="text-center mt-12" data-aos="fade-up">

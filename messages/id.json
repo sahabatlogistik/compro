@@ -34,8 +34,8 @@
     },
     "hero": {
       "badge": "🚛 Sahabat Logistik Terpercaya",
-      "title": "Solusi Logistik Domestik & Internasional *Terpercaya* untuk Bisnis Anda",
-      "subtitle": "Kami menyediakan pengiriman yang andal di mana pun Anda membutuhkannya. Dengan kami, Anda mendapatkan presisi, kecepatan, dan kepercayaan di setiap langkah.",
+      "title": "*Sahabat Terpercaya* untuk Semua Pengiriman Anda",
+      "subtitle": "PT Mitra Sahabat Logistik (MSL) adalah perusahaan yang bergerak di bidang jasa freight forwarding domestik dan internasional, berbasis di Batam, Kepulauan Riau. Kami hadir sebagai solusi logistik yang tidak hanya andal dan efisien, tetapi juga mudah dijangkau dan menyenangkan untuk diajak bekerja sama.",
       "cta_primary": "Pelajari Lebih Lanjut",
       "cta_secondary": "Pelajari Layanan",
       "stats": {
@@ -64,7 +64,7 @@
         },
         {
           "id": "domestic-sea",
-          "icon": "Package",
+          "icon": "Ship",
           "title": "Freight Forwarding Domestik - Laut",
           "shortDescription": "Angkut kargo besar antar pulau dengan biaya paling efisien. Kami menyediakan layanan laut yang terjadwal dan terpercaya ke semua pelabuhan utama.",
           "features": [
@@ -75,7 +75,7 @@
         },
         {
           "id": "domestic-air",
-          "icon": "LocationIcon",
+          "icon": "Plane",
           "title": "Freight Forwarding Domestik - Udara",
           "shortDescription": "Butuh kiriman cepat? Layanan kargo udara kami adalah solusi tercepat untuk barang mendesak Anda, menjangkau seluruh bandara di Indonesia.",
           "features": [
@@ -86,7 +86,7 @@
         },
         {
           "id": "international-import",
-          "icon": "Users",
+          "icon": "Import",
           "title": "Freight Forwarding Internasional - Import",
           "shortDescription": "Permudah proses import Anda dari negara manapun. Kami urus semuanya mulai dari penjemputan, bea cukai, hingga pengiriman langsung ke lokasi Anda.",
           "features": [

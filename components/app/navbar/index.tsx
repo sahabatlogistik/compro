@@ -52,7 +52,7 @@ export default function AppNavbar() {
                 alt="MSL Logo"
                 width={180}
                 height={60}
-                className="h-12 w-auto"
+                className="h-7 w-auto"
               />
             </Link>
           </div>
