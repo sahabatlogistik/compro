@@ -34,8 +34,8 @@
     },
     "hero": {
       "badge": "🚛 Trusted Logistics Partner",
-      "title": "We Provide *logistics solution* tailor-made for your business",
-      "subtitle": "We provide reliable shipping wherever you need it. With us, you get precision, speed, and confidence at every step.",
+      "title": "*Trusted Partner* for All Your Shipments",
+      "subtitle": "PT Mitra Sahabat Logistik (MSL) is a company engaged in domestic and international freight forwarding services, based in Batam, Riau Islands. We are here as a logistics solution that is not only reliable and efficient, but also accessible and pleasant to work with.",
       "cta_primary": "Learn More",
       "cta_secondary": "Learn Services",
       "stats": {
@@ -63,7 +63,7 @@
         },
         {
           "id": "domestic-sea",
-          "icon": "Package",
+          "icon": "Ship",
           "title": "Domestic Freight Forwarding - Sea",
           "shortDescription": "Transport large cargo between islands at the most efficient cost. We provide scheduled and reliable sea services to all major ports.",
           "features": [
@@ -74,7 +74,7 @@
         },
         {
           "id": "domestic-air",
-          "icon": "LocationIcon",
+          "icon": "Plane",
           "title": "Domestic Freight Forwarding - Air",
           "shortDescription": "Need a fast shipment? Our air cargo service is the quickest solution for your urgent goods, reaching all airports in Indonesia.",
           "features": [
@@ -85,7 +85,7 @@
         },
         {
           "id": "international-import",
-          "icon": "Users",
+          "icon": "Import",
           "title": "International Freight Forwarding - Import",
           "shortDescription": "Simplify your import process from any country. We handle everything from pickup and customs clearance to direct delivery to your location.",
           "features": [

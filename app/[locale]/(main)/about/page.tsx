@@ -67,14 +67,6 @@ export default function AboutPage() {
                 size="lg"
                 className="bg-msl-navy hover:bg-msl-dark-blue text-white"
               >
-                {t("about.hero.cta_primary")}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white"
-              >
                 {t("about.hero.cta_secondary")}
               </Button>
             </div>
@@ -164,14 +156,16 @@ export default function AboutPage() {
                   {t("about.cta.cta_primary")}
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-msl-navy"
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                {t("about.cta.cta_secondary")}
-              </Button>
+              <Link href={`mailto:${siteConfig.contact.email}`}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-msl-navy hover:bg-white hover:text-msl-navy"
+                >
+                  <Mail className="mr-2 h-5 w-5" />
+                  {t("about.cta.cta_secondary")}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -85,17 +85,8 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: Phone,
-                title: t("contact.info.phone.title"),
-                value: siteConfig.contact.phone,
-                description: t("contact.info.phone.description"),
-                action: t("contact.info.phone.action"),
-                href: `tel:${siteConfig.contact.phone}`,
-                color: "msl-orange",
-              },
               {
                 icon: Mail,
                 title: t("contact.info.email.title"),
@@ -257,126 +248,7 @@ export default function ContactPage() {
                       ))}
                   </CardContent>
                 </Card>
-
-                {/* Quick Stats */}
-                <div className="grid grid-cols-2 gap-4">
-                  <Card className="border-gray-200 text-center">
-                    <CardContent className="p-6">
-                      <div className="text-2xl font-bold text-msl-navy">
-                        {siteConfig.company.clients}
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        {t("about.stats.clients")}
-                      </div>
-                    </CardContent>
-                  </Card>
-                  <Card className="border-gray-200 text-center">
-                    <CardContent className="p-6">
-                      <div className="text-2xl font-bold text-msl-orange">
-                        {siteConfig.company.satisfaction}
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        {t("about.stats.satisfaction")}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-12" data-aos="fade-up">
-            <Badge
-              variant="secondary"
-              className="bg-msl-navy/10 text-msl-navy border-msl-navy/20"
-            >
-              {t("contact.location.badge")}
-            </Badge>
-            <H1 text={t("contact.location.title")} size="md" />
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t("contact.location.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8" data-aos="fade-up">
-            <div className="lg:col-span-2">
-              <Card className="border-gray-200 overflow-hidden">
-                <div className="h-96 bg-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-msl-navy mx-auto mb-4" />
-                    <p className="text-gray-600">
-                      Peta lokasi akan ditampilkan di sini
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      {siteConfig.contact.address.street}
-                      <br />
-                      {siteConfig.contact.address.city}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-
-            <div className="space-y-6">
-              <Card className="border-gray-200">
-                <CardHeader>
-                  <CardTitle className="text-lg text-msl-navy">
-                    {t("contact.location.address_title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-msl-orange mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium">
-                        {siteConfig.contact.address.street}
-                      </p>
-                      <p className="text-gray-600">
-                        {siteConfig.contact.address.city}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-gray-200">
-                <CardHeader>
-                  <CardTitle className="text-lg text-msl-navy">
-                    {t("contact.location.transportation.title")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="space-y-2">
-                    <p className="text-sm text-gray-600">
-                      <strong>Dari Bandara:</strong>{" "}
-                      {t("contact.location.transportation.airport")}
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      <strong>Dari Pelabuhan:</strong>{" "}
-                      {t("contact.location.transportation.port")}
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      <strong>Transportasi Umum:</strong>{" "}
-                      {t("contact.location.transportation.public")}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Button
-                className="w-full bg-msl-orange hover:bg-msl-orange/90 text-white"
-                asChild
-              >
-                <a href="#" target="_blank">
-                  <MapPin className="mr-2 h-4 w-4" />
-                  {t("contact.location.maps_action")}
-                </a>
-              </Button>
             </div>
           </div>
         </div>
