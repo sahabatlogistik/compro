@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <GallerySwiperSection />
+      {/* <GallerySwiperSection /> */}
 
       {/* Contact Section */}
       <section id="kontak" className="py-24 bg-msl-navy">
