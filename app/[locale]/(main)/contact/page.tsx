@@ -105,18 +105,22 @@ export default function ContactPage() {
                 href: "#",
                 color: "msl-orange",
               },
-              {
-                icon: MessageCircle,
-                title: t("contact.info.whatsapp.title"),
-                value: siteConfig.contact.phone,
-                description: t("contact.info.whatsapp.description"),
-                action: t("contact.info.whatsapp.action"),
-                href: `https://wa.me/${siteConfig.contact.phone.replace(
-                  /[^0-9]/g,
-                  ""
-                )}`,
-                color: "msl-orange",
-              },
+              ...(siteConfig.settings.hide_phone
+                ? []
+                : [
+                    {
+                      icon: MessageCircle,
+                      title: t("contact.info.whatsapp.title"),
+                      value: siteConfig.contact.phone,
+                      description: t("contact.info.whatsapp.description"),
+                      action: t("contact.info.whatsapp.action"),
+                      href: `https://wa.me/${siteConfig.contact.phone.replace(
+                        /[^0-9]/g,
+                        ""
+                      )}`,
+                      color: "msl-orange",
+                    },
+                  ]),
             ].map((contact, index) => (
               <Card
                 key={index}

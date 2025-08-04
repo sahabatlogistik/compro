@@ -79,7 +79,9 @@ export default function AppFooter() {
               {t("footer.contact_title")}
             </h4>
             <div className="space-y-2 text-sm text-gray-600">
-              <div>{siteConfig.contact.phone}</div>
+              {!siteConfig.settings.hide_phone && (
+                <div>{siteConfig.contact.phone}</div>
+              )}
               <div>{siteConfig.contact.email}</div>
               <div>
                 {siteConfig.contact.address.street}

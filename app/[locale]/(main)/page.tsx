@@ -142,19 +142,21 @@ export default function Home() {
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-msl-orange rounded-xl flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">
-                      {t("common.phone")}
+                {!siteConfig.settings.hide_phone && (
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-msl-orange rounded-xl flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-white" />
                     </div>
-                    <div className="text-gray-300">
-                      {siteConfig.contact.phone}
+                    <div>
+                      <div className="font-semibold text-white">
+                        {t("common.phone")}
+                      </div>
+                      <div className="text-gray-300">
+                        {siteConfig.contact.phone}
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-msl-orange rounded-xl flex items-center justify-center">
                     <Mail className="h-6 w-6 text-white" />
@@ -186,15 +188,17 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    className="bg-msl-orange hover:bg-msl-orange/90 text-white w-full"
-                  >
-                    <Phone className="mr-2 h-5 w-5" />
-                    {t("home.contact.cta_primary")}
-                  </Button>
-                </Link>
+                {!siteConfig.settings.hide_phone && (
+                  <Link href="/contact">
+                    <Button
+                      size="lg"
+                      className="bg-msl-orange hover:bg-msl-orange/90 text-white w-full"
+                    >
+                      <Phone className="mr-2 h-5 w-5" />
+                      {t("home.contact.cta_primary")}
+                    </Button>
+                  </Link>
+                )}
                 <Link
                   href={`mailto:${siteConfig.contact.email}`}
                   target="_blank"
