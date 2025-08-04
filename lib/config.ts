@@ -65,4 +65,8 @@ export const siteConfig = {
     { name: "Tentang", href: "/about" },
     { name: "Kontak", href: "/contact" },
   ],
+
+  settings: {
+    hide_phone: true,
+  },
 };

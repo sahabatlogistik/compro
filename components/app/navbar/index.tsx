@@ -161,7 +161,11 @@ export default function AppNavbar() {
                   {/* Contact Button */}
                   <div className="border-t pt-6">
                     <Link
-                      href={siteConfig.contact.whatsapp}
+                      href={
+                        siteConfig.settings.hide_phone
+                          ? `mailto:${siteConfig.contact.email}`
+                          : siteConfig.contact.whatsapp
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={closeMenu}
@@ -201,7 +205,11 @@ export default function AppNavbar() {
             </DropdownMenu>
 
             <Link
-              href={siteConfig.contact.whatsapp}
+              href={
+                siteConfig.settings.hide_phone
+                  ? `mailto:${siteConfig.contact.email}`
+                  : siteConfig.contact.whatsapp
+              }
               target="_blank"
               rel="noopener noreferrer"
             >
